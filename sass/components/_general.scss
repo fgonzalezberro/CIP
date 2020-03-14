@@ -1,4 +1,6 @@
-// General .scss File
+// Google Fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poiret+One&display=swap');
 
 // General Styles Open
 *{
@@ -20,4 +22,11 @@ $dark-blue : #39496a;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+@mixin flex-row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }

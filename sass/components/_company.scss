@@ -1,0 +1,41 @@
+// Company Styles Open
+.company{
+  width: 100%;
+  padding: 5% 0;
+  @include flex-column;
+
+  h1{
+    color: $dark-blue;
+  }
+
+  .company-info{
+    padding: 3% 20%;
+    text-align: center;
+    color: grey;
+    font-family: 'Poiret One', cursive;
+  }
+
+  .company-features{
+    padding: 3% 10%;
+    @include flex-row;
+    text-align: center;
+
+    div{
+      @include flex-column;
+      width: 33.3%;
+      text-align: center;
+
+      i{
+        color: $dark-blue;
+        font-size: 3rem;
+      }
+
+      p{
+        padding: 3% 20%;
+        text-align: center;
+        color: grey;
+        font-family: 'Poiret One', cursive;
+      }
+    }
+  }
+}

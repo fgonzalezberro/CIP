@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poiret+One&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -31,8 +33,10 @@ header nav ul li {
   width: auto;
   margin: 0 10px;
   color: #39496a;
-  font-size: 20px;
+  font-size: 17px;
   padding: 5px 10px;
+  font-family: "Open Sans Condensed", sans-serif;
+  letter-spacing: 1px;
 }
 header nav ul li:hover {
   color: #e3e3e3;
@@ -43,11 +47,87 @@ header nav ul .login-nav-btn {
   padding: 5px 20px;
   color: #fff;
   transition: 1s;
+  font-size: 17px;
 }
 header nav ul .login-nav-btn:hover {
   background-color: #fff;
   color: #39496a;
   border: 1px solid #39496a;
+}
+
+.cover {
+  width: 100%;
+  height: 90vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url("../img/cover-image-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.cover h1 {
+  color: #fff;
+  letter-spacing: 10px;
+  font-size: 60px;
+}
+.cover h2 {
+  color: #fff;
+  letter-spacing: 5px;
+  font-size: 30px;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+.cover p {
+  color: #fff;
+  letter-spacing: 5px;
+  font-size: 15px;
+  font-family: "Open Sans Condensed", sans-serif;
+  margin-top: 10px;
+}
+
+.company {
+  width: 100%;
+  padding: 5% 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.company h1 {
+  color: #39496a;
+}
+.company .company-info {
+  padding: 3% 20%;
+  text-align: center;
+  color: grey;
+  font-family: "Poiret One", cursive;
+}
+.company .company-features {
+  padding: 3% 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  text-align: center;
+}
+.company .company-features div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 33.3%;
+  text-align: center;
+}
+.company .company-features div i {
+  color: #39496a;
+  font-size: 3rem;
+}
+.company .company-features div p {
+  padding: 3% 20%;
+  text-align: center;
+  color: grey;
+  font-family: "Poiret One", cursive;
 }
 
 /*# sourceMappingURL=styles.css.map */

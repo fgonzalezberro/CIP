@@ -25,8 +25,10 @@ header{
         width: auto;
         margin: 0 10px;
         color: $dark-blue;
-        font-size: 20px;
+        font-size: 17px;
         padding: 5px 10px;
+        font-family: 'Open Sans Condensed', sans-serif;
+        letter-spacing: 1px;
       }
 
       li:hover{
@@ -39,6 +41,7 @@ header{
         padding: 5px 20px;
         color: #fff;
         transition: 1s;
+        font-size: 17px;
       }
 
       .login-nav-btn:hover{
