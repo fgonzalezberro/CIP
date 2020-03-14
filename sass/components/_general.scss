@@ -9,3 +9,15 @@
   text-decoration: none;
   outline: none;
 }
+
+// Variables
+$dark-blue : #39496a;
+
+
+// Mixin´s
+@mixin flex-column{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
