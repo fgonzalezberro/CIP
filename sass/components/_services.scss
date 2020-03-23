@@ -1,0 +1,79 @@
+// Services Styles Open
+.our-services{
+  width: 100%;
+  padding: 5% 0 0 0;
+  @include flex-column;
+
+  h2{
+    color: $dark-blue;
+  }
+
+  p{
+    text-align: center;
+    color: grey;
+    font-family: 'Poiret One', cursive;
+    margin-bottom: 5%;
+  }
+
+  .services{
+    @include flex-row;
+    width: 100%;
+    padding: 0;
+
+    .content , .image{
+      height: 400px;
+      width: 50%;
+    }
+
+    .content{
+      @include flex-column;
+      box-sizing: border-box;
+      padding: 5%;
+      background-color: #363636;
+
+      i{
+        font-size: 4rem;
+        margin-bottom: 3%;
+        color: #fff;
+      }
+
+      h3{
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: 18px;
+        margin-bottom: 5%;
+      }
+
+      h4{
+        font-size: 16px;
+        margin-bottom: 3%;
+        color: #fff;
+      }
+
+      p{
+        font-size: 14px;
+        color: #fff;
+      }
+    }
+
+    .image{
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      cursor: pointer;
+      transition: 1s;
+    }
+
+    .image:hover{
+      background-size: 120% 120%;
+    }
+
+    .image-1{
+      background-image: url('../img/pesticide-image-1.jpg');
+    }
+
+    .image-2{
+      background-image: url('../img/termite-image-1.png');
+    }
+  }
+}

@@ -1,0 +1,50 @@
+// Login Styles Open
+.login{
+  width: 60%;
+  height: 80vh;
+  @include flex-column;
+
+  .login-content{
+    width: 35%;
+    height: 40vh;
+    padding: 0;
+    border: 2px solid $dark-blue;
+
+    .login-header{
+      width: 100%;
+      height: 10vh;
+      background-color: $dark-blue;
+      @include flex-column;
+
+      h2{
+        letter-spacing: 3px;
+        font-size: 15px;
+        color: #fff;
+        font-family: 'Poiret One', cursive;
+      }
+    }
+
+    .login-form{
+      @include flex-column;
+      width: 100%;
+      height: 30vh;
+
+      .user-password , .user-id{
+        padding: 0 0 0 10px;
+        width: 80%;
+        height: 25px;
+        border: 1px solid $dark-blue;
+        margin-bottom: 3%;
+        box-sizing: border-box;
+      }
+
+      button{
+        width: 80%;
+        height: 25px;
+        border: 1px solid $dark-blue;
+        background-color: $dark-blue;
+        color: #fff;
+      }
+    }
+  }
+}

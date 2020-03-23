@@ -1,0 +1,23 @@
+// Footer Section Open
+footer{
+  width: 100%;
+  height: auto;
+  padding: 5% 0;
+  background-color: #363636;
+  @include flex-column;
+
+  p{
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Poiret One', cursive;
+    margin-bottom: 2%;
+
+    .fa-map-pin{
+      color: tomato;
+    }
+
+    i{
+      margin: 0 10px;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+// Staff Section Open
+.staff{
+  width: 100%;
+  padding: 5% 0;
+  @include flex-column;
+
+  h2{
+    color: $dark-blue;
+    margin-bottom: 2%;
+  }
+
+  .staff-content{
+    @include flex-row;
+    width: 100%;
+    text-align: center;
+    padding: 3% 0;
+
+    .professional{
+      width: 33.3%;
+      padding: 0 5%;
+      cursor: pointer;
+
+      img{
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        transition: 1s;
+        border: 2px solid $dark-blue;
+        padding: 5%;
+      }
+
+      img:hover{
+        transform: scale(1.1);
+      }
+
+      h3{
+        color: $dark-blue;
+        font-family: 'Poiret One', cursive;
+        font-size: 20px;
+        margin-bottom: 5%;
+      }
+
+      p{
+        color: grey;
+        font-family: 'Poiret One', cursive;
+        font-size: 15px;
+        margin-bottom: 3%;
+      }
+    }
+  }
+}

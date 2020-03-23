@@ -12,6 +12,10 @@
   outline: none;
 }
 
+a{
+  cursor: pointer;
+}
+
 // Variables
 $dark-blue : #39496a;
 
@@ -29,4 +33,19 @@ $dark-blue : #39496a;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+}
+
+// Close Button Styles
+.close-btn{
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  color: $dark-blue;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.close-btn:hover{
+  transform: scale(1.2);
+  z-index: 1000000000000000000000000000000000000;
 }

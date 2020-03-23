@@ -1,0 +1,19 @@
+// Location Section Open
+.location{
+  width: 100%;
+  padding: 5% 0;
+  @include flex-column;
+
+  h2{
+    color: $dark-blue;
+    letter-spacing: 3px;
+    margin-bottom: 2%;
+  }
+
+  p{
+    color: grey;
+    font-family: 'Poiret One', cursive;
+    font-size: 15px;
+    margin-bottom: 3%;
+  }
+}

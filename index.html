@@ -50,15 +50,19 @@
         <!-- Section´s lists open -->
         <ul>
           <a href="#company"><li>Empresa</li></a>
-          <a href=""><li>Servicio Profesional</li></a>
-          <a href=""><li>Staff</li></a>
-          <a href=""><li>Contacto</li></a>
-          <a href=""><li class="login-nav-btn">Acceder <i class="fas fa-sign-in-alt"></i></li></a>
+          <a href="#our-services"><li>Servicio Profesional</li></a>
+          <a href="#staff"><li>Staff</li></a>
+          <a onclick="window.location.href='https://api.whatsapp.com/send?phone=598099360796&text=%20Hola!%20me%20interesan%20su%20servicios%20.%20'"><li>Contacto</li></a>
+          <a id="login-nav-btn"><li class="login-nav-btn">Zona Clientes <i class="fas fa-sign-in-alt"></i></li></a>
         </ul>
         <!-- Section´s lists close -->
       </nav>
     </header>
     <!-- Header Section Close -->
+
+    <!-- Principal View Content -->
+    <section class="principal-view"></section>
+    <!-- Principal View Content -->
 
     <!-- Cover Section Open -->
     <section class="cover">
@@ -68,14 +72,25 @@
     </section>
     <!-- Cover Section Close -->
 
+    <section onclick="window.location.href='https://api.whatsapp.com/send?phone=598099360796&text=%20Hola!%20me%20interesan%20su%20servicios%20.%20'" class="whatsapp-contact animated pulse infinite">
+      <p> Contactanos por Whatsapp <i class="fab fa-whatsapp"></i></p>
+    </section>
+
     <!-- Company Section Open -->
-    <section class="company">
-      <h1>Nuestra Empresa</h1>
-      
+    <section id="company" class="company">
+      <h2>Nuestra Empresa</h2>
       <div class="company-info">
         <p>
           Somos una empresa establecida en Uruguay, contamos con amplia experiencia en el rubro. Estamos en constante actualización
           para brindar el mejor servicio a travez de nuevos productos, tendencias en el mercado y nuevos procediminentos de fumigación.
+        </p>
+
+        <p>
+          Nos especializamos en la fumigación y exterminación de <strong>CUCARACHAS , MOSCAS , ROEDORES , ARAÑAS y TERMITAS </strong> entre otras plagas.
+        </p>
+
+        <p>
+          Contamos con una extensa y variada clientela, entre nuestros clientes se encuentran Industrias, Comercios, Casas, Est. Agropecuarias etc..
         </p>
       </div>
 
@@ -97,6 +112,88 @@
       </div>
     </section>
     <!-- Company Section Close -->
+
+    <!-- Our Services Section Open -->
+    <section id="our-services" class="our-services">
+      <h2>Nuestros Servicios</h2>
+      <p>¿Que Ofrecemos?</p>
+
+      <div class="services">
+        <div class="content">
+          <i class="fas fa-bug"></i>
+          <h3>Control de plagas urbanas</h3>
+          <h4>Asesoría de expertos</h4>
+          <p>
+            Contamos con la experiencia y las capacidades necesarias para combatir cualquier tipo de plaga. Al contratar a CIP (Control Integral de Plagas),
+            los clientes saben exactamente qué esperar: profesionalismo, eficiencia y confianza
+          </p>
+        </div>
+        <div class="image image-1"></div>
+      </div>
+
+      <div class="services">
+        <div class="image image-2"></div>
+        <div class="content">
+          <i class="fas fa-spray-can"></i>
+          <h3>Exterminio de termitas</h3>
+          <h4>Sastifacción garantizada</h4>
+          <p>
+            Las plagas encuentran en las estructuras de nuestras viviendas excelentes condiciones para cubrir sus necesidades básicas.
+            Contamos con la experiencia necesaria para dar una solución a cada situación.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Our Services Section Close -->
+
+    <!-- Staff Section Open -->
+    <section id="staff" class="staff">
+      <h2>Nuestro Equipo</h2>
+      <div class="staff-content">
+        <div class="professional">
+          <img src="img/staff/professional-image-1.png" alt="">
+          <h3>Santiago Mackinnon</h3>
+          <p><i class="fas fa-user"></i> Sub Director</p>
+          <p><i class="fas fa-mobile-alt"></i> Telefono: 099 999 999</p>
+          <p><i class="fas fa-envelope"></i> Email: santiago@cip.com</p>
+        </div>
+
+        <div class="professional">
+          <img src="img/staff/professional-image-1.png" alt="">
+          <h3>Juan Patricio Mackinnon</i></h3>
+          <p><i class="fas fa-user"></i> Director</p>
+          <p><i class="fas fa-mobile-alt"></i> Telefono: 099 999 999</p>
+          <p><i class="fas fa-envelope"></i> Email: juanpatricio@cip.com</p>
+        </div>
+
+        <div class="professional">
+          <img src="img/staff/professional-image-1.png" alt="">
+          <h3>Francisco Mackinnon</h3>
+          <p><i class="fas fa-user"></i> Sub Director</p>
+          <p><i class="fas fa-mobile-alt"></i> Telefono: 099 999 999</p>
+          <p><i class="fas fa-envelope"></i> Email: francisco@cip.com</p>
+        </div>
+      </div>
+    </section>
+    <!-- Staff Section Close -->
+
+    <!-- Location Section Open -->
+    <section id="location" class="location">
+      <h2>Ubicación</h2>
+      <p>Nos encontramos en la zona de Parque Miramar, Barra de carrsco.</p>
+      <div class="location-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3273.7020381713746!2d-56.03289398449642!3d-34.863713478808705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f8628d34d8afb%3A0xa696e6fe00ebb103!2sAv%20de%20las%20Am%C3%A9ricas%208167%2C%20Ciudad%20de%20la%20Costa%2C%20Departamento%20de%20Canelones!5e0!3m2!1ses!2suy!4v1584190332496!5m2!1ses!2suy" width="800" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </div>
+    </section>
+    <!-- Location Section Close -->
+
+    <!-- Footer Section Open -->
+    <footer>
+      <p><i class="fas fa-map-pin"></i>Av. Americas 8167, Parque Miramar, Canelones, Uruguay.</p>
+      <p><i class="fab fa-instagram"></i> <i class="fab fa-twitter"></i> <i class="fab fa-facebook-square"></i></p>
+      <p>Copyright 2020 © CIP Control Integral de Plagas.</p>
+    </footer>
+    <!-- Footer Section Close -->
 
     <!-- jQuery 3.4.1v plugin (full Version) -->
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>

@@ -1,0 +1,12 @@
+// Principal View Styles Open
+.principal-view{
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000000000000000000000000000000;
+  display: none;
+}

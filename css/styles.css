@@ -9,10 +9,41 @@
   outline: none;
 }
 
+a {
+  cursor: pointer;
+}
+
+.close-btn {
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  color: #39496a;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  transform: scale(1.2);
+  z-index: -5527149226598858752;
+}
+
+.principal-view {
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5076944270305263616;
+  display: none;
+}
+
 header nav {
   width: 100%;
   height: 100px;
   background-color: #fff;
+  position: fixed;
 }
 header nav .logo-icon {
   font-size: 50px;
@@ -44,10 +75,12 @@ header nav ul li:hover {
 header nav ul .login-nav-btn {
   background-color: #39496a;
   border-radius: 20px;
+  box-sizing: content-box;
   padding: 5px 20px;
   color: #fff;
   transition: 1s;
   font-size: 17px;
+  border: 1px solid #39496a;
 }
 header nav ul .login-nav-btn:hover {
   background-color: #fff;
@@ -57,7 +90,7 @@ header nav ul .login-nav-btn:hover {
 
 .cover {
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url("../img/cover-image-1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -94,7 +127,7 @@ header nav ul .login-nav-btn:hover {
   align-items: center;
   flex-direction: column;
 }
-.company h1 {
+.company h2 {
   color: #39496a;
 }
 .company .company-info {
@@ -102,6 +135,9 @@ header nav ul .login-nav-btn:hover {
   text-align: center;
   color: grey;
   font-family: "Poiret One", cursive;
+}
+.company .company-info p {
+  margin-bottom: 2%;
 }
 .company .company-features {
   padding: 3% 10%;
@@ -128,6 +164,244 @@ header nav ul .login-nav-btn:hover {
   text-align: center;
   color: grey;
   font-family: "Poiret One", cursive;
+}
+
+.our-services {
+  width: 100%;
+  padding: 5% 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.our-services h2 {
+  color: #39496a;
+}
+.our-services p {
+  text-align: center;
+  color: grey;
+  font-family: "Poiret One", cursive;
+  margin-bottom: 5%;
+}
+.our-services .services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  padding: 0;
+}
+.our-services .services .content, .our-services .services .image {
+  height: 400px;
+  width: 50%;
+}
+.our-services .services .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 5%;
+  background-color: #363636;
+}
+.our-services .services .content i {
+  font-size: 4rem;
+  margin-bottom: 3%;
+  color: #fff;
+}
+.our-services .services .content h3 {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 18px;
+  margin-bottom: 5%;
+}
+.our-services .services .content h4 {
+  font-size: 16px;
+  margin-bottom: 3%;
+  color: #fff;
+}
+.our-services .services .content p {
+  font-size: 14px;
+  color: #fff;
+}
+.our-services .services .image {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  cursor: pointer;
+  transition: 1s;
+}
+.our-services .services .image:hover {
+  background-size: 120% 120%;
+}
+.our-services .services .image-1 {
+  background-image: url("../img/pesticide-image-1.jpg");
+}
+.our-services .services .image-2 {
+  background-image: url("../img/termite-image-1.png");
+}
+
+.staff {
+  width: 100%;
+  padding: 5% 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.staff h2 {
+  color: #39496a;
+  margin-bottom: 2%;
+}
+.staff .staff-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  text-align: center;
+  padding: 3% 0;
+}
+.staff .staff-content .professional {
+  width: 33.3%;
+  padding: 0 5%;
+  cursor: pointer;
+}
+.staff .staff-content .professional img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  transition: 1s;
+  border: 2px solid #39496a;
+  padding: 5%;
+}
+.staff .staff-content .professional img:hover {
+  transform: scale(1.1);
+}
+.staff .staff-content .professional h3 {
+  color: #39496a;
+  font-family: "Poiret One", cursive;
+  font-size: 20px;
+  margin-bottom: 5%;
+}
+.staff .staff-content .professional p {
+  color: grey;
+  font-family: "Poiret One", cursive;
+  font-size: 15px;
+  margin-bottom: 3%;
+}
+
+.location {
+  width: 100%;
+  padding: 5% 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.location h2 {
+  color: #39496a;
+  letter-spacing: 3px;
+  margin-bottom: 2%;
+}
+.location p {
+  color: grey;
+  font-family: "Poiret One", cursive;
+  font-size: 15px;
+  margin-bottom: 3%;
+}
+
+footer {
+  width: 100%;
+  height: auto;
+  padding: 5% 0;
+  background-color: #363636;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+footer p {
+  color: #fff;
+  font-size: 16px;
+  font-family: "Poiret One", cursive;
+  margin-bottom: 2%;
+}
+footer p .fa-map-pin {
+  color: tomato;
+}
+footer p i {
+  margin: 0 10px;
+}
+
+.whatsapp-contact {
+  background-color: green;
+  color: #fff;
+  width: 300px;
+  height: auto;
+  padding: 10px 15px;
+  border-radius: 50px;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login {
+  width: 60%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.login .login-content {
+  width: 35%;
+  height: 40vh;
+  padding: 0;
+  border: 2px solid #39496a;
+}
+.login .login-content .login-header {
+  width: 100%;
+  height: 10vh;
+  background-color: #39496a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.login .login-content .login-header h2 {
+  letter-spacing: 3px;
+  font-size: 15px;
+  color: #fff;
+  font-family: "Poiret One", cursive;
+}
+.login .login-content .login-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 30vh;
+}
+.login .login-content .login-form .user-password, .login .login-content .login-form .user-id {
+  padding: 0 0 0 10px;
+  width: 80%;
+  height: 25px;
+  border: 1px solid #39496a;
+  margin-bottom: 3%;
+  box-sizing: border-box;
+}
+.login .login-content .login-form button {
+  width: 80%;
+  height: 25px;
+  border: 1px solid #39496a;
+  background-color: #39496a;
+  color: #fff;
 }
 
 /*# sourceMappingURL=styles.css.map */

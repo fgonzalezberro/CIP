@@ -1,0 +1,15 @@
+// whatsapp-contact Styles Open
+.whatsapp-contact{
+  background-color: green;
+  color: #fff;
+  width: 300px;
+  height: auto;
+  padding: 10px 15px;
+  border-radius: 50px;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  cursor: pointer;
+
+  @include flex-column;
+}
