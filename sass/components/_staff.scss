@@ -17,20 +17,20 @@
 
     .professional{
       width: 33.3%;
-      padding: 0 5%;
-      cursor: pointer;
+      padding: 0;
 
       img{
-        width: 130px;
-        height: 130px;
+        width: 150px;
+        height: 150px;
         border-radius: 50%;
-        transition: 1s;
-        border: 2px solid $dark-blue;
-        padding: 5%;
+        transition: 1.5s;
+        filter: grayscale(100%);
+        margin-bottom: 2rem;
+        cursor: pointer;
       }
 
       img:hover{
-        transform: scale(1.1);
+        filter: grayscale(10%);
       }
 
       h3{

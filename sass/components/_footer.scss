@@ -20,4 +20,16 @@ footer{
       margin: 0 10px;
     }
   }
+
+  .social-networks{
+
+    i{
+      transition: 1.5s;
+      cursor: pointer;
+    }
+
+    i:hover{
+      color: tomato;
+    }
+  }
 }

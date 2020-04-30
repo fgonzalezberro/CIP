@@ -28,8 +28,20 @@ window.addEventListener('load', ()=>{
                               </div>
 
                               <div class="login-form">
-                                <input class="user-id" type="text" placeholder="Usuario">
-                                <input class="user-password" type="password" placeholder="Contraseña">
+                                <div class="input-content">
+                                  <div class="logo-content">
+                                    <i class="fas fa-user"></i>
+                                  </div>
+                                  <input class="user-id" type="text" placeholder="Usuario">
+                                </div>
+
+                                <div class="input-content">
+                                  <div class="logo-content">
+                                    <i class="fas fa-key"></i>
+                                  </div>
+                                  <input class="user-password" type="password" placeholder="Contraseña">
+                                </div>
+
                                 <button class="login-btn">Ingresar</button>
                               </div>
                             `;

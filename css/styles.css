@@ -42,6 +42,10 @@ a {
 header nav {
   width: 100%;
   height: 100px;
+  z-index: 1590897978359414784;
+  -webkit-box-shadow: 0px 1px 6px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 1px 6px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 1px 6px 1px rgba(0, 0, 0, 0.75);
   background-color: #fff;
   position: fixed;
 }
@@ -202,7 +206,7 @@ header nav ul .login-nav-btn:hover {
   flex-direction: column;
   box-sizing: border-box;
   padding: 5%;
-  background-color: #363636;
+  background-color: #39496a;
 }
 .our-services .services .content i {
   font-size: 4rem;
@@ -229,16 +233,22 @@ header nav ul .login-nav-btn:hover {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   cursor: pointer;
-  transition: 1s;
+  transition: 2s;
 }
 .our-services .services .image:hover {
   background-size: 120% 120%;
 }
 .our-services .services .image-1 {
-  background-image: url("../img/pesticide-image-1.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/pesticide-image-1.jpg");
+}
+.our-services .services .image-1:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/pesticide-image-1.jpg");
 }
 .our-services .services .image-2 {
-  background-image: url("../img/termite-image-1.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/farm-image.jpg");
+}
+.our-services .services .image-2:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/farm-image.jpg");
 }
 
 .staff {
@@ -264,19 +274,19 @@ header nav ul .login-nav-btn:hover {
 }
 .staff .staff-content .professional {
   width: 33.3%;
-  padding: 0 5%;
-  cursor: pointer;
+  padding: 0;
 }
 .staff .staff-content .professional img {
-  width: 130px;
-  height: 130px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  transition: 1s;
-  border: 2px solid #39496a;
-  padding: 5%;
+  transition: 1.5s;
+  filter: grayscale(100%);
+  margin-bottom: 2rem;
+  cursor: pointer;
 }
 .staff .staff-content .professional img:hover {
-  transform: scale(1.1);
+  filter: grayscale(10%);
 }
 .staff .staff-content .professional h3 {
   color: #39496a;
@@ -293,22 +303,8 @@ header nav ul .login-nav-btn:hover {
 
 .location {
   width: 100%;
+  height: 25vh;
   padding: 5% 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.location h2 {
-  color: #39496a;
-  letter-spacing: 3px;
-  margin-bottom: 2%;
-}
-.location p {
-  color: grey;
-  font-family: "Poiret One", cursive;
-  font-size: 15px;
-  margin-bottom: 3%;
 }
 
 footer {
@@ -332,6 +328,13 @@ footer p .fa-map-pin {
 }
 footer p i {
   margin: 0 10px;
+}
+footer .social-networks i {
+  transition: 1.5s;
+  cursor: pointer;
+}
+footer .social-networks i:hover {
+  color: tomato;
 }
 
 .whatsapp-contact {
@@ -360,8 +363,8 @@ footer p i {
   flex-direction: column;
 }
 .login .login-content {
-  width: 35%;
-  height: 40vh;
+  width: 40%;
+  height: 50vh;
   padding: 0;
   border: 2px solid #39496a;
 }
@@ -386,22 +389,49 @@ footer p i {
   align-items: center;
   flex-direction: column;
   width: 100%;
-  height: 30vh;
+  height: 40vh;
 }
-.login .login-content .login-form .user-password, .login .login-content .login-form .user-id {
+.login .login-content .login-form .input-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 50%;
+}
+.login .login-content .login-form .input-content .logo-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #39496a;
+  height: 25px;
+  width: 30px;
+  margin-bottom: 10%;
+}
+.login .login-content .login-form .input-content .logo-content i {
+  font-size: 0.75rem;
+  color: #fff;
+}
+.login .login-content .login-form .input-content .user-password, .login .login-content .login-form .input-content .user-id {
   padding: 0 0 0 10px;
-  width: 80%;
+  width: 100%;
   height: 25px;
   border: 1px solid #39496a;
-  margin-bottom: 3%;
+  margin-bottom: 10%;
   box-sizing: border-box;
 }
 .login .login-content .login-form button {
-  width: 80%;
+  width: 50%;
   height: 25px;
   border: 1px solid #39496a;
   background-color: #39496a;
   color: #fff;
+  transition: 1s;
+  cursor: pointer;
+}
+.login .login-content .login-form button:hover {
+  background-color: #fff;
+  color: #39496a;
 }
 
 /*# sourceMappingURL=styles.css.map */
