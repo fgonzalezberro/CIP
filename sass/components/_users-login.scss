@@ -1,0 +1,71 @@
+// Users Login
+.users-login{
+  width: 100%;
+  height: 100vh;
+  @include flex-column;
+
+  .users-login-content{
+    width: 30%;
+    border: 3px solid $dark-blue;
+
+    .users-login-header{
+      padding: 5% 0;
+      width: 100%;
+      background-color: $dark-blue;
+      color: #fff;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+
+      i{
+        margin: 0 30px;
+      }
+    }
+
+    .users-login-form{
+      width: 100%;
+      padding: 5% 0;
+      @include flex-column;
+
+      .users-login-input{
+        width: 60%;
+        @include flex-row;
+
+        i{
+          padding: 5px;
+          width: 50px;
+          height: 50px;
+          background-color: $dark-blue;
+          color: #fff;
+          @include flex-column;
+        }
+
+        input{
+          width: 100%;
+          margin: 5% 0;
+          border: 1px solid #e3e3e3;
+          padding: 5px;
+          height: 50px;
+          color: $dark-blue;
+        }
+      }
+
+      .users-login-btn{
+        width: 30%;
+        padding: 5px 10px;
+        border-radius: 30px;
+        background-color: #fff;
+        border: 1px solid $dark-blue;
+        color: $dark-blue;
+        margin: 5% 0;
+        transition: 1s;
+        cursor: pointer;
+      }
+
+      .users-login-btn:hover{
+        background-color: $dark-blue;
+        color: #fff;
+      }
+    }
+  }
+}

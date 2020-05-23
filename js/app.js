@@ -70,27 +70,7 @@ window.addEventListener('load', ()=>{
     principalView.appendChild(loginSection);
     loginSection.appendChild(loginCloseBtn);
     loginSection.appendChild(loginContent);
-    loginContent.innerHTML = `<div class="login-header">
-                                <h2> LOGIN </h2>
-                              </div>
-
-                              <div class="login-form">
-                                <div class="input-content">
-                                  <div class="logo-content">
-                                    <i class="fas fa-user"></i>
-                                  </div>
-                                  <input class="user-id" type="text" placeholder="Usuario">
-                                </div>
-
-                                <div class="input-content">
-                                  <div class="logo-content">
-                                    <i class="fas fa-key"></i>
-                                  </div>
-                                  <input class="user-password" type="password" placeholder="Contraseña">
-                                </div>
-
-                                <button class="login-btn">Ingresar</button>
-                              </div>
+    loginContent.innerHTML = `
                             `;
 
     // Add or Remove Login Elements Class
