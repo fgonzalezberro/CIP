@@ -125,7 +125,7 @@ header nav ul .login-nav-btn:hover {
 
 .company {
   width: 100%;
-  padding: 5% 0;
+  padding: 10% 0 0 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -133,6 +133,12 @@ header nav ul .login-nav-btn:hover {
 }
 .company h2 {
   color: #39496a;
+}
+.company p {
+  text-align: center;
+  color: grey;
+  font-family: "Poiret One", cursive;
+  margin-bottom: 2%;
 }
 .company .company-info {
   padding: 3% 20%;
@@ -172,7 +178,7 @@ header nav ul .login-nav-btn:hover {
 
 .our-services {
   width: 100%;
-  padding: 5% 0 0 0;
+  padding: 10% 0 0 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -206,7 +212,7 @@ header nav ul .login-nav-btn:hover {
   flex-direction: column;
   box-sizing: border-box;
   padding: 5%;
-  background-color: #39496a;
+  background-color: #363636;
 }
 .our-services .services .content i {
   font-size: 4rem;
@@ -253,7 +259,7 @@ header nav ul .login-nav-btn:hover {
 
 .staff {
   width: 100%;
-  padding: 5% 0;
+  padding: 10% 0 0 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -261,6 +267,11 @@ header nav ul .login-nav-btn:hover {
 }
 .staff h2 {
   color: #39496a;
+}
+.staff p {
+  text-align: center;
+  color: grey;
+  font-family: "Poiret One", cursive;
   margin-bottom: 2%;
 }
 .staff .staff-content {
@@ -303,8 +314,25 @@ header nav ul .login-nav-btn:hover {
 
 .location {
   width: 100%;
-  height: 25vh;
-  padding: 5% 0;
+  padding: 10% 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.location h2 {
+  color: #39496a;
+}
+.location p {
+  text-align: center;
+  color: grey;
+  font-family: "Poiret One", cursive;
+  margin-bottom: 2%;
+}
+.location img {
+  width: 70%;
+  height: auto;
 }
 
 footer {
@@ -312,6 +340,7 @@ footer {
   height: auto;
   padding: 5% 0;
   background-color: #363636;
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -352,6 +381,121 @@ footer .social-networks i:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.our-clients {
+  width: 100%;
+  padding: 10% 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.our-clients h2 {
+  color: #39496a;
+}
+.our-clients p {
+  text-align: center;
+  color: grey;
+  font-family: "Poiret One", cursive;
+  margin-bottom: 2%;
+}
+.our-clients .carousel-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.our-clients .carousel-content i {
+  font-size: 2rem;
+  margin: 0 100px;
+  padding: 5px;
+  background-color: #39496a;
+  color: #fff;
+  transition: 1s;
+  cursor: pointer;
+}
+.our-clients .carousel-content i:hover {
+  background-color: #e3e3e3;
+}
+.our-clients .carousel-content .our-clients-carousel {
+  width: 50%;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.our-clients .carousel-content .our-clients-carousel .slick-next, .our-clients .carousel-content .our-clients-carousel .slick-prev {
+  visibility: hidden;
+}
+.our-clients .carousel-content .our-clients-carousel .slick-dots li button:before {
+  font-size: 30px;
+  line-height: 30px;
+}
+.our-clients .carousel-content .our-clients-carousel .slick-dots li.slick-active button:before {
+  color: #39496a !important;
+}
+.our-clients .carousel-content .our-clients-carousel div {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.our-clients .carousel-content .our-clients-carousel div img {
+  height: auto;
+  width: 150px;
+  filter: grayscale(100%);
+}
+
+.loading-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 200376420520689664;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.loading-section .lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  color: #39496a;
+}
+.loading-section .lds-ripple div {
+  position: absolute;
+  border: 4px solid #fff;
+  opacity: 1;
+  border-radius: 50%;
+  background-color: #39496a;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.loading-section .lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
 }
 
 .login {

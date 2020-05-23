@@ -4,6 +4,7 @@ footer{
   height: auto;
   padding: 5% 0;
   background-color: #363636;
+  text-align: center;
   @include flex-column;
 
   p{

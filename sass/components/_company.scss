@@ -1,11 +1,18 @@
 // Company Styles Open
 .company{
   width: 100%;
-  padding: 5% 0;
+  padding: 10% 0 0 0;
   @include flex-column;
 
   h2{
     color: $dark-blue;
+  }
+
+  p{
+    text-align: center;
+    color: grey;
+    font-family: 'Poiret One', cursive;
+    margin-bottom: 2%;
   }
 
   .company-info{

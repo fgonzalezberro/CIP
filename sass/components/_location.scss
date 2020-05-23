@@ -1,6 +1,23 @@
 // Location Section Open
 .location{
   width: 100%;
-  height: 25vh;
-  padding: 5% 0;
+  padding: 10% 0;
+  text-align: center;
+  @include flex-column;
+
+  h2{
+    color: $dark-blue;
+  }
+
+  p{
+    text-align: center;
+    color: grey;
+    font-family: 'Poiret One', cursive;
+    margin-bottom: 2%;
+  }
+
+  img{
+    width: 70%;
+    height: auto;
+  }
 }

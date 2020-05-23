@@ -1,7 +1,7 @@
 // Services Styles Open
 .our-services{
   width: 100%;
-  padding: 5% 0 0 0;
+  padding: 10% 0 0 0;
   @include flex-column;
 
   h2{
@@ -29,7 +29,7 @@
       @include flex-column;
       box-sizing: border-box;
       padding: 5%;
-      background-color: $dark-blue;
+      background-color: #363636;
 
       i{
         font-size: 4rem;

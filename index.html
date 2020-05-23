@@ -23,6 +23,9 @@
     <!-- Principal CSS file of the project -->
     <link rel="stylesheet" href="css/styles.css">
 
+    <!-- Favico logo -->
+    <link rel="shortcut icon" href="img/favicon/cip.ico" />
+
     <!-- Smooth Js Plugin -->
     <script type="text/javascript" src="js\smooth-scroll.min.js"></script>
     <script>
@@ -52,6 +55,8 @@
           <a href="#company"><li>Empresa</li></a>
           <a href="#our-services"><li>Servicio Profesional</li></a>
           <a href="#staff"><li>Staff</li></a>
+          <a href="#our-clients"><li>Clientes</li></a>
+          <a href="#location"><li>Ubicación</li></a>
           <a onclick="window.location.href='https://api.whatsapp.com/send?phone=598099360796&text=%20Hola!%20me%20interesan%20su%20servicios%20.%20'"><li>Contacto</li></a>
           <a id="login-nav-btn"><li class="login-nav-btn">Zona Clientes <i class="fas fa-sign-in-alt"></i></li></a>
         </ul>
@@ -59,6 +64,15 @@
       </nav>
     </header>
     <!-- Header Section Close -->
+
+    <!-- Loading Section Open -->
+    <section class="loading-section">
+      <div class="lds-ripple">
+        <div></div>
+        <div></div>
+      </div>
+    </section>
+    <!-- Loading Section Close -->
 
     <!-- Principal View Content -->
     <section class="principal-view"></section>
@@ -72,13 +86,10 @@
     </section>
     <!-- Cover Section Close -->
 
-    <section onclick="window.location.href='https://api.whatsapp.com/send?phone=598099360796&text=%20Hola!%20me%20interesan%20su%20servicios%20.%20'" class="whatsapp-contact animated pulse infinite">
-      <p> Contactanos por Whatsapp <i class="fab fa-whatsapp"></i></p>
-    </section>
-
     <!-- Company Section Open -->
     <section id="company" class="company">
       <h2>Nuestra Empresa</h2>
+      <p>¿ Quienes Somos ?</p>
       <div class="company-info">
         <p>
           Somos una empresa establecida en Uruguay, contamos con amplia experiencia en el rubro. Estamos en constante actualización
@@ -136,7 +147,7 @@
         <div class="image image-2"></div>
         <div class="content">
           <i class="fas fa-spray-can"></i>
-          <h3>Exterminio de termitas</h3>
+          <h3>Control de plagas en Estancias y Hogares</h3>
           <h4>Sastifacción garantizada</h4>
           <p>
             Las plagas encuentran en las estructuras de nuestras viviendas excelentes condiciones para cubrir sus necesidades básicas.
@@ -150,6 +161,8 @@
     <!-- Staff Section Open -->
     <section id="staff" class="staff">
       <h2>Nuestro Equipo</h2>
+      <p>Parte de nuestro Staff</p>
+
       <div class="staff-content">
         <div class="professional">
           <img src="img/staff/staff-santiago.jpg" alt="">
@@ -160,7 +173,7 @@
         </div>
 
         <div class="professional">
-          <img src="img/staff/staff-santiago.jpg" alt="">
+          <img src="img/staff/staff-patricio.jpg" alt="">
           <h3>Juan Patricio Mackinnon</i></h3>
           <p><i class="fas fa-user"></i> Director</p>
           <p><i class="fas fa-mobile-alt"></i> Telefono: 099 999 999</p>
@@ -178,9 +191,83 @@
     </section>
     <!-- Staff Section Close -->
 
+    <!-- Our Clients Section Open -->
+    <section id="our-clients" class="our-clients">
+      <h2>Clientes</h2>
+      <p>Algunos de nuestros clientes</p>
+
+      <div class="carousel-content">
+        <i class="fas fa-arrow-left"></i>
+        <div class="our-clients-carousel">
+          <div class="carousel-image-item">
+            <img src="img/clients/alista-uruguay-logo-2.png" alt="">
+          </div>
+          <div class="carousel-image-item">
+            <img src="img/clients/almacen-rural-logo.png" alt="">
+          </div>
+          <div class="carousel-image-item">
+            <img src="img/clients/barraca-erro-logo.png" alt="">
+          </div>
+          <div class="carousel-image-item">
+            <img src="img/clients/brou-logo-2.png" alt="">
+          </div>
+          <div class="carousel-image-item">
+            <img src="img/clients/estancias-del-lago-logo.png" alt="">
+          </div>
+          <div class="carousel-image-item">
+            <img src="img/clients/farming-logo.png" alt="">
+          </div>
+          <div class="carousel-image-item">
+            <img src="img/clients/femi-logo.png" alt="">
+          </div>
+          <div class="carousel-image-item">
+            <img src="img/clients/fraylog-logo.png" alt="">
+          </div>
+          <div class="carousel-image-item">
+            <img src="img/clients/ingleby-logo-2.png" alt="">
+          </div>
+          <div class="carousel-image-item">
+            <img src="img/clients/intendencia-durazno-logo-2.png" alt="">
+          </div>
+          <div class="carousel-image-item">
+            <img src="img/clients/maccio&cia-logo.jpg" alt="">
+          </div>
+          <div class="carousel-image-item">
+            <img src="img/clients/our-kids-logo.png" alt="">
+          </div>
+          <div class="carousel-image-item">
+            <img src="img/clients/msp-logo.jpg" alt="">
+          </div>
+          <div class="carousel-image-item">
+            <img src="img/clients/preu-logo.png" alt="">
+          </div>
+          <div class="carousel-image-item">
+            <img src="img/clients/municipio-paso-de-los-toros-logo.png" alt="">
+          </div>
+          <div class="carousel-image-item">
+            <img src="img/clients/sur-logistica-srl-logo.png" alt="">
+          </div>
+        </div>
+        <i class="fas fa-arrow-right"></i>
+      </div>
+    </section>
+    <!-- Our Clients Section Close -->
+
     <!-- Location Section Open -->
-    <div id="map" class="location"></div>
+    <div id="location" class="location">
+      <h2>Nuestra Ubicación</h2>
+      <p>
+        Nos encontramos en puntos totalmente estrategicos para poder expandir nuestros servicios a la gran mayoría del país.
+      </p>
+      <img class="wow animated fadeInLeft slow" src="img/uruguay-map.png" alt="">
+    </div>
     <!-- Location Section Close -->
+
+    <!-- Whatsapp Section Open -->
+    <section class="whatsapp-contact" onclick="window.location.href='https://api.whatsapp.com/send?phone=598099360796&text=%20Hola!%20me%20interesan%20su%20servicios%20.%20'" class="whatsapp-contact animated pulse infinite">
+      <p> Contactanos por Whatsapp <i class="fab fa-whatsapp"></i></p>
+    </section>
+    <!-- Whatsapp Section Close -->
 
     <!-- Footer Section Open -->
     <footer>
@@ -191,6 +278,19 @@
       <p>Copyright 2020 © CIP Control Integral de Plagas.</p>
     </footer>
     <!-- Footer Section Close -->
+
+   <!-- The core Firebase JavaScript SDK is always required and must be listed first -->
+   <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+
+   <!-- Firebase authentication -->
+   <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-auth.js"></script>
+   <!-- Data Base Real Time SDK -->
+   <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-database.js"></script>
+   <!-- Firebase Storage SDK -->
+   <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-storage.js"></script>
+   <!-- Firebase Firestore SDK -->
+   <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-firestore.js"></script>
 
     <!-- jQuery 3.4.1v plugin (full Version) -->
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>

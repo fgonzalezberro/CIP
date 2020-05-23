@@ -1,0 +1,66 @@
+// Our Clients Styles
+.our-clients{
+  width: 100%;
+  padding: 10% 0 0 0;
+  @include flex-column;
+
+  h2{
+    color: $dark-blue;
+  }
+
+  p{
+    text-align: center;
+    color: grey;
+    font-family: 'Poiret One', cursive;
+    margin-bottom: 2%;
+  }
+
+  .carousel-content{
+    width: 100%;
+    @include flex-row;
+
+    i{
+      font-size: 2rem;
+      margin: 0 100px;
+      padding: 5px;
+      background-color: $dark-blue;
+      color: #fff;
+      transition: 1s;
+      cursor: pointer;
+    }
+
+    i:hover{
+      background-color: #e3e3e3;
+    }
+
+    .our-clients-carousel{
+      width: 50%;
+      height: 250px;
+      @include flex-row;
+
+      .slick-next , .slick-prev{
+          visibility: hidden;
+        }
+
+      .slick-dots li button:before{
+        font-size: 30px;
+        line-height: 30px;
+      }
+
+      .slick-dots li.slick-active button:before {
+        color: $dark-blue !important;
+      }
+
+      div{
+        height: 100%;
+        @include flex-row;
+
+        img{
+          height: auto;
+          width: 150px;
+          filter: grayscale(100%);
+        }
+      }
+    }
+  }
+}
