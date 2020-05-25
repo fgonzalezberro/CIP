@@ -57,7 +57,7 @@ window.addEventListener('load' , ()=>{
       alert('Logueado correctamente');
 
       if(uid === 'YEvESS87g5aEEKpY9xxZvmZE8xt2'){
-        window.location.href = '../index.html';
+        window.location.href = '../users-login/admin-panel.html';
       }else{
         alert('equis de');
       }

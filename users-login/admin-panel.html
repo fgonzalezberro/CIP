@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Meta Label´s -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Lideres en el control integral de plagas">
+    <meta name="author" content="Francisco González Berro">
+    <meta name="keywords" content="Control Integral de Plagas">
+
+    <!-- Web site Title -->
+    <title>CIP | Admin</title>
+
+    <!-- Fontawesome CSS Plugin (5.7.2 Version) -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- Animate CSS plugin -->
+    <link rel="stylesheet" href="../css/animate.css">
+    <!-- Principal CSS file of the project -->
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- Favico logo -->
+    <link rel="shortcut icon" href="../img/favicon/cip.ico" />
+
+  </head>
+
+  <body>
+    <!-- Header Section Open -->
+    <header>
+      <nav>
+        <!-- Website Logo -->
+        <p class="logo-icon">CIP <i class="fas fa-home"></i></p>
+        <!-- Section´s lists open -->
+        <ul>
+          <a href="../index.html"><li>Ver todos los reportes <i class="fas fa-tasks"></i></li></a>
+          <a href="../index.html"><li>Administrar Usuarios <i class="fas fa-user-cog"></i></li></a>
+          <a class="add-report-nav" href="#"><li>Cargar Reporte <i class="far fa-file-alt"></i></li></a>
+          <a class="log-out-btn" href="#"><li>Cerrar sesión <i class="fas fa-door-closed"></i></li></a>
+        </ul>
+        <!-- Section´s lists close -->
+      </nav>
+    </header>
+    <!-- Header Section Close -->
+
+    <!-- Loading Section Open -->
+    <section class="loading-section">
+      <div class="lds-ripple">
+        <div></div>
+        <div></div>
+      </div>
+    </section>
+    <!-- Loading Section Close -->
+
+    <!-- Principañ Container -->
+    <section class="principal-container">
+      <h2>Panel de control del administrador <i class="fas fa-sliders-h"></i></h2>
+    </section>
+    <!-- Principal Container -->
+
+    <!-- Charge reports panel Section Open -->
+    <section class="charge-reports">
+      <h2>Nota de control</h2>
+
+      <!-- Enterprise data Open -->
+      <div class="enterprise-data">
+        <div class="input-container">
+          <p><span> * </span> <i class="fas fa-building"></i></p>
+          <input class="enterprise-name" type="text" placeholder="Nombre de la empresa">
+        </div>
+        <div class="input-container">
+          <p><span> * </span> <i class="fas fa-map-marker-alt"></i></p>
+          <input class="enterprise-address" type="text" placeholder="Dirección de la empresa">
+        </div>
+        <div class="input-container">
+          <p><span> * </span> <i class="fas fa-mail-bulk"></i></p>
+          <input class="enterprise-email" type="text" placeholder="Correo electronico de la empresa">
+        </div>
+        <div class="input-container">
+          <p><span> * </span> <i class="fas fa-house-damage"></i></p>
+          <input class="enterprise-type" type="text" placeholder="Tipo de establecimiento">
+        </div>
+        <div class="input-container">
+          <p><span> * </span> <i class="far fa-calendar-alt"></i></p>
+          <input class="enterprise-date" type="text" placeholder="Fecha">
+        </div>
+        <div class="input-container">
+          <p><span> * </span> <i class="far fa-clock"></i></p>
+          <input class="enterprise-hour" type="text" placeholder="Hora">
+        </div>
+        <div class="input-container">
+          <p><span> * </span> <i class="fas fa-chart-area"></i></p>
+          <input class="enterprise-area" type="text" placeholder="Area">
+        </div>
+      </div>
+      <!-- Enterprise data Close -->
+
+      <!-- Rodents Control Open -->
+      <div class="rodents-control">
+
+        <div class="table-header">
+          <h2>Información del reporte</h2>
+        </div>
+
+        <div class="rodents-control-place">
+          <p>Control de roedores</p>
+          <input class="rodents-control-int" type="radio" name="place" value="Interior"> Interior
+          <input class="rodents-control-ext" type="radio" name="place" value="Exterior"> Exterior
+          <input class="addStations" type="button" name="" value="Agregar Estaciones">
+        </div>
+
+        <div class="rodents-control-table-content">
+          <table class="rodents-control-table">
+            <tr class="rodents-control-stations">
+              <td class="first-td">Estaciones</td>
+            </tr>
+            <tr class="rodents-control-no-news">
+              <td class="first-td">Sin novedades</td>
+            </tr>
+            <tr class="rodents-control-change">
+              <td class="first-td">Cambio</td>
+            </tr>
+            <tr class="rodents-control-recharge">
+              <td class="first-td">Recarga</td>
+            </tr>
+            <tr class="rodents-control-is-missing-posion">
+              <td class="first-td">Falta veneno</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="rodents-control-references">
+          <div class='rodents-control-references-header'>
+            <h2>Referencias</h2>
+          </div>
+
+          <div class="rodents-control-references-content">
+            <p><strong>Motivo del cambio</strong> - H: Humedad - D: Deterioro - R: Roido</p>
+            <p><span style="color: green">✓</span> : Afirmativo - <span style="color: tomato">x</span> : Negativo</p>
+          </div>
+        </div>
+      </div>
+      <!-- Rodents Control Close -->
+    </section>
+    <!-- Charge reports panel Section Close -->
+
+   <!-- The core Firebase JavaScript SDK is always required and must be listed first -->
+   <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+
+    <!-- Firebase authentication -->
+    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-auth.js"></script>
+    <!-- Data Base Real Time SDK -->
+    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-database.js"></script>
+    <!-- Firebase Storage SDK -->
+    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-storage.js"></script>
+    <!-- Firebase Firestore SDK -->
+    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-firestore.js"></script>
+    <!-- Admin panel Script -->
+    <script src="../js/admin-panel.js"></script>
+    <!-- jQuery 3.4.1v plugin (full Version) -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+  </body>
+</html>

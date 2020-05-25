@@ -9,6 +9,10 @@
   outline: none;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 a {
   cursor: pointer;
 }
@@ -200,15 +204,15 @@ header nav ul .login-nav-btn:hover {
   flex-direction: column;
   box-sizing: border-box;
   padding: 5%;
-  background-color: #363636;
+  background-color: #fff;
 }
 .our-services .services .content i {
   font-size: 4rem;
   margin-bottom: 3%;
-  color: #fff;
+  color: #39496a;
 }
 .our-services .services .content h3 {
-  color: #fff;
+  color: #39496a;
   text-transform: uppercase;
   letter-spacing: 3px;
   font-size: 18px;
@@ -217,11 +221,11 @@ header nav ul .login-nav-btn:hover {
 .our-services .services .content h4 {
   font-size: 16px;
   margin-bottom: 3%;
-  color: #fff;
+  color: #39496a;
 }
 .our-services .services .content p {
   font-size: 14px;
-  color: #fff;
+  color: #39496a;
 }
 .our-services .services .image {
   background-repeat: no-repeat;
@@ -557,6 +561,174 @@ footer .social-networks i:hover {
 }
 .users-login .users-login-content .users-login-form .users-login-btn:hover {
   background-color: #39496a;
+  color: #fff;
+}
+
+.principal-container {
+  position: absolute;
+  top: 200px;
+  left: 5%;
+  width: 90%;
+  min-height: 400px;
+  padding: 5% 0 10% 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.principal-container h2 {
+  color: #e3e3e3;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.charge-reports {
+  width: 100%;
+  display: none;
+}
+.charge-reports h2 {
+  color: #39496a;
+  margin-bottom: 3rem;
+}
+.charge-reports .enterprise-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.charge-reports .enterprise-data .input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+}
+.charge-reports .enterprise-data .input-container p span {
+  color: tomato;
+}
+.charge-reports .enterprise-data .input-container p i {
+  color: #39496a;
+}
+.charge-reports .enterprise-data .input-container input {
+  width: 40%;
+  border: 1px solid #e3e3e3;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 10px;
+  color: #39496a;
+}
+.charge-reports .rodents-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 3rem;
+}
+.charge-reports .rodents-control .table-header {
+  width: 80%;
+  padding: 20px 0;
+  margin-top: 3rem;
+  border-radius: 50px 50px 0 0;
+  background-color: #39496a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.charge-reports .rodents-control .table-header h2 {
+  color: #fff;
+  margin-bottom: 0;
+}
+.charge-reports .rodents-control .rodents-control-place {
+  color: #39496a;
+  padding: 20px 0;
+  width: 80%;
+  border-left: 1px solid #e3e3e3;
+  border-right: 1px solid #e3e3e3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.charge-reports .rodents-control .rodents-control-place p {
+  color: #39496a;
+  font-weight: bold;
+  margin: 0 10px;
+}
+.charge-reports .rodents-control .rodents-control-place input[type=radio] {
+  margin: 0 10px;
+}
+.charge-reports .rodents-control .rodents-control-place input[type=button] {
+  margin: 0 30px;
+  padding: 5px 30px;
+  border: 1px solid #39496a;
+  border-radius: 30px;
+  color: #39496a;
+  background-color: #fff;
+  cursor: pointer;
+  transition: 1s;
+}
+.charge-reports .rodents-control .rodents-control-place input[type=button]:hover {
+  padding: 5px 30px;
+  border: 1px solid #39496a;
+  color: #fff;
+  background-color: #39496a;
+  cursor: pointer;
+}
+.charge-reports .rodents-control .rodents-control-table-content {
+  width: 80%;
+  border: 1px solid #e3e3e3;
+  overflow-x: scroll;
+}
+.charge-reports .rodents-control .rodents-control-table-content table {
+  table-layout: fixed;
+}
+.charge-reports .rodents-control .rodents-control-table-content table tr {
+  text-align: center;
+  color: #363636;
+}
+.charge-reports .rodents-control .rodents-control-table-content table tr td {
+  text-align: center;
+  padding: 15px;
+  border-right: 1px solid #e3e3e3;
+  border-bottom: 1px solid #e3e3e3;
+}
+.charge-reports .rodents-control .rodents-control-table-content table tr .first-td {
+  font-size: 15px;
+  background-color: #39496a;
+  color: #fff;
+}
+.charge-reports .rodents-control .rodents-control-references {
+  width: 80%;
+  border: 1px solid #e3e3e3;
+  border-left: 1px solid #e3e3e3;
+  border-right: 1px solid #e3e3e3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.charge-reports .rodents-control .rodents-control-references .rodents-control-references-header {
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  background-color: #39496a;
+}
+.charge-reports .rodents-control .rodents-control-references .rodents-control-references-header h2 {
+  color: #fff;
+  margin-bottom: 0;
+}
+.charge-reports .rodents-control .rodents-control-references .rodents-control-references-content {
+  width: 100%;
+  padding: 20px 0;
+  background-color: #39496a;
+  text-align: center;
+  border-radius: 0 0 50px 50px;
+}
+.charge-reports .rodents-control .rodents-control-references .rodents-control-references-content p {
+  margin-bottom: 5px;
   color: #fff;
 }
 
