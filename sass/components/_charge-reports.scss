@@ -5,6 +5,8 @@
   h2{
     color: $dark-blue;
     margin-bottom: 3rem;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Poiret One', cursive;
   }
 
   .enterprise-data{
@@ -16,6 +18,9 @@
       width: 100%;
 
       p{
+        font-family: 'Montserrat Alternates', sans-serif;
+        font-family: 'Poiret One', cursive;
+
         span{
           color: tomato;
         }
@@ -45,13 +50,14 @@
       width: 80%;
       padding: 20px 0;
       margin-top: 3rem;
-      border-radius: 50px 50px 0 0;
       background-color: $dark-blue;
       @include flex-column;
 
       h2{
         color: #fff;
         margin-bottom: 0;
+        font-family: 'Montserrat Alternates', sans-serif;
+        font-family: 'Poiret One', cursive;
       }
     }
 
@@ -61,12 +67,16 @@
       width: 80%;
       border-left: 1px solid #e3e3e3;
       border-right: 1px solid #e3e3e3;
+      font-family: 'Montserrat Alternates', sans-serif;
+      font-family: 'Poiret One', cursive;
       @include flex-row;
 
       p{
         color: $dark-blue;
         font-weight: bold;
         margin: 0 10px;
+        font-family: 'Montserrat Alternates', sans-serif;
+        font-family: 'Poiret One', cursive;
       }
 
       input[type = "radio"]{
@@ -77,6 +87,8 @@
         margin: 0 30px;
         padding: 5px 30px;
         border: 1px solid $dark-blue;
+        font-family: 'Montserrat Alternates', sans-serif;
+        font-family: 'Poiret One', cursive;
         border-radius: 30px;
         color: $dark-blue;
         background-color: #fff;
@@ -110,6 +122,8 @@
             padding: 15px;
             border-right: 1px solid #e3e3e3;
             border-bottom: 1px solid #e3e3e3;
+            font-family: 'Montserrat Alternates', sans-serif;
+            font-family: 'Poiret One', cursive;
           }
 
           .first-td{
@@ -138,6 +152,8 @@
         h2{
           color: #fff;
           margin-bottom: 0;
+          font-family: 'Montserrat Alternates', sans-serif;
+          font-family: 'Poiret One', cursive;
         }
       }
 
@@ -146,11 +162,12 @@
         padding: 20px 0;
         background-color: $dark-blue;
         text-align: center;
-        border-radius: 0 0 50px 50px;
 
         p{
           margin-bottom: 5px;
           color: #fff;
+          font-family: 'Montserrat Alternates', sans-serif;
+          font-family: 'Poiret One', cursive;
         }
       }
     }

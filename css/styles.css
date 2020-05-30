@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Poiret+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100&family=Poiret+One&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -531,6 +532,7 @@ footer .social-networks i:hover {
 }
 .users-login .users-login-content .users-login-form .users-login-input i {
   padding: 5px;
+  border: 1px solid #39496a;
   width: 50px;
   height: 50px;
   background-color: #39496a;
@@ -565,11 +567,10 @@ footer .social-networks i:hover {
 }
 
 .principal-container {
-  position: absolute;
-  top: 200px;
-  left: 5%;
-  width: 90%;
-  min-height: 400px;
+  position: relative;
+  top: 100px;
+  width: 100%;
+  min-height: 600px;
   padding: 5% 0 10% 0;
   display: flex;
   justify-content: center;
@@ -589,6 +590,8 @@ footer .social-networks i:hover {
 .charge-reports h2 {
   color: #39496a;
   margin-bottom: 3rem;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Poiret One", cursive;
 }
 .charge-reports .enterprise-data {
   display: flex;
@@ -603,6 +606,10 @@ footer .social-networks i:hover {
   align-items: center;
   flex-direction: row;
   width: 100%;
+}
+.charge-reports .enterprise-data .input-container p {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Poiret One", cursive;
 }
 .charge-reports .enterprise-data .input-container p span {
   color: tomato;
@@ -630,7 +637,6 @@ footer .social-networks i:hover {
   width: 80%;
   padding: 20px 0;
   margin-top: 3rem;
-  border-radius: 50px 50px 0 0;
   background-color: #39496a;
   display: flex;
   justify-content: center;
@@ -640,6 +646,8 @@ footer .social-networks i:hover {
 .charge-reports .rodents-control .table-header h2 {
   color: #fff;
   margin-bottom: 0;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Poiret One", cursive;
 }
 .charge-reports .rodents-control .rodents-control-place {
   color: #39496a;
@@ -647,6 +655,8 @@ footer .social-networks i:hover {
   width: 80%;
   border-left: 1px solid #e3e3e3;
   border-right: 1px solid #e3e3e3;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Poiret One", cursive;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -656,6 +666,8 @@ footer .social-networks i:hover {
   color: #39496a;
   font-weight: bold;
   margin: 0 10px;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Poiret One", cursive;
 }
 .charge-reports .rodents-control .rodents-control-place input[type=radio] {
   margin: 0 10px;
@@ -664,6 +676,8 @@ footer .social-networks i:hover {
   margin: 0 30px;
   padding: 5px 30px;
   border: 1px solid #39496a;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Poiret One", cursive;
   border-radius: 30px;
   color: #39496a;
   background-color: #fff;
@@ -694,6 +708,8 @@ footer .social-networks i:hover {
   padding: 15px;
   border-right: 1px solid #e3e3e3;
   border-bottom: 1px solid #e3e3e3;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Poiret One", cursive;
 }
 .charge-reports .rodents-control .rodents-control-table-content table tr .first-td {
   font-size: 15px;
@@ -719,17 +735,132 @@ footer .social-networks i:hover {
 .charge-reports .rodents-control .rodents-control-references .rodents-control-references-header h2 {
   color: #fff;
   margin-bottom: 0;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Poiret One", cursive;
 }
 .charge-reports .rodents-control .rodents-control-references .rodents-control-references-content {
   width: 100%;
   padding: 20px 0;
   background-color: #39496a;
   text-align: center;
-  border-radius: 0 0 50px 50px;
 }
 .charge-reports .rodents-control .rodents-control-references .rodents-control-references-content p {
   margin-bottom: 5px;
   color: #fff;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Poiret One", cursive;
+}
+
+.admin-users {
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+.admin-users h2 {
+  color: #39496a;
+  margin-bottom: 3rem;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Poiret One", cursive;
+}
+.admin-users .add-new-user-content {
+  width: 80%;
+}
+.admin-users .add-new-user-content .add-new-user-title {
+  width: 100%;
+  padding: 10px 0;
+  background-color: #39496a;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.admin-users .add-new-user-content .add-new-user-title h3 {
+  color: #fff;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Poiret One", cursive;
+}
+.admin-users .add-new-user-content .add-new-user-inputs {
+  width: 100%;
+  margin-top: 2rem;
+  padding: 10px 0;
+  display: none;
+}
+.admin-users .add-new-user-content .add-new-user-inputs .add-new-user-inputs-content {
+  margin-bottom: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.admin-users .add-new-user-content .add-new-user-inputs .add-new-user-inputs-content p {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Poiret One", cursive;
+}
+.admin-users .add-new-user-content .add-new-user-inputs .add-new-user-inputs-content p span {
+  color: tomato;
+}
+.admin-users .add-new-user-content .add-new-user-inputs .add-new-user-inputs-content p i {
+  color: #39496a;
+  margin-right: 10px;
+}
+.admin-users .add-new-user-content .add-new-user-inputs .add-new-user-inputs-content input[type=email], .admin-users .add-new-user-content .add-new-user-inputs .add-new-user-inputs-content input[type=password], .admin-users .add-new-user-content .add-new-user-inputs .add-new-user-inputs-content input[type=text] {
+  width: 40%;
+  border: 1px solid #e3e3e3;
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+.admin-users .add-new-user-content .add-new-user-inputs .add-new-user-inputs-content .add-new-user-logo-input {
+  display: none;
+}
+.admin-users .add-new-user-content .add-new-user-inputs .add-new-user-inputs-content .update-new-logo-btn {
+  cursor: pointer;
+  border: 1px #e3e3e3 dashed;
+  padding: 10px 50px;
+}
+.admin-users .add-new-user-content .add-new-user-inputs .add-new-user-inputs-content #progress-bar {
+  margin-top: 1%;
+  width: 40%;
+  display: none;
+}
+.admin-users .add-new-user-content .add-new-user-inputs input[type=button] {
+  margin: 0 30px;
+  padding: 5px 30px;
+  border: 1px solid #39496a;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Poiret One", cursive;
+  border-radius: 30px;
+  background-color: #39496a;
+  color: #fff;
+  cursor: pointer;
+  transition: 1s;
+}
+.admin-users .add-new-user-content .add-new-user-inputs input[type=button]:hover {
+  padding: 5px 30px;
+  border: 1px solid #39496a;
+  background-color: #fff;
+  color: #39496a;
+  cursor: pointer;
+}
+.admin-users .manage-all-users {
+  width: 80%;
+  margin-top: 2rem;
+}
+.admin-users .manage-all-users .manage-all-users-title {
+  width: 100%;
+  padding: 10px 0;
+  background-color: #39496a;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.admin-users .manage-all-users .manage-all-users-title h3 {
+  color: #fff;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Poiret One", cursive;
 }
 
 /*# sourceMappingURL=styles.css.map */

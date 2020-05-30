@@ -32,7 +32,7 @@
         <!-- Section´s lists open -->
         <ul>
           <a href="../index.html"><li>Ver todos los reportes <i class="fas fa-tasks"></i></li></a>
-          <a href="../index.html"><li>Administrar Usuarios <i class="fas fa-user-cog"></i></li></a>
+          <a class="admin-users-nav"><li>Administrar Usuarios <i class="fas fa-user-cog"></i></li></a>
           <a class="add-report-nav" href="#"><li>Cargar Reporte <i class="far fa-file-alt"></i></li></a>
           <a class="log-out-btn" href="#"><li>Cerrar sesión <i class="fas fa-door-closed"></i></li></a>
         </ul>
@@ -97,11 +97,11 @@
       <div class="rodents-control">
 
         <div class="table-header">
-          <h2>Información del reporte</h2>
+          <h2>Control de roedores</h2>
         </div>
 
         <div class="rodents-control-place">
-          <p>Control de roedores</p>
+          <p>Espacio:</p>
           <input class="rodents-control-int" type="radio" name="place" value="Interior"> Interior
           <input class="rodents-control-ext" type="radio" name="place" value="Exterior"> Exterior
           <input class="addStations" type="button" name="" value="Agregar Estaciones">
@@ -133,14 +133,108 @@
           </div>
 
           <div class="rodents-control-references-content">
-            <p><strong>Motivo del cambio</strong> - H: Humedad - D: Deterioro - R: Roido</p>
-            <p><span style="color: green">✓</span> : Afirmativo - <span style="color: tomato">x</span> : Negativo</p>
+            <p>
+              <strong style="color: tomato">Motivo del cambio</strong>
+              <br>
+              H: Humedad
+              <br>
+              D: Deterioro
+              <br>
+              R: Roido
+              <br>
+              <br>
+            </p>
+
+            <p>
+              <strong style="color: tomato">Recarga</strong>
+              <br>
+              E: Existencia de roedores
+              <br>
+              S: Sin información
+              <br>
+              <br>
+            </p>
+
+            <p>
+              <span style="color: green">✓</span> : Afirmativo
+              <br>
+              <span style="color: tomato">x</span> : Negativo
+             </p>
           </div>
         </div>
       </div>
       <!-- Rodents Control Close -->
     </section>
     <!-- Charge reports panel Section Close -->
+
+    <!-- Admin Users Section Open -->
+    <section class="admin-users">
+      <h2>Administrar Usuarios</h2>
+
+      <!-- Add new users content open -->
+      <div class="add-new-user-content">
+        <div class="add-new-user-title">
+          <h3>Agregar nuevos usuarios <i class="fas fa-sort-down"></i></h3>
+        </div>
+
+        <div class="add-new-user-inputs">
+          <div class="add-new-user-inputs-content">
+            <p><span> * </span> <i class="fas fa-building"></i></p>
+            <input class="add-user-name" type="text" placeholder="Nombre del usuario">
+          </div>
+
+          <div class="add-new-user-inputs-content">
+            <p><span> * </span> <i class="fas fa-map-marker-alt"></i></p>
+            <input class="add-user-location" type="text" placeholder="Dirección del usuario">
+          </div>
+
+          <div class="add-new-user-inputs-content">
+            <p><span> * </span> <i class="fas fa-mail-bulk"></i></p>
+            <input class="add-user-email" type="email" placeholder="Email del usuario ( Necesario para loguearse )">
+          </div>
+
+          <div class="add-new-user-inputs-content">
+            <p><span> * </span> <i class="fas fa-key"></i></p>
+            <input class="add-user-password" type="password" placeholder="Contraseña del usuario ( Necesaria para loguearse )">
+          </div>
+
+          <div class="add-new-user-inputs-content">
+            <input class="add-new-user-logo-input" type="file">
+            <p class="update-new-logo-btn">Subir logo <i class="far fa-image"></i></p>
+          </div>
+
+          <!-- Progress BAR Open -->
+          <meter id="progress-bar" class="hidden" min='0' max='100' low='30' high='70' value='0'></meter>
+          <!-- Progress BAR Close -->
+
+          <input class="add-user-btn" type="button" value="Agregar Usuario">
+        </div>
+      </div>
+      <!-- Add new users content close -->
+
+      <!-- User lists section open -->
+      <div class="manage-all-users">
+        <div class="manage-all-users-title">
+          <h3>Ver todos los usuarios <i class="fas fa-sort-down"></i></h3>
+        </div>
+
+        <div class="manage-all-users-content">
+
+        </div>
+      </div>
+      <!-- USer list section close -->
+    </section>
+    <!-- Admin Users Section Close -->
+
+    <!-- Footer Section Open -->
+    <footer>
+      <p><i class="fas fa-map-pin"></i>Montevideo, Uruguay.</p>
+      <p><i class="fas fa-map-pin"></i>Canelones, Uruguay.</p>
+      <p><i class="fas fa-map-pin"></i>Durazno, Uruguay.</p>
+      <p class="social-networks"><i class="fab fa-instagram"></i> <i class="fab fa-twitter"></i> <i class="fab fa-facebook-square"></i></p>
+      <p>Copyright 2020 © CIP Control Integral de Plagas.</p>
+    </footer>
+    <!-- Footer Section Close -->
 
    <!-- The core Firebase JavaScript SDK is always required and must be listed first -->
    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>

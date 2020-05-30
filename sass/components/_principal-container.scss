@@ -1,10 +1,9 @@
 // Principal Container Styles open
 .principal-container{
-  position: absolute;
-  top: 200px;
-  left: 5%;
-  width: 90%;
-  min-height: 400px;
+  position: relative;
+  top: 100px;
+  width: 100%;
+  min-height: 600px;
   padding: 5% 0 10% 0;
   @include flex-column;
 
