@@ -172,11 +172,68 @@ window.addEventListener('load', ()=>{
    // Show and hide add users option
    $('.add-new-user-title').click(() =>{
      $('.add-new-user-inputs').slideToggle();
+     // Set css properties
+     $('.add-new-user-inputs').css({
+       'display' : 'flex',
+       'align-items' : 'center',
+       'justify-content' : 'center',
+       'flex-direction' : 'column'
+     });
    });
+
+   // Recover Users list
+   function recoverUserList(){
+    let dataBaseRef = firebase.database().ref('users/');
+
+    dataBaseRef.on("value", function(snapshot){
+      let showData = snapshot.val();
+      let usersList = '';
+
+
+      // Iterate all tables in DB
+      for(var key in showData){
+        usersList += `
+                    <tr>
+                    <td>`+showData[key].userName+`</td>
+                    <td>`+key+`</td>
+                    <td><i class="fas fa-trash-alt `+key+`" value="`+key+`"></i></td>
+                   </tr>
+                   `;
+      }
+
+      // Show the user list
+      $('tbody').html(usersList);
+
+      $('.fa-trash-alt').click(function(){
+        deleteUser($(this)[0]);
+      });
+    });
+  }
+
+  // Delete user
+  const deleteUser = (e) =>{
+    let dataBaseRef = firebase.database();
+    let itemToDelete = e.getAttribute('value');
+
+    // Select item to delete
+    dataBaseRef.ref('users/' + itemToDelete).remove();
+
+    alert('Usuario eliminado correctamente');
+  }
 
    // Show and hide manage users
    $('.manage-all-users-title').click(() =>{
      $('.manage-all-users-content').slideToggle();
+     // Set css properties
+     $('.manage-all-users-content').css({
+       'display' : 'flex',
+       'align-items' : 'center',
+       'justify-content' : 'center',
+       'flex-direction' : 'column'
+     });
+
+     // Recover User list
+     recoverUserList();
    });
 
    // Click input file when admin click the button
@@ -189,8 +246,10 @@ window.addEventListener('load', ()=>{
      alert("selecciono el logo correctamente");
    });
 
+   // Capture Add user button
    const addUserBtn = document.querySelector('.add-user-btn');
 
+   // Add event in add user button
    addUserBtn.addEventListener('click' , function(){
      let userEmail = document.querySelector('.add-user-email');
      let userName = document.querySelector('.add-user-name');
@@ -201,6 +260,7 @@ window.addEventListener('load', ()=>{
      // Create a node in data base with the inputs info
      const createNodeInDataBase = (imageName, imageURL) =>{
 
+       // Set the User data in data base
        dataBaseRef.child('users/').push({
          userName: userName.value,
          userEmail: userEmail.value,
@@ -209,7 +269,11 @@ window.addEventListener('load', ()=>{
          imgUrl: imageURL
        });
 
+       // Success Messagge
        alert("Usuario creado correctamente");
+
+       // Clean all fields
+       window.location.href = './admin-panel.html';
      }
 
      // Create an user
@@ -248,11 +312,13 @@ window.addEventListener('load', ()=>{
       }, function() {
         uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL) {
           $("#progress-bar").hide();
+
+          // Call create node in data base function
           createNodeInDataBase(imageToUpload.name , downloadURL);
         });
       });
     });
-
    });
+
  });
 });

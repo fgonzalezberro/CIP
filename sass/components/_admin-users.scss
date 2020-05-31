@@ -67,13 +67,8 @@
         .update-new-logo-btn{
           cursor: pointer;
           border: 1px #e3e3e3 dashed;
-          padding: 10px 50px;
-        }
-
-        #progress-bar{
-          margin-top: 1%;
+          padding: 10px 15px;
           width: 40%;
-          display: none;
         }
       }
 
@@ -97,6 +92,12 @@
         color: $dark-blue;
         cursor: pointer;
       }
+
+      #progress-bar{
+        margin: 2rem 0;
+        width: 40%;
+        display: none;
+      }
     }
   }
 
@@ -115,6 +116,58 @@
         color: #fff;
         font-family: 'Montserrat Alternates', sans-serif;
         font-family: 'Poiret One', cursive;
+      }
+    }
+
+    .manage-all-users-content{
+      display: none;
+
+      table{
+        width: 100%;
+        margin: 2rem 0;
+        text-align: center;
+
+        thead{
+          width: 100%;
+          margin: 1rem 0;
+
+          th{
+            width: 33.3%;
+            color: $dark-blue;
+            padding: 1rem 0;
+            border-bottom: 1px solid $dark-blue;
+            text-align: center;
+            font-family: 'Montserrat Alternates', sans-serif;
+            font-family: 'Poiret One', cursive;
+          }
+        }
+
+        tbody{
+          width: 100%;
+          margin: 1rem 0;
+
+          tr{
+            width: 100%;
+            margin: 1rem 0;
+
+            td{
+              color: #444;
+              font-family: 'Montserrat Alternates', sans-serif;
+              font-family: 'Poiret One', cursive;
+              padding: 1rem 0;
+
+              .fa-trash-alt{
+                color: tomato;
+                cursor: pointer;
+                transition: 1s;
+              }
+
+              .fa-trash-alt:hover{
+                color: red;
+              }
+            }
+          }
+        }
       }
     }
   }

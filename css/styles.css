@@ -533,8 +533,8 @@ footer .social-networks i:hover {
 .users-login .users-login-content .users-login-form .users-login-input i {
   padding: 5px;
   border: 1px solid #39496a;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   background-color: #39496a;
   color: #fff;
   display: flex;
@@ -547,7 +547,7 @@ footer .social-networks i:hover {
   margin: 5% 0;
   border: 1px solid #e3e3e3;
   padding: 5px;
-  height: 50px;
+  height: 30px;
   color: #39496a;
 }
 .users-login .users-login-content .users-login-form .users-login-btn {
@@ -817,12 +817,8 @@ footer .social-networks i:hover {
 .admin-users .add-new-user-content .add-new-user-inputs .add-new-user-inputs-content .update-new-logo-btn {
   cursor: pointer;
   border: 1px #e3e3e3 dashed;
-  padding: 10px 50px;
-}
-.admin-users .add-new-user-content .add-new-user-inputs .add-new-user-inputs-content #progress-bar {
-  margin-top: 1%;
+  padding: 10px 15px;
   width: 40%;
-  display: none;
 }
 .admin-users .add-new-user-content .add-new-user-inputs input[type=button] {
   margin: 0 30px;
@@ -843,6 +839,11 @@ footer .social-networks i:hover {
   color: #39496a;
   cursor: pointer;
 }
+.admin-users .add-new-user-content .add-new-user-inputs #progress-bar {
+  margin: 2rem 0;
+  width: 40%;
+  display: none;
+}
 .admin-users .manage-all-users {
   width: 80%;
   margin-top: 2rem;
@@ -861,6 +862,49 @@ footer .social-networks i:hover {
   color: #fff;
   font-family: "Montserrat Alternates", sans-serif;
   font-family: "Poiret One", cursive;
+}
+.admin-users .manage-all-users .manage-all-users-content {
+  display: none;
+}
+.admin-users .manage-all-users .manage-all-users-content table {
+  width: 100%;
+  margin: 2rem 0;
+  text-align: center;
+}
+.admin-users .manage-all-users .manage-all-users-content table thead {
+  width: 100%;
+  margin: 1rem 0;
+}
+.admin-users .manage-all-users .manage-all-users-content table thead th {
+  width: 33.3%;
+  color: #39496a;
+  padding: 1rem 0;
+  border-bottom: 1px solid #39496a;
+  text-align: center;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Poiret One", cursive;
+}
+.admin-users .manage-all-users .manage-all-users-content table tbody {
+  width: 100%;
+  margin: 1rem 0;
+}
+.admin-users .manage-all-users .manage-all-users-content table tbody tr {
+  width: 100%;
+  margin: 1rem 0;
+}
+.admin-users .manage-all-users .manage-all-users-content table tbody tr td {
+  color: #444;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Poiret One", cursive;
+  padding: 1rem 0;
+}
+.admin-users .manage-all-users .manage-all-users-content table tbody tr td .fa-trash-alt {
+  color: tomato;
+  cursor: pointer;
+  transition: 1s;
+}
+.admin-users .manage-all-users .manage-all-users-content table tbody tr td .fa-trash-alt:hover {
+  color: red;
 }
 
 /*# sourceMappingURL=styles.css.map */
