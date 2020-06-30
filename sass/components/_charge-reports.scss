@@ -38,6 +38,15 @@
         margin: 10px;
         color: $dark-blue;
       }
+
+      select{
+        width: 43%;
+        border: 1px solid #e3e3e3;
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin: 10px;
+        color: $dark-blue;
+      }
     }
   }
 
@@ -162,14 +171,89 @@
         padding: 20px 0;
         background-color: $dark-blue;
         text-align: center;
+        @include flex-row;
 
         p{
-          margin-bottom: 5px;
+          margin: 0  2rem;
           color: #fff;
           font-family: 'Montserrat Alternates', sans-serif;
           font-family: 'Poiret One', cursive;
         }
       }
     }
+  }
+
+  .other-treatmens{
+    width: 80%;
+
+    .others-treatmens-header{
+      width: 100%;
+      padding: 2rem 0;
+      @include flex-column;
+
+      h2{
+        color: $dark-blue;
+        margin-bottom: 0;
+        font-family: 'Montserrat Alternates', sans-serif;
+        font-family: 'Poiret One', cursive;
+      }
+    }
+
+    .other-treatmens-area{
+      margin: 1rem 0;
+      color: $dark-blue;
+      @include flex-row;
+
+      input[type= "radio"]{
+        margin: 0 10px;
+      }
+    }
+
+    .other-treatmens-content{
+      width: 100%;
+      @include flex-row;
+
+      input[type = "text"]{
+        padding: 10px 20px;
+        width: 30%;
+        border: 1px solid #e3e3e3;
+        border-radius: 10px;
+        margin: 0 3rem;
+      }
+    }
+
+    .observations{
+      margin: 2rem 0;
+      width: 100%;
+      @include flex-column;
+
+      textarea{
+        width: 100%;
+        padding: 20px;
+        border: 1px solid #e3e3e3;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  #upload-report-btn{
+    margin: 0 30px;
+    padding: 5px 30px;
+    border: 1px solid $dark-blue;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Poiret One', cursive;
+    border-radius: 30px;
+    background-color: $dark-blue;
+    color: #fff;
+    cursor: pointer;
+    transition: 1s;
+  }
+
+  #upload-report-btn:hover{
+    padding: 5px 30px;
+    border: 1px solid $dark-blue;
+    background-color: #fff;
+    color: $dark-blue;
+    cursor: pointer;
   }
 }

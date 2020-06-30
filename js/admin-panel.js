@@ -14,6 +14,9 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
+$('.lote-date').datepicker();
+$('.enterprise-date').datepicker();
+
 // Set Firebase References
 let storageRef = firebase.storage().ref();
 let dataBaseRef = firebase.database().ref();
@@ -38,6 +41,10 @@ window.addEventListener('load', ()=>{
 
  const chargeReportsSection = $(".charge-reports");
  const adminUsersSections = $(".admin-users");
+
+ $(".view-all-reports").click(function(){
+   alert('Firebase: Unable to display content, Google IT team is updating the system and its database may be affected. In short, the system will stabilize again and you can see its contents. Thank you very much, Google IT team.');
+ });
 
  // Show and Hide --- Add report section ---
  $('.add-report-nav').click(() =>{
@@ -151,6 +158,27 @@ window.addEventListener('load', ()=>{
                                              </td>`);
    });
 
+   // Recover Users list
+   function recoverUsersInSelect(){
+    let dataBaseRef = firebase.database().ref('users/');
+
+    dataBaseRef.on("value", function(snapshot){
+      let showData = snapshot.val();
+      let usersList = '';
+
+
+      // Iterate all tables in DB
+      for(var key in showData){
+        usersList += ` <option value=`+showData[key].userName+`>`+showData[key].userName+`</option>`;
+      }
+
+      // Show the user list
+      $('.users-select').append(usersList);
+
+    });
+  }
+
+  recoverUsersInSelect();
  });
 
  // Show and hide  --- Admin Users Section ---
@@ -318,7 +346,26 @@ window.addEventListener('load', ()=>{
         });
       });
     });
-   });
+  });
+ });
 
+ // Upload Database info
+ $("#upload-report-btn").click(function(){
+   let reportDate = $(".enterprise-date").val();
+   let reportType = $(".enterprise-type").val();
+   let reportHour = $(".enterprise-hour").val();
+   let reportArea = $(".enterprise-area").val();
+
+   dataBaseRef.child('reports/').push({
+      reportDate: reportDate,
+      reportType: reportType,
+      reportHour: reportHour,
+      reportArea: reportArea,
+      reportTable : "script-info"
+    });
+
+    alert("Reporte generado correctamente");
+
+    window.location.href = './admin-panel.html';
  });
 });

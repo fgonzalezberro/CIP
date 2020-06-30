@@ -13,6 +13,9 @@
 
     <!-- Fontawesome CSS Plugin (5.7.2 Version) -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- Datapicker Css plugin -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
     <!-- Animate CSS plugin -->
     <link rel="stylesheet" href="../css/animate.css">
     <!-- Principal CSS file of the project -->
@@ -31,7 +34,7 @@
         <p class="logo-icon">CIP <i class="fas fa-home"></i></p>
         <!-- Section´s lists open -->
         <ul>
-          <a href="../index.html"><li>Ver todos los reportes <i class="fas fa-tasks"></i></li></a>
+          <a class="view-all-reports"><li>Ver todos los reportes <i class="fas fa-tasks"></i></li></a>
           <a class="admin-users-nav"><li>Administrar Usuarios <i class="fas fa-user-cog"></i></li></a>
           <a class="add-report-nav" href="#"><li>Cargar Reporte <i class="far fa-file-alt"></i></li></a>
           <a class="log-out-btn" href="#"><li>Cerrar sesión <i class="fas fa-door-closed"></i></li></a>
@@ -63,16 +66,10 @@
       <!-- Enterprise data Open -->
       <div class="enterprise-data">
         <div class="input-container">
-          <p><span> * </span> <i class="fas fa-building"></i></p>
-          <input class="enterprise-name" type="text" placeholder="Nombre de la empresa">
-        </div>
-        <div class="input-container">
-          <p><span> * </span> <i class="fas fa-map-marker-alt"></i></p>
-          <input class="enterprise-address" type="text" placeholder="Dirección de la empresa">
-        </div>
-        <div class="input-container">
-          <p><span> * </span> <i class="fas fa-mail-bulk"></i></p>
-          <input class="enterprise-email" type="text" placeholder="Correo electronico de la empresa">
+          <p><span> * </span> <i class="fas fa-user"></i></p>
+          <select class="users-select" name="">
+            <option value="">Seleccióna usuario</option>
+          </select>
         </div>
         <div class="input-container">
           <p><span> * </span> <i class="fas fa-house-damage"></i></p>
@@ -122,7 +119,7 @@
               <td class="first-td">Recarga</td>
             </tr>
             <tr class="rodents-control-is-missing-posion">
-              <td class="first-td">Falta veneno</td>
+              <td class="first-td">Falta Estacion</td>
             </tr>
           </table>
         </div>
@@ -164,6 +161,33 @@
         </div>
       </div>
       <!-- Rodents Control Close -->
+
+      <!-- Other Treatmens Section Open -->
+      <div class="other-treatmens">
+        <div class="others-treatmens-header">
+          <h2>Otros tratamientos</h2>
+        </div>
+
+        <div class="other-treatmens-area">
+          <input class="other-treatmens-area" type="radio" name="place" value="Interior"> Interior
+          <input class="other-treatmens-area" type="radio" name="place" value="Exterior"> Exterior
+        </div>
+
+        <div class="other-treatmens-content">
+          <input type="text" placeholder="Principio Activo">
+          <input type="text" placeholder="Nro. de lote">
+          <input class="lote-date" type="text" placeholder="Fecha de Vto.">
+        </div>
+
+        <div class="observations">
+          <textarea name="name" rows="8" cols="80" placeholder="Observaciónes y/o recomendaciónes"></textarea>
+        </div>
+      </div>
+      <!-- Other Treatmens Section Close -->
+
+      <!-- Upload report Button Open-->
+      <input id="upload-report-btn" type="button" value="Subir reporte">
+      <!-- Upload report Button Close -->
     </section>
     <!-- Charge reports panel Section Close -->
 
@@ -257,6 +281,9 @@
     <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-storage.js"></script>
     <!-- Firebase Firestore SDK -->
     <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-firestore.js"></script>
+    <!-- jQuery JavaScript plugin -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!-- Admin panel Script -->
     <script src="../js/admin-panel.js"></script>
     <!-- jQuery 3.4.1v plugin (full Version) -->

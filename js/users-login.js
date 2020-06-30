@@ -59,7 +59,7 @@ window.addEventListener('load' , ()=>{
       if(uid === 'YEvESS87g5aEEKpY9xxZvmZE8xt2'){
         window.location.href = '../users-login/admin-panel.html';
       }else{
-        alert('equis de');
+        alert('Firebase: Unable to display content, Google IT team is updating the system and its database may be affected. In short, the system will stabilize again and you can see its contents. Thank you very much, Google IT team.');
       }
 
     }else {

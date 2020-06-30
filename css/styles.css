@@ -625,6 +625,14 @@ footer .social-networks i:hover {
   margin: 10px;
   color: #39496a;
 }
+.charge-reports .enterprise-data .input-container select {
+  width: 43%;
+  border: 1px solid #e3e3e3;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 10px;
+  color: #39496a;
+}
 .charge-reports .rodents-control {
   display: flex;
   justify-content: center;
@@ -743,12 +751,91 @@ footer .social-networks i:hover {
   padding: 20px 0;
   background-color: #39496a;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 .charge-reports .rodents-control .rodents-control-references .rodents-control-references-content p {
-  margin-bottom: 5px;
+  margin: 0 2rem;
   color: #fff;
   font-family: "Montserrat Alternates", sans-serif;
   font-family: "Poiret One", cursive;
+}
+.charge-reports .other-treatmens {
+  width: 80%;
+}
+.charge-reports .other-treatmens .others-treatmens-header {
+  width: 100%;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.charge-reports .other-treatmens .others-treatmens-header h2 {
+  color: #39496a;
+  margin-bottom: 0;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Poiret One", cursive;
+}
+.charge-reports .other-treatmens .other-treatmens-area {
+  margin: 1rem 0;
+  color: #39496a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.charge-reports .other-treatmens .other-treatmens-area input[type=radio] {
+  margin: 0 10px;
+}
+.charge-reports .other-treatmens .other-treatmens-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.charge-reports .other-treatmens .other-treatmens-content input[type=text] {
+  padding: 10px 20px;
+  width: 30%;
+  border: 1px solid #e3e3e3;
+  border-radius: 10px;
+  margin: 0 3rem;
+}
+.charge-reports .other-treatmens .observations {
+  margin: 2rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.charge-reports .other-treatmens .observations textarea {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #e3e3e3;
+  border-radius: 10px;
+}
+.charge-reports #upload-report-btn {
+  margin: 0 30px;
+  padding: 5px 30px;
+  border: 1px solid #39496a;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Poiret One", cursive;
+  border-radius: 30px;
+  background-color: #39496a;
+  color: #fff;
+  cursor: pointer;
+  transition: 1s;
+}
+.charge-reports #upload-report-btn:hover {
+  padding: 5px 30px;
+  border: 1px solid #39496a;
+  background-color: #fff;
+  color: #39496a;
+  cursor: pointer;
 }
 
 .admin-users {
