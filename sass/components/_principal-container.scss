@@ -1,15 +1,10 @@
 // Principal Container Styles open
 .principal-container{
-  position: relative;
+  position: fixed;
   top: 100px;
   width: 100%;
   min-height: 600px;
-  padding: 5% 0 10% 0;
-  @include flex-column;
-
-  h2{
-    color: #e3e3e3;
-    font-weight: bold;
-    letter-spacing: 3px;
-  }
+  padding: 5% 0;
+  display: none;
+  overflow-y: scroll;
 }

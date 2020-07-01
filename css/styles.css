@@ -491,420 +491,112 @@ footer .social-networks i:hover {
   }
 }
 
-.users-login {
+.login {
   width: 100%;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.users-login .users-login-content {
-  width: 30%;
-  border: 3px solid #39496a;
-}
-.users-login .users-login-content .users-login-header {
-  padding: 5% 0;
-  width: 100%;
-  background-color: #39496a;
-  color: #fff;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-}
-.users-login .users-login-content .users-login-header i {
-  margin: 0 30px;
-}
-.users-login .users-login-content .users-login-form {
-  width: 100%;
-  padding: 5% 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.users-login .users-login-content .users-login-form .users-login-input {
-  width: 60%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-.users-login .users-login-content .users-login-form .users-login-input i {
-  padding: 5px;
-  border: 1px solid #39496a;
-  width: 30px;
-  height: 30px;
-  background-color: #39496a;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.users-login .users-login-content .users-login-form .users-login-input input {
-  width: 100%;
-  margin: 5% 0;
-  border: 1px solid #e3e3e3;
-  padding: 5px;
-  height: 30px;
-  color: #39496a;
-}
-.users-login .users-login-content .users-login-form .users-login-btn {
-  width: 30%;
-  padding: 5px 10px;
-  border-radius: 30px;
-  background-color: #fff;
-  border: 1px solid #39496a;
-  color: #39496a;
-  margin: 5% 0;
-  transition: 1s;
-  cursor: pointer;
-}
-.users-login .users-login-content .users-login-form .users-login-btn:hover {
-  background-color: #39496a;
-  color: #fff;
-}
-
-.principal-container {
-  position: relative;
+  position: fixed;
   top: 100px;
-  width: 100%;
-  min-height: 600px;
-  padding: 5% 0 10% 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.principal-container h2 {
-  color: #e3e3e3;
-  font-weight: bold;
-  letter-spacing: 3px;
-}
-
-.charge-reports {
-  width: 100%;
-  display: none;
-}
-.charge-reports h2 {
-  color: #39496a;
-  margin-bottom: 3rem;
-  font-family: "Montserrat Alternates", sans-serif;
-  font-family: "Poiret One", cursive;
-}
-.charge-reports .enterprise-data {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-}
-.charge-reports .enterprise-data .input-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  width: 100%;
-}
-.charge-reports .enterprise-data .input-container p {
-  font-family: "Montserrat Alternates", sans-serif;
-  font-family: "Poiret One", cursive;
-}
-.charge-reports .enterprise-data .input-container p span {
-  color: tomato;
-}
-.charge-reports .enterprise-data .input-container p i {
-  color: #39496a;
-}
-.charge-reports .enterprise-data .input-container input {
-  width: 40%;
-  border: 1px solid #e3e3e3;
-  padding: 10px 20px;
-  border-radius: 5px;
-  margin: 10px;
-  color: #39496a;
-}
-.charge-reports .rodents-control {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  margin-top: 3rem;
-}
-.charge-reports .rodents-control .table-header {
-  width: 80%;
-  padding: 20px 0;
-  margin-top: 3rem;
-  background-color: #39496a;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.charge-reports .rodents-control .table-header h2 {
-  color: #fff;
-  margin-bottom: 0;
-  font-family: "Montserrat Alternates", sans-serif;
-  font-family: "Poiret One", cursive;
-}
-.charge-reports .rodents-control .rodents-control-place {
-  color: #39496a;
-  padding: 20px 0;
-  width: 80%;
-  border-left: 1px solid #e3e3e3;
-  border-right: 1px solid #e3e3e3;
-  font-family: "Montserrat Alternates", sans-serif;
-  font-family: "Poiret One", cursive;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-.charge-reports .rodents-control .rodents-control-place p {
-  color: #39496a;
-  font-weight: bold;
-  margin: 0 10px;
-  font-family: "Montserrat Alternates", sans-serif;
-  font-family: "Poiret One", cursive;
-}
-.charge-reports .rodents-control .rodents-control-place input[type=radio] {
-  margin: 0 10px;
-}
-.charge-reports .rodents-control .rodents-control-place input[type=button] {
-  margin: 0 30px;
-  padding: 5px 30px;
-  border: 1px solid #39496a;
-  font-family: "Montserrat Alternates", sans-serif;
-  font-family: "Poiret One", cursive;
-  border-radius: 30px;
-  color: #39496a;
+  left: 0;
   background-color: #fff;
-  cursor: pointer;
-  transition: 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.charge-reports .rodents-control .rodents-control-place input[type=button]:hover {
-  padding: 5px 30px;
-  border: 1px solid #39496a;
-  color: #fff;
+.login .login-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.login .login-form .fa-user-circle {
+  font-size: 5rem;
+  margin-bottom: 20px;
+  color: #39496a;
+}
+.login .login-form .input-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.login .login-form .input-content .input-icon {
+  width: 50px;
+  height: 37px;
   background-color: #39496a;
-  cursor: pointer;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.charge-reports .rodents-control .rodents-control-table-content {
-  width: 80%;
-  border: 1px solid #e3e3e3;
-  overflow-x: scroll;
-}
-.charge-reports .rodents-control .rodents-control-table-content table {
-  table-layout: fixed;
-}
-.charge-reports .rodents-control .rodents-control-table-content table tr {
-  text-align: center;
-  color: #363636;
-}
-.charge-reports .rodents-control .rodents-control-table-content table tr td {
-  text-align: center;
-  padding: 15px;
-  border-right: 1px solid #e3e3e3;
-  border-bottom: 1px solid #e3e3e3;
-  font-family: "Montserrat Alternates", sans-serif;
-  font-family: "Poiret One", cursive;
-}
-.charge-reports .rodents-control .rodents-control-table-content table tr .first-td {
+.login .login-form .input-content .input-icon i {
   font-size: 15px;
-  background-color: #39496a;
-  color: #fff;
 }
-.charge-reports .rodents-control .rodents-control-references {
-  width: 80%;
-  border: 1px solid #e3e3e3;
-  border-left: 1px solid #e3e3e3;
-  border-right: 1px solid #e3e3e3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.charge-reports .rodents-control .rodents-control-references .rodents-control-references-header {
-  width: 100%;
-  padding: 20px 0;
-  text-align: center;
-  background-color: #39496a;
-}
-.charge-reports .rodents-control .rodents-control-references .rodents-control-references-header h2 {
-  color: #fff;
-  margin-bottom: 0;
-  font-family: "Montserrat Alternates", sans-serif;
-  font-family: "Poiret One", cursive;
-}
-.charge-reports .rodents-control .rodents-control-references .rodents-control-references-content {
-  width: 100%;
-  padding: 20px 0;
-  background-color: #39496a;
-  text-align: center;
-}
-.charge-reports .rodents-control .rodents-control-references .rodents-control-references-content p {
-  margin-bottom: 5px;
-  color: #fff;
-  font-family: "Montserrat Alternates", sans-serif;
-  font-family: "Poiret One", cursive;
-}
-
-.admin-users {
-  width: 100%;
-  text-align: center;
-  display: none;
-}
-.admin-users h2 {
-  color: #39496a;
-  margin-bottom: 3rem;
-  font-family: "Montserrat Alternates", sans-serif;
-  font-family: "Poiret One", cursive;
-}
-.admin-users .add-new-user-content {
-  width: 80%;
-}
-.admin-users .add-new-user-content .add-new-user-title {
-  width: 100%;
-  padding: 10px 0;
-  background-color: #39496a;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.admin-users .add-new-user-content .add-new-user-title h3 {
-  color: #fff;
-  font-family: "Montserrat Alternates", sans-serif;
-  font-family: "Poiret One", cursive;
-}
-.admin-users .add-new-user-content .add-new-user-inputs {
-  width: 100%;
-  margin-top: 2rem;
-  padding: 10px 0;
-  display: none;
-}
-.admin-users .add-new-user-content .add-new-user-inputs .add-new-user-inputs-content {
-  margin-bottom: 1rem;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-.admin-users .add-new-user-content .add-new-user-inputs .add-new-user-inputs-content p {
-  font-family: "Montserrat Alternates", sans-serif;
-  font-family: "Poiret One", cursive;
-}
-.admin-users .add-new-user-content .add-new-user-inputs .add-new-user-inputs-content p span {
-  color: tomato;
-}
-.admin-users .add-new-user-content .add-new-user-inputs .add-new-user-inputs-content p i {
-  color: #39496a;
-  margin-right: 10px;
-}
-.admin-users .add-new-user-content .add-new-user-inputs .add-new-user-inputs-content input[type=email], .admin-users .add-new-user-content .add-new-user-inputs .add-new-user-inputs-content input[type=password], .admin-users .add-new-user-content .add-new-user-inputs .add-new-user-inputs-content input[type=text] {
-  width: 40%;
-  border: 1px solid #e3e3e3;
-  border-radius: 10px;
+.login .login-form .input-content input[type=text] {
+  width: 180px;
   padding: 10px 15px;
+  margin: 10px 0;
+  border: 1px solid grey;
 }
-.admin-users .add-new-user-content .add-new-user-inputs .add-new-user-inputs-content .add-new-user-logo-input {
-  display: none;
-}
-.admin-users .add-new-user-content .add-new-user-inputs .add-new-user-inputs-content .update-new-logo-btn {
-  cursor: pointer;
-  border: 1px #e3e3e3 dashed;
+.login .login-form .input-content input[type=password] {
+  width: 180px;
   padding: 10px 15px;
-  width: 40%;
+  margin: 10px 0;
+  border: 1px solid grey;
 }
-.admin-users .add-new-user-content .add-new-user-inputs input[type=button] {
-  margin: 0 30px;
-  padding: 5px 30px;
+.login .login-form input[type=button] {
+  width: 150px;
+  margin: 10px 0;
+  padding: 10px 30px;
   border: 1px solid #39496a;
-  font-family: "Montserrat Alternates", sans-serif;
-  font-family: "Poiret One", cursive;
-  border-radius: 30px;
   background-color: #39496a;
+  border-radius: 30px;
   color: #fff;
-  cursor: pointer;
   transition: 1s;
+  cursor: pointer;
 }
-.admin-users .add-new-user-content .add-new-user-inputs input[type=button]:hover {
-  padding: 5px 30px;
+.login .login-form input[type=button]:hover {
+  width: 150px;
+  margin: 10px 0;
+  padding: 10px 30px;
   border: 1px solid #39496a;
   background-color: #fff;
+  border-radius: 30px;
   color: #39496a;
-  cursor: pointer;
 }
-.admin-users .add-new-user-content .add-new-user-inputs #progress-bar {
-  margin: 2rem 0;
+.login .login-form .success-login-message, .login .login-form .error-login-message {
   width: 40%;
-  display: none;
-}
-.admin-users .manage-all-users {
-  width: 80%;
-  margin-top: 2rem;
-}
-.admin-users .manage-all-users .manage-all-users-title {
-  width: 100%;
-  padding: 10px 0;
-  background-color: #39496a;
-  cursor: pointer;
+  height: 80px;
+  position: absolute;
+  top: 10vh;
+  right: 2%;
+  text-align: center;
+  -webkit-box-shadow: 0px 0px 10px 0px #e3e3e3;
+  -moz-box-shadow: 0px 0px 10px 0px #e3e3e3;
+  box-shadow: 0px 0px 10px 0px #e3e3e3;
+  border-radius: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.admin-users .manage-all-users .manage-all-users-title h3 {
+.login .login-form .success-login-message i, .login .login-form .error-login-message i {
+  font-size: 1.5rem;
   color: #fff;
-  font-family: "Montserrat Alternates", sans-serif;
-  font-family: "Poiret One", cursive;
+  margin: 5px 0;
 }
-.admin-users .manage-all-users .manage-all-users-content {
+.login .login-form .success-login-message p, .login .login-form .error-login-message p {
+  color: #fff;
+  font-size: 14px;
+}
+.login .login-form .success-login-message {
+  background-color: rgba(35, 203, 167, 0.8);
   display: none;
 }
-.admin-users .manage-all-users .manage-all-users-content table {
-  width: 100%;
-  margin: 2rem 0;
-  text-align: center;
-}
-.admin-users .manage-all-users .manage-all-users-content table thead {
-  width: 100%;
-  margin: 1rem 0;
-}
-.admin-users .manage-all-users .manage-all-users-content table thead th {
-  width: 33.3%;
-  color: #39496a;
-  padding: 1rem 0;
-  border-bottom: 1px solid #39496a;
-  text-align: center;
-  font-family: "Montserrat Alternates", sans-serif;
-  font-family: "Poiret One", cursive;
-}
-.admin-users .manage-all-users .manage-all-users-content table tbody {
-  width: 100%;
-  margin: 1rem 0;
-}
-.admin-users .manage-all-users .manage-all-users-content table tbody tr {
-  width: 100%;
-  margin: 1rem 0;
-}
-.admin-users .manage-all-users .manage-all-users-content table tbody tr td {
-  color: #444;
-  font-family: "Montserrat Alternates", sans-serif;
-  font-family: "Poiret One", cursive;
-  padding: 1rem 0;
-}
-.admin-users .manage-all-users .manage-all-users-content table tbody tr td .fa-trash-alt {
-  color: tomato;
-  cursor: pointer;
-  transition: 1s;
-}
-.admin-users .manage-all-users .manage-all-users-content table tbody tr td .fa-trash-alt:hover {
-  color: red;
+.login .login-form .error-login-message {
+  background-color: rgba(255, 99, 71, 0.8);
+  display: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
