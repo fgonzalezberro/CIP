@@ -1,6 +1,7 @@
 // Firebase Config
 import { firebaseConfig } from './firebase-config.js';
 import { ajaxRequest } from './ajax-request.js';
+import { loginValidation , loginUsers } from './login.js';
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
@@ -46,4 +47,14 @@ window.addEventListener('load', ()=>{
   loginNavBtn.addEventListener('click' , ()=>{
     ajaxRequest('../components/login.html');
   });
+
+  $(document).on('click' , '.close-main', function(){
+    $('.main').slideUp();
+  });
+
+  // Call login validation component
+  loginValidation();
+
+  // Login Users Function
+  loginUsers();
 });

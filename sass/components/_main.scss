@@ -1,0 +1,10 @@
+// Principal Container Styles open
+.main{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  display: none;
+  z-index: 100000000000000000000000000000000000;
+}

@@ -9,9 +9,9 @@ const ajaxRequest = (componentUrl) =>{
     success: (data) =>{
       setTimeout(() =>{
         $(".loading-section").slideUp();
-        $(".principal-container").slideDown();
-        $(".principal-container").css("display","block");
-        $(".principal-container").html(data);
+        $(".main").html('');
+        $(".main").css("display","block");
+        $(".main").html(data);
       }, 2000);
     }
   });
