@@ -2,6 +2,7 @@
 import { firebaseConfig } from './firebase-config.js';
 import { ajaxRequest } from './ajax-request.js';
 import { loginValidation , loginUsers } from './login.js';
+import { logOut } from './log-out.js';
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
@@ -57,4 +58,7 @@ window.addEventListener('load', ()=>{
 
   // Login Users Function
   loginUsers();
+
+  // Log Out Function
+  logOut();
 });

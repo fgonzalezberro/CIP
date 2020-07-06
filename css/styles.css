@@ -634,4 +634,57 @@ footer .social-networks i:hover {
   display: none;
 }
 
+.admin-dashboard {
+  width: 100%;
+  position: relative;
+}
+.admin-dashboard .log-out-message {
+  position: absolute;
+  top: 30vh;
+  left: 15%;
+  width: 70%;
+  padding: 20px 0;
+  border: 2px solid #39496a;
+  -webkit-box-shadow: 0px 0px 5px 0px #363636;
+  -moz-box-shadow: 0px 0px 5px 0px #363636;
+  box-shadow: 0px 0px 5px 0px #363636;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: none;
+}
+.admin-dashboard .log-out-message p {
+  color: #39496a;
+  font-family: "Open Sans Condensed", sans-serif;
+  letter-spacing: 1px;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+.admin-dashboard .log-out-message .confirm-log-out-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.admin-dashboard .log-out-message .confirm-log-out-buttons input[type=button] {
+  padding: 10px 30px;
+  border-radius: 50px;
+  background-color: #39496a;
+  border: 1px solid #39496a;
+  color: #fff;
+  transition: 1s;
+  margin: 0 20px;
+  cursor: pointer;
+}
+.admin-dashboard .log-out-message .confirm-log-out-buttons input[type=button]:hover {
+  padding: 10px 30px;
+  border-radius: 50px;
+  background-color: #fff;
+  border: 1px solid #39496a;
+  color: #39496a;
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=styles.css.map */
