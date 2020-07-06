@@ -498,6 +498,7 @@ footer .social-networks i:hover {
   height: 100vh;
   overflow-y: scroll;
   display: none;
+  background-color: #fff;
   z-index: 3136633892082024448;
 }
 
@@ -613,12 +614,12 @@ footer .social-networks i:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
 }
 .login .login-form .success-login-message i, .login .login-form .error-login-message i {
   font-size: 1.5rem;
   color: #fff;
-  margin: 5px 0;
+  margin: 0 5px;
 }
 .login .login-form .success-login-message p, .login .login-form .error-login-message p {
   color: #fff;
