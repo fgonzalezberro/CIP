@@ -3,6 +3,21 @@
   width: 100%;
   position: relative;
 
+  .admin-main{
+    width: 100%;
+    position: absolute;
+    top: 150px;
+    left: 0;
+    height: 70vh;
+    @include flex-column;
+
+
+    .admin-dashboard-welcome-message{
+      color: $dark-blue;
+      letter-spacing: 5px;
+    }
+  }
+
   .log-out-message{
     position: absolute;
     top: 30vh;

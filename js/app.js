@@ -3,6 +3,8 @@ import { firebaseConfig } from './firebase-config.js';
 import { ajaxRequest } from './ajax-request.js';
 import { loginValidation , loginUsers } from './login.js';
 import { logOut } from './log-out.js';
+import { requestAdminDashboardComponents } from './request-admin-dashboard-components.js';
+import { changePassword } from './change-password.js';
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
@@ -61,4 +63,14 @@ window.addEventListener('load', ()=>{
 
   // Log Out Function
   logOut();
+
+  // Call 'Change Password Component'
+  $(document).on('click' , '.nav-change-password' , function(){
+    requestAdminDashboardComponents('../components/change-password.html');
+  });
+
+  // Change Password Functionality
+  $(document).on('keyup' , '.new-pass' , function(){
+    changePassword();
+  });
 });

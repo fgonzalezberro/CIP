@@ -552,6 +552,7 @@ footer .social-networks i:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  border-radius: 30px 0 0 30px;
 }
 .login .login-form .input-content .input-icon i {
   font-size: 15px;
@@ -561,12 +562,14 @@ footer .social-networks i:hover {
   padding: 10px 15px;
   margin: 10px 0;
   border: 1px solid grey;
+  border-radius: 0 30px 30px 0;
 }
 .login .login-form .input-content input[type=password] {
   width: 180px;
   padding: 10px 15px;
   margin: 10px 0;
   border: 1px solid grey;
+  border-radius: 0 30px 30px 0;
 }
 .login .login-form .input-content .fa-check-circle {
   margin: 0 10px;
@@ -604,7 +607,7 @@ footer .social-networks i:hover {
   width: 40%;
   height: 80px;
   position: absolute;
-  top: 10vh;
+  top: 12vh;
   right: 2%;
   text-align: center;
   -webkit-box-shadow: 0px 0px 10px 0px #e3e3e3;
@@ -637,6 +640,21 @@ footer .social-networks i:hover {
 .admin-dashboard {
   width: 100%;
   position: relative;
+}
+.admin-dashboard .admin-main {
+  width: 100%;
+  position: absolute;
+  top: 150px;
+  left: 0;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.admin-dashboard .admin-main .admin-dashboard-welcome-message {
+  color: #39496a;
+  letter-spacing: 5px;
 }
 .admin-dashboard .log-out-message {
   position: absolute;
@@ -679,6 +697,85 @@ footer .social-networks i:hover {
   cursor: pointer;
 }
 .admin-dashboard .log-out-message .confirm-log-out-buttons input[type=button]:hover {
+  padding: 10px 30px;
+  border-radius: 50px;
+  background-color: #fff;
+  border: 1px solid #39496a;
+  color: #39496a;
+  cursor: pointer;
+}
+
+.change-password {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.change-password h2 {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #39496a;
+  margin-bottom: 5%;
+  text-shadow: 0px 0px 5px #969696;
+}
+.change-password .new-password-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 20px 0;
+}
+.change-password .new-password-content .new-password-logo {
+  width: 50px;
+  height: 30px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #39496a;
+  border: 1px solid #39496a;
+  border-radius: 30px 0 0 30px;
+}
+.change-password .new-password-content .new-password-logo i {
+  font-size: 1rem;
+  color: #fff;
+}
+.change-password .new-password-content input[type=password] {
+  padding: 5px;
+  height: 30px;
+  border: 1px solid #e3e3e3;
+  border-radius: 0 30px 30px 0;
+  font-size: 12px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.change-password .new-password-content .new-pass-check, .change-password .new-password-content .confirm-new-pass-check {
+  color: green;
+  display: none;
+  margin: 0 10px;
+}
+.change-password .new-password-content .new-pass-un-check, .change-password .new-password-content .confirm-new-pass-un-check {
+  color: tomato;
+  display: none;
+  margin: 0 10px;
+}
+.change-password input[type=button] {
+  padding: 10px 30px;
+  border-radius: 50px;
+  background-color: #39496a;
+  border: 1px solid #39496a;
+  color: #fff;
+  transition: 1s;
+  margin: 0 20px;
+  cursor: pointer;
+}
+.change-password input[type=button]:hover {
   padding: 10px 30px;
   border-radius: 50px;
   background-color: #fff;
