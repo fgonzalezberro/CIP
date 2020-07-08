@@ -4,7 +4,7 @@ import { ajaxRequest } from './ajax-request.js';
 import { loginValidation , loginUsers } from './login.js';
 import { logOut } from './log-out.js';
 import { requestAdminDashboardComponents } from './request-admin-dashboard-components.js';
-import { changePassword } from './change-password.js';
+import { changePasswordNewPassValidation , changePasswordConfirmPassValidation , changePassword } from './change-password.js';
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
@@ -69,8 +69,18 @@ window.addEventListener('load', ()=>{
     requestAdminDashboardComponents('../components/change-password.html');
   });
 
-  // Change Password Functionality
+  // Change Password (User validation)
   $(document).on('keyup' , '.new-pass' , function(){
+    changePasswordNewPassValidation();
+  });
+
+  // Change Password (Password validation)
+  $(document).on('keyup' , '.confirm-pass' , function(){
+    changePasswordConfirmPassValidation();
+  });
+
+  // Change Password
+  $(document).on('click' , '.confirm-new-pass-btn' , function(){
     changePassword();
   });
 });
