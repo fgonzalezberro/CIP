@@ -1,3 +1,4 @@
+// Import Ajax Request
 import { ajaxRequest } from './ajax-request.js';
 
 // Login Validation
@@ -121,7 +122,7 @@ const loginUsers = () =>{
          }, 3000);
 
          setTimeout(() =>{
-           if(uid === 'YEvESS87g5aEEKpY9xxZvmZE8xt2'){
+           if(uid === '27zKvJQsvIX8Qs9CyDS7TpV5VCA3'){
               ajaxRequest('../components/admin-dashboard.html');
             }else{
               alert('Normal User');
@@ -135,4 +136,5 @@ const loginUsers = () =>{
     });
 }
 
+// Export loginValidation & loginUsers function
 export { loginValidation , loginUsers };

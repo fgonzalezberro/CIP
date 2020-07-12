@@ -5,10 +5,14 @@ import { loginValidation , loginUsers } from './login.js';
 import { logOut } from './log-out.js';
 import { requestAdminDashboardComponents } from './request-admin-dashboard-components.js';
 import { changePasswordNewPassValidation , changePasswordConfirmPassValidation , changePassword } from './change-password.js';
+import { addNewUser , setUserImage } from './add-users.js';
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
+
+// Firebase Database Ref
+const storageRef = firebase.storage().ref();
 
 // Charge Document
 window.addEventListener('load', ()=>{
@@ -82,5 +86,19 @@ window.addEventListener('load', ()=>{
   // Change Password
   $(document).on('click' , '.confirm-new-pass-btn' , function(){
     changePassword();
+  });
+
+  // Call 'Add Users Component'
+  $(document).on('click' , '.nav-add-user' , function(){
+    requestAdminDashboardComponents('../components/add-users.html');
+  });
+
+  // Add user
+  $(document).on('click' , '.new-user-logo-link' , function(){
+    setUserImage();
+  });
+
+  $(document).on('click' , '.up-new-user-btn' , function(){
+    addNewUser();
   });
 });
