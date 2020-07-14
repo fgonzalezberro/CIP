@@ -1,0 +1,80 @@
+// Generate Certificate Styles Open
+.generate-certifications-section{
+  width: 100%;
+  @include flex-column;
+
+  .upload-certifiction{
+    margin-bottom: 3rem;
+
+    h2{
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      color: $dark-blue;
+      margin-bottom: 5%;
+      text-shadow: 0px 0px 5px rgba(150, 150, 150, 1);
+    }
+
+    .upload-certification-content{
+      border-radius: 30px;
+      border: 1px dashed $dark-blue;
+      padding: 5px 20px;
+      height: 30px;
+      transition: 1s;
+      @include flex-row;
+      cursor: pointer;
+
+      p{
+        color: $dark-blue;
+      }
+    }
+
+    .upload-certification-content:hover{
+      border: 1px dashed grey;
+      transition: 1s;
+      @include flex-row;
+      cursor: pointer;
+
+      p{
+        color: grey;
+      }
+    }
+
+    .select-certificate-to-upload{
+      display: none;
+    }
+  }
+
+  .assign-certifiction-to-user{
+    @include flex-column;
+
+    h2{
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      color: $dark-blue;
+      margin-bottom: 5%;
+      text-shadow: 0px 0px 5px rgba(150, 150, 150, 1);
+    }
+
+    input[type = 'button']{
+      width: auto;
+      margin: 10px 0;
+      padding: 10px 30px;
+      border: 1px solid $dark-blue;
+      background-color: $dark-blue;
+      border-radius: 30px;
+      color: #fff;
+      transition: 1s;
+      cursor: pointer;
+    }
+
+    input[type = 'button']:hover{
+      width: auto;
+      margin: 10px 0;
+      padding: 10px 30px;
+      border: 1px solid $dark-blue;
+      background-color: #fff;
+      border-radius: 30px;
+      color: $dark-blue;
+    }
+  }
+}

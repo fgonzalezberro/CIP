@@ -101,4 +101,9 @@ window.addEventListener('load', ()=>{
   $(document).on('click' , '.up-new-user-btn' , function(){
     addNewUser();
   });
+
+  // Call 'Generate certificate'
+  $(document).on('click' , '.nav-generate-certificate' , function(){
+    requestAdminDashboardComponents('../components/generate-certificate.html');
+  });
 });
