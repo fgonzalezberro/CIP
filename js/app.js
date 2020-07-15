@@ -6,7 +6,7 @@ import { logOut } from './log-out.js';
 import { requestAdminDashboardComponents } from './request-admin-dashboard-components.js';
 import { changePasswordNewPassValidation , changePasswordConfirmPassValidation , changePassword } from './change-password.js';
 import { addNewUser , setUserImage } from './add-users.js';
-import { addGenerateCertificationsAnimation , removeGenerateCertificationsAnimation , chargeSelectUsers , clickSelectCertFileInput } from './generate-certifications.js';
+import { addGenerateCertificationsAnimation , removeGenerateCertificationsAnimation , chargeSelectUsers , clickSelectCertFileInput , uploadCertificatesOnDB , inputFileChange , chargeSelectCertificates } from './generate-certifications.js';
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
@@ -124,5 +124,26 @@ window.addEventListener('load', ()=>{
   // Click Add Certificate input file
   $(document).on('click' , '.upload-certification-content' , function(){
     clickSelectCertFileInput();
+  });
+
+  // Set Certifications into DB
+  $(document).on('click' , '.upload-certificate' , function(){
+    uploadCertificatesOnDB();
+  });
+
+  // Detect change on 'Add Cert' input file
+  inputFileChange();
+
+  // Charge Users and Certificates on Select Dropbox's
+  $(document).on('click' , '.acept-cert-message' , function(){
+    // Charge Users in Select Dropbox
+    chargeSelectUsers();
+
+    // Charge Certificates in Select Dropbox
+    chargeSelectCertificates();
+
+    // Hide Certificate Message
+    const certificateMessage = document.querySelector('.certificate-message');
+    $(certificateMessage).slideUp();
   });
 });

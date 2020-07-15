@@ -666,7 +666,7 @@ footer .social-networks i:hover {
   position: absolute;
   top: 30vh;
   left: 15%;
-  width: 70%;
+  width: 60%;
   padding: 20px 0;
   border: 2px solid #39496a;
   background-color: #fff;
@@ -1046,6 +1046,48 @@ footer .social-networks i:hover {
   background-color: #fff;
   border-radius: 30px;
   color: #39496a;
+}
+.generate-certifications-section .certificate-message {
+  position: absolute;
+  top: 30vh;
+  left: 20%;
+  width: 60%;
+  padding: 20px 0;
+  border: 2px solid #39496a;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 5px 0px #363636;
+  -moz-box-shadow: 0px 0px 5px 0px #363636;
+  box-shadow: 0px 0px 5px 0px #363636;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.generate-certifications-section .certificate-message p {
+  color: #39496a;
+  font-family: "Open Sans Condensed", sans-serif;
+  letter-spacing: 1px;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+.generate-certifications-section .certificate-message input[type=button] {
+  padding: 10px 30px;
+  border-radius: 50px;
+  background-color: #39496a;
+  border: 1px solid #39496a;
+  color: #fff;
+  transition: 1s;
+  margin: 0 20px;
+  cursor: pointer;
+}
+.generate-certifications-section .certificate-message input[type=button]:hover {
+  padding: 10px 30px;
+  border-radius: 50px;
+  background-color: #fff;
+  border: 1px solid #39496a;
+  color: #39496a;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=styles.css.map */
