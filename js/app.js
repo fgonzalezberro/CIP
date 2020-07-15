@@ -6,7 +6,7 @@ import { logOut } from './log-out.js';
 import { requestAdminDashboardComponents } from './request-admin-dashboard-components.js';
 import { changePasswordNewPassValidation , changePasswordConfirmPassValidation , changePassword } from './change-password.js';
 import { addNewUser , setUserImage } from './add-users.js';
-import { addGenerateCertificationsAnimation , removeGenerateCertificationsAnimation , chargeSelectUsers } from './generate-certifications.js';
+import { addGenerateCertificationsAnimation , removeGenerateCertificationsAnimation , chargeSelectUsers , clickSelectCertFileInput } from './generate-certifications.js';
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
@@ -119,5 +119,10 @@ window.addEventListener('load', ()=>{
 
   $(document).on('click' , '.select-user' , function(){
     chargeSelectUsers();
+  });
+
+  // Click Add Certificate input file
+  $(document).on('click' , '.upload-certification-content' , function(){
+    clickSelectCertFileInput();
   });
 });

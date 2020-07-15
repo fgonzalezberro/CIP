@@ -36,4 +36,10 @@ const chargeSelectUsers = () =>{
   });
 }
 
-export{ addGenerateCertificationsAnimation , removeGenerateCertificationsAnimation , chargeSelectUsers };
+// Charge certifications files in Database
+const clickSelectCertFileInput = () =>{
+  const trueFileButton = document.querySelector('.select-certificate-to-upload');
+  trueFileButton.click();
+}
+
+export{ addGenerateCertificationsAnimation , removeGenerateCertificationsAnimation , chargeSelectUsers , clickSelectCertFileInput};
