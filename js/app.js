@@ -6,10 +6,12 @@ import { logOut } from './log-out.js';
 import { requestAdminDashboardComponents } from './request-admin-dashboard-components.js';
 import { changePasswordNewPassValidation , changePasswordConfirmPassValidation , changePassword } from './change-password.js';
 import { addNewUser , setUserImage } from './add-users.js';
+import { addGenerateCertificationsAnimation , removeGenerateCertificationsAnimation , chargeSelectUsers } from './generate-certifications.js';
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
+
 
 // Firebase Database Ref
 const storageRef = firebase.storage().ref();
@@ -105,5 +107,17 @@ window.addEventListener('load', ()=>{
   // Call 'Generate certificate'
   $(document).on('click' , '.nav-generate-certificate' , function(){
     requestAdminDashboardComponents('../components/generate-certificate.html');
+  });
+
+  $(document).on('mouseover' , '.upload-certification-content' , function(){
+    addGenerateCertificationsAnimation();
+  });
+
+  $(document).on('mouseleave' , '.upload-certification-content' , function(){
+    removeGenerateCertificationsAnimation();
+  });
+
+  $(document).on('click' , '.select-user' , function(){
+    chargeSelectUsers();
   });
 });

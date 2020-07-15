@@ -941,6 +941,7 @@ footer .social-networks i:hover {
 
 .generate-certifications-section {
   width: 100%;
+  height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -948,6 +949,10 @@ footer .social-networks i:hover {
 }
 .generate-certifications-section .upload-certifiction {
   margin-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .generate-certifications-section .upload-certifiction h2 {
   text-transform: uppercase;
@@ -957,8 +962,8 @@ footer .social-networks i:hover {
   text-shadow: 0px 0px 5px #969696;
 }
 .generate-certifications-section .upload-certifiction .upload-certification-content {
-  border-radius: 30px;
-  border: 1px dashed #39496a;
+  margin: 20px 0;
+  border-bottom: 1px dashed #39496a;
   padding: 5px 20px;
   height: 30px;
   transition: 1s;
@@ -968,11 +973,15 @@ footer .social-networks i:hover {
   flex-direction: row;
   cursor: pointer;
 }
+.generate-certifications-section .upload-certifiction .upload-certification-content i {
+  color: green;
+  margin-right: 5px;
+}
 .generate-certifications-section .upload-certifiction .upload-certification-content p {
   color: #39496a;
 }
 .generate-certifications-section .upload-certifiction .upload-certification-content:hover {
-  border: 1px dashed grey;
+  border-bottom: 1px dashed grey;
   transition: 1s;
   display: flex;
   justify-content: center;
@@ -986,6 +995,26 @@ footer .social-networks i:hover {
 .generate-certifications-section .upload-certifiction .select-certificate-to-upload {
   display: none;
 }
+.generate-certifications-section .upload-certifiction input[type=button] {
+  width: auto;
+  margin: 10px 0;
+  padding: 10px 30px;
+  border: 1px solid #39496a;
+  background-color: #39496a;
+  border-radius: 30px;
+  color: #fff;
+  transition: 1s;
+  cursor: pointer;
+}
+.generate-certifications-section .upload-certifiction input[type=button]:hover {
+  width: auto;
+  margin: 10px 0;
+  padding: 10px 30px;
+  border: 1px solid #39496a;
+  background-color: #fff;
+  border-radius: 30px;
+  color: #39496a;
+}
 .generate-certifications-section .assign-certifiction-to-user {
   display: flex;
   justify-content: center;
@@ -998,6 +1027,17 @@ footer .social-networks i:hover {
   color: #39496a;
   margin-bottom: 5%;
   text-shadow: 0px 0px 5px #969696;
+}
+.generate-certifications-section .assign-certifiction-to-user select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: #39496a 1px solid;
+  width: 50%;
+  padding: 10px 20px;
+  color: #485761;
+  margin: 1rem 0;
 }
 .generate-certifications-section .assign-certifiction-to-user input[type=button] {
   width: auto;

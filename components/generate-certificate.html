@@ -4,19 +4,25 @@
   <div class="upload-certifiction">
     <h2>Subir certificados a la plataforma</h2>
     <div class='upload-certification-content'>
-      <i class="fa fa-file-text" aria-hidden="true"></i>
+      <i class="fas fa-folder-plus"></i>
       <p>Seleccionar certificado</p>
     </div>
     <input class='select-certificate-to-upload' type="file">
+    <input type="button" value="Subir certificación">
   </div>
   <!-- Upload Certificate Close -->
 
   <!-- Assign Certificate Section Open -->
   <div class="assign-certifiction-to-user">
     <h2>Asignar certificado a usuario</h2>
-    <select class="select-user" placeholder='Seleccióna el usuario'></select>
-    <select class="select-certificate"></select>
-    <input type="button" value='Asignar certificado'>
+    <select class="select-user" placeholder='Seleccióna el usuario'>
+      <option value="">Selecciona un usuario</option>
+    </select>
+
+    <select class="select-certificate" placeholder='Seleccióna certificación'>
+      <option value="">Selecciona una certificación</option>
+    </select>
+    <input type="button" value='Cargar certificación'>
   </div>
   <!-- Assign Certificate Section Close -->
 </section>
