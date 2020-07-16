@@ -117,10 +117,6 @@ window.addEventListener('load', ()=>{
     removeGenerateCertificationsAnimation();
   });
 
-  $(document).on('click' , '.select-user' , function(){
-    chargeSelectUsers();
-  });
-
   // Click Add Certificate input file
   $(document).on('click' , '.upload-certification-content' , function(){
     clickSelectCertFileInput();

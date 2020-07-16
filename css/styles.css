@@ -525,7 +525,6 @@ footer .social-networks i:hover {
   font-size: 20px;
   color: #39496a;
   letter-spacing: 5px;
-  text-transform: uppercase;
   cursor: pointer;
   transition: 1s;
 }
@@ -589,6 +588,17 @@ footer .social-networks i:hover {
   font-size: 1rem;
   display: none;
 }
+.login .login-form .select-user-role {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: grey;
+  width: 180px;
+  padding: 10px 0;
+  margin: 2rem 0;
+  border-bottom: 2px solid #39496a;
+}
 .login .login-form input[type=button] {
   width: 150px;
   margin: 10px 0;
@@ -609,7 +619,7 @@ footer .social-networks i:hover {
   border-radius: 30px;
   color: #39496a;
 }
-.login .login-form .success-login-message, .login .login-form .error-login-message {
+.login .login-form .success-login-message, .login .login-form .error-login-message, .login .login-form .error-login-message-2 {
   width: 40%;
   height: 80px;
   position: absolute;
@@ -625,12 +635,12 @@ footer .social-networks i:hover {
   align-items: center;
   flex-direction: row;
 }
-.login .login-form .success-login-message i, .login .login-form .error-login-message i {
+.login .login-form .success-login-message i, .login .login-form .error-login-message i, .login .login-form .error-login-message-2 i {
   font-size: 1.5rem;
   color: #fff;
   margin: 0 5px;
 }
-.login .login-form .success-login-message p, .login .login-form .error-login-message p {
+.login .login-form .success-login-message p, .login .login-form .error-login-message p, .login .login-form .error-login-message-2 p {
   color: #fff;
   font-size: 14px;
 }
@@ -638,7 +648,7 @@ footer .social-networks i:hover {
   background-color: rgba(35, 203, 167, 0.8);
   display: none;
 }
-.login .login-form .error-login-message {
+.login .login-form .error-login-message, .login .login-form .error-login-message-2 {
   background-color: rgba(255, 99, 71, 0.8);
   display: none;
 }

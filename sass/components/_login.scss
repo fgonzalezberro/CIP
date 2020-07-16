@@ -13,7 +13,6 @@
     font-size: 20px;
     color: $dark-blue;
     letter-spacing: 5px;
-    text-transform: uppercase;
     cursor: pointer;
     transition: 1s;
   }
@@ -78,6 +77,15 @@
       }
     }
 
+    .select-user-role{
+      @include flex-column;
+      color: grey;
+      width: 180px;
+      padding: 10px 0;
+      margin: 2rem 0;
+      border-bottom: 2px solid $dark-blue;
+    }
+
     input[type = 'button']{
       width: 150px;
       margin: 10px 0;
@@ -100,7 +108,7 @@
       color: $dark-blue;
     }
 
-    .success-login-message , .error-login-message{
+    .success-login-message , .error-login-message , .error-login-message-2{
       width: 40%;
       height: 80px;
       position: absolute;
@@ -130,7 +138,7 @@
       display: none;
     }
 
-    .error-login-message{
+    .error-login-message , .error-login-message-2{
       background-color: rgba(255,99,71, 0.8);
       display: none;
     }

@@ -105,3 +105,32 @@
     color: $dark-blue;
   }
 }
+
+// -------- Media Querys Open  -------- //
+
+// Phone Only
+@media screen and (max-width: 599px){
+
+}
+
+// Tablet Portait Up
+@media screen and (min-width: 600px){
+
+}
+
+// Tablet lanscape up
+@media screen and (min-width: 900px){
+
+}
+
+// Desktop portait up
+@media screen and (min-width: 1200px){
+
+}
+
+// Big Desktop portait up
+@media screen and (min-width: 1800px){
+
+}
+
+// -------- Media Querys Close  -------- //
