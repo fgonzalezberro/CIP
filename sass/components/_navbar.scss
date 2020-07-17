@@ -11,13 +11,39 @@ header{
     position: fixed;
 
     .logo-icon{
-      font-size: 50px;
+      font-size: 40px;
       position: absolute;
-      top: 25px;
+      top: 30px;
       left: 100px;
       cursor: pointer;
       color: $dark-blue;
       letter-spacing: 8px;
+    }
+
+    .mobile-nav-btn{
+      color: $dark-blue;
+      border: 2px solid $dark-blue;
+      background-color: #fff;
+      transition: 1s;
+      cursor: pointer;
+      position: absolute;
+      font-size: 30px;
+      padding: 10px;
+      right: 70px;
+      top: 25px;
+      display: none;
+    }
+
+    .mobile-nav-btn:hover{
+      color: #fff;
+      border: 2px solid $dark-blue;
+      background-color: $dark-blue;
+      transition: 1s;
+      cursor: pointer;
+      font-size: 30px;
+      padding: 10px;
+      right: 70px;
+      top: 25px;
     }
 
     ul{
@@ -59,3 +85,93 @@ header{
     }
   }
 }
+
+// -------- Media Querys Open  -------- //
+
+// Phone Only
+@media screen and (max-width: 599px){
+  header{
+    nav{
+      .logo-icon{
+        font-size: 30px;
+        position: absolute;
+        top: 35px;
+        left: 50px;
+        cursor: pointer;
+        color: $dark-blue;
+        letter-spacing: 8px;
+      }
+    }
+  }
+}
+
+// Tablet Portait Up
+@media screen and (min-width: 600px){
+
+}
+
+// Tablet lanscape down
+@media screen and (max-width: 1100px){
+  header{
+    nav{
+      .mobile-nav-btn{
+        color: $dark-blue;
+        border: 2px solid $dark-blue;
+        border-radius: 5px;
+        background-color: #fff;
+        transition: 1s;
+        cursor: pointer;
+        position: absolute;
+        font-size: 30px;
+        padding: 10px 20px;
+        right: 70px;
+        top: 25px;
+        display: block;
+      }
+
+      .mobile-nav-btn:hover{
+        color: #fff;
+        border: 2px solid $dark-blue;
+        border-radius: 5px;
+        background-color: $dark-blue;
+        transition: 1s;
+        cursor: pointer;
+        font-size: 30px;
+        padding: 10px 20px;
+        right: 70px;
+        top: 25px;
+        display: block;
+      }
+
+      ul{
+        display: none;
+        top: 100px;
+        width: 100%;
+        right: 0;
+        left: 0;
+        background-color: #fff;
+        color: $dark-blue;
+        padding: 0 0 2rem 0;
+        text-align: center;
+
+        li{
+          border-bottom: 1px solid #e3e3e3;
+          padding: 10px 0;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+// Desktop portait up
+@media screen and (min-width: 1200px){
+
+}
+
+// Big Desktop portait up
+@media screen and (min-width: 1800px){
+
+}
+
+// -------- Media Querys Close  -------- //

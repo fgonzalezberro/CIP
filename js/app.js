@@ -49,6 +49,24 @@ window.addEventListener('load', ()=>{
     document.querySelector('.slick-next').click();
   });
 
+  // Mobile button functionality
+  const mobileBtn = document.querySelector('.mobile-nav-btn');
+  const ul = document.querySelector('.ul-component');
+
+  mobileBtn.addEventListener('click' , () =>{
+    if($(window).width() < 1100){
+      $(ul).slideToggle(300);
+      $(ul).toggleClass('flex');
+    }
+  });
+
+  $(ul).children('a').click(() =>{
+    if($(window).width() < 1100){
+      $(ul).slideToggle(300);
+      $(ul).toggleClass('flex');
+    }
+  });
+
   // Capture login button element
   const loginNavBtn = document.getElementById('login-nav-btn');
 

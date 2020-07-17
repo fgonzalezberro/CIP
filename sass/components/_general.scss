@@ -24,7 +24,6 @@ a{
 // Variables
 $dark-blue : #39496a;
 
-
 // Mixin´s
 @mixin flex-column{
   display: flex;
@@ -38,6 +37,14 @@ $dark-blue : #39496a;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+}
+
+// Flex class
+.flex{
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 // Close Button Styles
