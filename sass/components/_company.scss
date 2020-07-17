@@ -50,3 +50,25 @@
     }
   }
 }
+
+// Media Query Open //
+@media screen and (max-width: 992px){
+  .company{
+
+    h2{
+      font-size: 22px;
+    }
+
+    p{
+      font-size: 16px;
+    }
+
+    .company-features{
+      @include flex-column;
+
+      div{
+        width: 100%;
+      }
+    }
+  }
+}

@@ -273,6 +273,23 @@ header nav ul .login-nav-btn:hover {
   font-family: "Poiret One", cursive;
 }
 
+@media screen and (max-width: 992px) {
+  .company h2 {
+    font-size: 22px;
+  }
+  .company p {
+    font-size: 16px;
+  }
+  .company .company-features {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .company .company-features div {
+    width: 100%;
+  }
+}
 .our-services {
   width: 100%;
   padding: 10% 0 0 0;
