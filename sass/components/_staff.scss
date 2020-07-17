@@ -57,25 +57,27 @@
 }
 
 // Media Querys Open //
-.staff{
+@media screen and (max-width: 1100px){
+  .staff{
 
-  h2{
-    font-size: 22px;
-  }
+    h2{
+      font-size: 22px;
+    }
 
-  p{
-    font-size: 16px;
-  }
+    p{
+      font-size: 16px;
+    }
 
-  .staff-content{
-    @include flex-column;
+    .staff-content{
+      @include flex-column;
 
-    .professional{
-      width: 100%;
-      padding: 0 5%;
+      .professional{
+        width: 100%;
+        padding: 0 5%;
 
-      h3{
-        font-size: 20px;
+        h3{
+          font-size: 20px;
+        }
       }
     }
   }

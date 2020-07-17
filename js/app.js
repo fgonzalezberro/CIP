@@ -34,7 +34,16 @@ window.addEventListener('load', ()=>{
     slidesToScroll: 2,
     speed: 400,
     autoplay: true,
-    slidesToShow: 3
+    slidesToShow: 3,
+    responsive: [
+      {
+        breakpoint: 1100,
+        settings: {
+          slidesToScroll: 1,
+          slidesToShow: 1
+        }
+      }
+    ]
   });
 
   // Carousel Arrows
