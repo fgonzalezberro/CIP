@@ -389,6 +389,12 @@ header nav ul .login-nav-btn:hover {
     width: 100%;
     text-align: center;
   }
+  .our-services .services .content i {
+    font-size: 3rem;
+  }
+  .our-services .services .content h3 {
+    font-size: 14px;
+  }
   .our-services .services .content-1 {
     order: 1;
   }
@@ -607,6 +613,25 @@ footer .social-networks i:hover {
   flex-direction: column;
 }
 
+@media screen and (max-width: 992px) {
+  .whatsapp-contact {
+    background-color: green;
+    color: #fff;
+    width: 200px;
+    height: auto;
+    padding: 10px 15px;
+    border-radius: 50px;
+    position: fixed;
+    bottom: 50px;
+    right: 5px;
+    font-size: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
 .our-clients {
   width: 100%;
   padding: 10% 0 0 0;
