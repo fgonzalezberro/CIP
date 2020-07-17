@@ -558,6 +558,38 @@ footer .social-networks i:hover {
   color: tomato;
 }
 
+@media screen and (max-width: 740px) {
+  footer {
+    width: 100%;
+    height: auto;
+    padding: 5% 0;
+    background-color: #363636;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  footer p {
+    color: #fff;
+    font-size: 13px;
+    font-family: "Poiret One", cursive;
+    margin-bottom: 1rem;
+  }
+  footer p .fa-map-pin {
+    color: tomato;
+  }
+  footer p i {
+    margin: 0 10px;
+  }
+  footer .social-networks i {
+    transition: 1.5s;
+    cursor: pointer;
+  }
+  footer .social-networks i:hover {
+    color: tomato;
+  }
+}
 .whatsapp-contact {
   background-color: green;
   color: #fff;

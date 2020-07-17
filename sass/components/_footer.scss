@@ -34,3 +34,42 @@ footer{
     }
   }
 }
+
+// Media Querys Open //
+@media screen and (max-width: 740px){
+  footer{
+    width: 100%;
+    height: auto;
+    padding: 5% 0;
+    background-color: #363636;
+    text-align: center;
+    @include flex-column;
+
+    p{
+      color: #fff;
+      font-size: 13px;
+      font-family: 'Poiret One', cursive;
+      margin-bottom: 1rem;
+
+      .fa-map-pin{
+        color: tomato;
+      }
+
+      i{
+        margin: 0 10px;
+      }
+    }
+
+    .social-networks{
+
+      i{
+        transition: 1.5s;
+        cursor: pointer;
+      }
+
+      i:hover{
+        color: tomato;
+      }
+    }
+  }
+}
