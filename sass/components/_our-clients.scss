@@ -64,3 +64,36 @@
     }
   }
 }
+
+// Media screen open //
+@media screen and (max-width: 992px){
+  .our-clients{
+
+    h2{
+      font-size: 22px;
+    }
+
+    p{
+      font-size: 16px;
+    }
+
+    .carousel-content{
+      width: 100%;
+      @include flex-row;
+
+      i{
+        font-size: 1rem;
+        margin: 0 10px;
+        padding: 5px;
+        background-color: $dark-blue;
+        color: #fff;
+        transition: 1s;
+        cursor: pointer;
+      }
+
+      i:hover{
+        background-color: #e3e3e3;
+      }
+    }
+  }
+}

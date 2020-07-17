@@ -39,6 +39,10 @@ window.addEventListener('load', ()=>{
       {
         breakpoint: 1100,
         settings: {
+          centerMode: false,
+          centerPadding: '0px',
+          dots: false,
+          arrows: true,
           slidesToScroll: 1,
           slidesToShow: 1
         }

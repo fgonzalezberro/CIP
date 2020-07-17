@@ -473,6 +473,7 @@ header nav ul .login-nav-btn:hover {
   .staff .staff-content .professional {
     width: 100%;
     padding: 0 5%;
+    margin-bottom: 1.5rem;
   }
   .staff .staff-content .professional h3 {
     font-size: 20px;
@@ -616,6 +617,33 @@ footer .social-networks i:hover {
   filter: grayscale(100%);
 }
 
+@media screen and (max-width: 992px) {
+  .our-clients h2 {
+    font-size: 22px;
+  }
+  .our-clients p {
+    font-size: 16px;
+  }
+  .our-clients .carousel-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  .our-clients .carousel-content i {
+    font-size: 1rem;
+    margin: 0 10px;
+    padding: 5px;
+    background-color: #39496a;
+    color: #fff;
+    transition: 1s;
+    cursor: pointer;
+  }
+  .our-clients .carousel-content i:hover {
+    background-color: #e3e3e3;
+  }
+}
 .loading-section {
   position: absolute;
   top: 0;
