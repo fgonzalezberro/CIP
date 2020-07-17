@@ -60,7 +60,7 @@
           <a href="#staff"><li>Staff</li></a>
           <a href="#our-clients"><li>Clientes</li></a>
           <a href="#location"><li>Ubicación</li></a>
-          <a onclick="window.location.href='https://api.whatsapp.com/send?phone=598099360796&text=%20Hola!%20me%20interesan%20su%20servicios%20.%20'"><li>Contacto</li></a>
+          <a href="#form-contact"><li>Contacto</li></a>
           <a href="#" id="login-nav-btn"><li class="login-nav-btn">Zona Clientes <i class="fas fa-sign-in-alt"></i></li></a>
         </ul>
         <!-- Section´s lists close -->
@@ -252,7 +252,7 @@
     <!-- Location Section Close -->
 
     <!-- Form contact Section Open -->
-    <section class='form-contact'>
+    <section id='form-contact' class='form-contact'>
       <h2>Contactenos</h2>
       <p>Puede hacernos cualquier consulta a través del formulario de contacto</p>
 
@@ -265,12 +265,12 @@
 
         <div class='form-content'>
           <i class="fas fa-briefcase"></i>
-          <input id="affair-form" type="text" placeholder="Asunto" name="affair" required>
+          <input id="affair-form" type="text" placeholder="Asunto (Requerido Obligatoriamente)" name="affair" required>
           <p class='required-field'>*</p>
         </div>
 
         <div class='form-content'>
-          <textarea id="message-form" rows="10" cols="50" placeholder="Ingrese su mensaje" name="message" required></textarea>
+          <textarea id="message-form" rows="10" cols="50" placeholder="Ingrese su mensaje (Requerido obligatoriamente)" name="message" required></textarea>
         </div>
 
         <input id="button-form" class="wow animated bounceInLeft" type="submit" value="Envíar">

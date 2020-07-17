@@ -209,6 +209,17 @@ header nav ul .login-nav-btn:hover {
   margin-top: 10px;
 }
 
+@media screen and (max-width: 992px) {
+  .cover h1 {
+    font-size: 30px;
+  }
+  .cover h2 {
+    font-size: 20px;
+  }
+  .cover p {
+    font-size: 16px;
+  }
+}
 .company {
   width: 100%;
   padding: 10% 0 0 0;
@@ -611,7 +622,7 @@ footer .social-networks i:hover {
   text-align: center;
   color: grey;
   font-family: "Poiret One", cursive;
-  margin-bottom: 5%;
+  margin-bottom: 3%;
 }
 .form-contact form {
   display: flex;
@@ -655,7 +666,7 @@ footer .social-networks i:hover {
 }
 .form-contact form .form-content textarea {
   width: 40%;
-  height: 200px;
+  height: 100px;
   padding: 20px;
   color: #343434;
   border: 1px solid #39496a;
@@ -665,6 +676,7 @@ footer .social-networks i:hover {
 }
 .form-contact form .form-content .required-field {
   color: tomato;
+  font-size: 1.5rem;
 }
 .form-contact form input[type=submit] {
   min-width: 200px;
