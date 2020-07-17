@@ -457,6 +457,26 @@ header nav ul .login-nav-btn:hover {
   margin-bottom: 3%;
 }
 
+.staff h2 {
+  font-size: 22px;
+}
+.staff p {
+  font-size: 16px;
+}
+.staff .staff-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.staff .staff-content .professional {
+  width: 100%;
+  padding: 0 5%;
+}
+.staff .staff-content .professional h3 {
+  font-size: 20px;
+}
+
 .location {
   width: 100%;
   padding: 10% 0 5% 0;

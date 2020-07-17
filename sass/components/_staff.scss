@@ -55,3 +55,28 @@
     }
   }
 }
+
+// Media Querys Open //
+.staff{
+
+  h2{
+    font-size: 22px;
+  }
+
+  p{
+    font-size: 16px;
+  }
+
+  .staff-content{
+    @include flex-column;
+
+    .professional{
+      width: 100%;
+      padding: 0 5%;
+
+      h3{
+        font-size: 20px;
+      }
+    }
+  }
+}
