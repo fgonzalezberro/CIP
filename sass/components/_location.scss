@@ -21,3 +21,31 @@
     height: auto;
   }
 }
+
+// Media Querys Open //
+@media screen and (max-width: 992px){
+  .location{
+    width: 100%;
+    padding: 10% 0 5% 0;
+    text-align: center;
+    @include flex-column;
+
+    h2{
+      color: $dark-blue;
+      font-size: 22px;
+    }
+
+    p{
+      text-align: center;
+      color: grey;
+      font-family: 'Poiret One', cursive;
+      margin-bottom: 2%;
+      font-size: 16px;
+    }
+
+    img{
+      width: 80%;
+      height: auto;
+    }
+  }
+}

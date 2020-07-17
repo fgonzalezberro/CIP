@@ -472,7 +472,6 @@ header nav ul .login-nav-btn:hover {
   }
   .staff .staff-content .professional {
     width: 100%;
-    padding: 0 5%;
     margin-bottom: 1.5rem;
   }
   .staff .staff-content .professional h3 {
@@ -502,6 +501,32 @@ header nav ul .login-nav-btn:hover {
   height: auto;
 }
 
+@media screen and (max-width: 992px) {
+  .location {
+    width: 100%;
+    padding: 10% 0 5% 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .location h2 {
+    color: #39496a;
+    font-size: 22px;
+  }
+  .location p {
+    text-align: center;
+    color: grey;
+    font-family: "Poiret One", cursive;
+    margin-bottom: 2%;
+    font-size: 16px;
+  }
+  .location img {
+    width: 80%;
+    height: auto;
+  }
+}
 footer {
   width: 100%;
   height: auto;
