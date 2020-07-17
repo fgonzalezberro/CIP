@@ -1,0 +1,85 @@
+// Contact Form Styles Open
+.form-contact{
+  padding: 10% 0;
+  width: 100%;
+  @include flex-column;
+
+  h2{
+    color: $dark-blue;
+  }
+
+  p{
+    text-align: center;
+    color: grey;
+    font-family: 'Poiret One', cursive;
+    margin-bottom: 5%;
+  }
+
+
+  form{
+    @include flex-column;
+    width: 100%;
+
+    .form-content{
+      @include flex-row;
+      width: 100%;
+
+      i{
+        font-size: 2rem;
+        color: $dark-blue;
+      }
+
+      input[type = 'email']{
+        width: 40%;
+        padding: 10px 20px;
+        @include flex-column;
+        border-bottom: 1px solid $dark-blue;
+        margin: 1rem;
+      }
+
+      input[type = 'text']{
+        width: 40%;
+        padding: 10px 20px;
+        @include flex-column;
+        border-bottom: 1px solid $dark-blue;
+        margin: 1rem;
+      }
+
+      textarea{
+        width: 40%;
+        height: 200px;
+        padding: 20px;
+        color: #343434;
+        border: 1px solid $dark-blue;
+        margin: 1rem 0;
+        border-radius: 20px;
+      }
+
+      .required-field{
+        color: tomato;
+      }
+    }
+
+    input[type = 'submit']{
+      min-width: 200px;
+      margin: 10px 0;
+      padding: 10px 30px;
+      border: 1px solid $dark-blue;
+      background-color: $dark-blue;
+      border-radius: 30px;
+      color: #fff;
+      transition: 1s;
+      cursor: pointer;
+    }
+
+    input[type = 'submit']:hover{
+      min-width: 200px;
+      margin: 10px 0;
+      padding: 10px 30px;
+      border: 1px solid $dark-blue;
+      background-color: #fff;
+      border-radius: 30px;
+      color: $dark-blue;
+    }
+  }
+}

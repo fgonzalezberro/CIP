@@ -313,7 +313,7 @@ header nav ul .login-nav-btn:hover {
 
 .location {
   width: 100%;
-  padding: 10% 0;
+  padding: 10% 0 0 0;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -506,6 +506,94 @@ footer .social-networks i:hover {
   display: none;
   background-color: #fff;
   z-index: 3136633892082024448;
+}
+
+.form-contact {
+  padding: 10% 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.form-contact h2 {
+  color: #39496a;
+}
+.form-contact p {
+  text-align: center;
+  color: grey;
+  font-family: "Poiret One", cursive;
+  margin-bottom: 5%;
+}
+.form-contact form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.form-contact form .form-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+}
+.form-contact form .form-content i {
+  font-size: 2rem;
+  color: #39496a;
+}
+.form-contact form .form-content input[type=email] {
+  width: 40%;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: 1px solid #39496a;
+  margin: 1rem;
+}
+.form-contact form .form-content input[type=text] {
+  width: 40%;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: 1px solid #39496a;
+  margin: 1rem;
+}
+.form-contact form .form-content textarea {
+  width: 40%;
+  height: 200px;
+  padding: 20px;
+  color: #343434;
+  border: 1px solid #39496a;
+  margin: 1rem 0;
+  border-radius: 20px;
+}
+.form-contact form .form-content .required-field {
+  color: tomato;
+}
+.form-contact form input[type=submit] {
+  min-width: 200px;
+  margin: 10px 0;
+  padding: 10px 30px;
+  border: 1px solid #39496a;
+  background-color: #39496a;
+  border-radius: 30px;
+  color: #fff;
+  transition: 1s;
+  cursor: pointer;
+}
+.form-contact form input[type=submit]:hover {
+  min-width: 200px;
+  margin: 10px 0;
+  padding: 10px 30px;
+  border: 1px solid #39496a;
+  background-color: #fff;
+  border-radius: 30px;
+  color: #39496a;
 }
 
 .login {

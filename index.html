@@ -246,6 +246,33 @@
     </div>
     <!-- Location Section Close -->
 
+    <!-- Form contact Section Open -->
+    <section class='form-contact'>
+      <h2>Contactenos</h2>
+      <p>Puede hacernos cualquier consulta a través del formulario de contacto</p>
+
+      <form action='send-form.php' action="POST">
+        <div class='form-content'>
+          <i class="fas fa-at"></i>
+          <input id="email-form" type="email" placeholder="E-mail (Requerido Obligatoriamente)" name="email" required>
+          <p class='required-field'>*</p>
+        </div>
+
+        <div class='form-content'>
+          <i class="fas fa-briefcase"></i>
+          <input id="affair-form" type="text" placeholder="Asunto" name="affair" required>
+          <p class='required-field'>*</p>
+        </div>
+
+        <div class='form-content'>
+          <textarea id="message-form" rows="10" cols="50" placeholder="Ingrese su mensaje" name="message" required></textarea>
+        </div>
+
+        <input id="button-form" class="wow animated bounceInLeft" type="submit" value="Envíar">
+      </form>
+    </section>
+    <!-- Form contact Section Close -->
+
     <!-- Whatsapp Section Open -->
     <section class="whatsapp-contact" onclick="window.location.href='https://api.whatsapp.com/send?phone=598099360796&text=%20Hola!%20me%20interesan%20su%20servicios%20.%20'" class="whatsapp-contact animated pulse infinite">
       <p> Contactanos por Whatsapp <i class="fab fa-whatsapp"></i></p>
