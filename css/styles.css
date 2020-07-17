@@ -371,6 +371,37 @@ header nav ul .login-nav-btn:hover {
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/farm-image.jpg");
 }
 
+@media screen and (max-width: 992px) {
+  .our-services h2 {
+    font-size: 22px;
+  }
+  .our-services p {
+    font-size: 16px;
+  }
+  .our-services .services {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .our-services .services .content, .our-services .services .image {
+    height: 300px;
+    width: 100%;
+    text-align: center;
+  }
+  .our-services .services .content-1 {
+    order: 1;
+  }
+  .our-services .services .content-2 {
+    order: 3;
+  }
+  .our-services .services .image-1 {
+    order: 2;
+  }
+  .our-services .services .image-2 {
+    order: 4;
+  }
+}
 .staff {
   width: 100%;
   padding: 10% 0 0 0;

@@ -85,3 +85,43 @@
     }
   }
 }
+
+// Media Query Open //
+@media screen and (max-width: 992px){
+  .our-services{
+
+    h2{
+      font-size: 22px;
+    }
+
+    p{
+      font-size: 16px;
+    }
+
+    .services{
+      @include flex-column;
+
+      .content , .image{
+        height: 300px;
+        width: 100%;
+        text-align: center;
+      }
+
+      .content-1{
+        order: 1;
+      }
+
+      .content-2{
+        order: 3;
+      }
+
+      .image-1{
+        order: 2
+      }
+
+      .image-2{
+        order: 4
+      }
+    }
+  }
+}
