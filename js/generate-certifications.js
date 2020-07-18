@@ -67,7 +67,22 @@ const clickSelectCertFileInput = () =>{
 // Detect when the input file changes
 const inputFileChange = () =>{
   $(document).on('change' , '.select-certificate-to-upload' , function(){
-    alert('Selecciono un archivo correctamente');
+    // Success Messagge
+    const successMessage = document.querySelector('.success-select-document');
+
+    // Show Success Message
+    successMessage.classList.remove('fadeOutLeft');
+    successMessage.classList.add('wow' , 'animated' , 'fadeInLeft' , 'slow');
+    successMessage.style.display = 'flex';
+
+    // Hide Success Message
+    setTimeout(() =>{
+      successMessage.classList.add('fadeOutLeft');
+
+      setTimeout(() =>{
+        successMessage.style.display = 'none';
+      }, 1000);
+    }, 3000);
   });
 }
 
@@ -75,6 +90,56 @@ const inputFileChange = () =>{
 const uploadCertificatesOnDB = () =>{
   const inputFile = document.querySelector('.select-certificate-to-upload');
   const fileToUpload = inputFile.files[0];
+
+  if(inputFile.value !== ''){
+    // Create an user
+    const storageRef = firebase.storage().ref();
+    const uploadTask = storageRef.child('certifications/' + fileToUpload.name).put(fileToUpload);
+
+    // Upload storage handler
+    uploadTask.on('state_changed', function(snapshot){
+      var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+      console.log('Upload is ' + progress + '% done');
+
+      switch (snapshot.state) {
+        case firebase.storage.TaskState.PAUSED: // or 'paused'
+          console.log('Upload is paused');
+          break;
+        case firebase.storage.TaskState.RUNNING: // or 'running'
+          console.log('Upload is running');
+          break;
+      }
+        // Show progress bar
+       $("#progress-bar").show();
+       document.querySelector("#progress-bar").value = progress;
+
+      }, function(error) {
+          $("#progress-bar").hide();
+      }, function() {
+      uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL) {
+        $("#progress-bar").hide();
+
+        // Call create node in data base function
+        createNodeInDataBase(fileToUpload.name , downloadURL);
+      });
+    });
+  }else{
+    const errorMessage = document.querySelector('.error-update-document');
+
+    // Show Error Message
+    errorMessage.classList.remove('fadeOutLeft');
+    errorMessage.classList.add('wow' , 'animated' , 'fadeInLeft' , 'slower');
+    errorMessage.style.display = 'flex';
+
+    // Hide Error message
+    setTimeout(() =>{
+      errorMessage.classList.add('fadeOutLeft');
+
+      setTimeout(() => {
+        errorMessage.style.display = 'none';
+      },1000);
+    }, 3000);
+  }
 
   // Set data in DataBase
   const createNodeInDataBase = (fileName , fileURL) =>{
@@ -92,40 +157,22 @@ const uploadCertificatesOnDB = () =>{
     });
 
     // Success Messagge
-    alert("Archivo cargado correctamente");
+    const successMessage = document.querySelector('.success-charge-document');
+
+    // Show Success Message
+    successMessage.classList.remove('fadeOutLeft');
+    successMessage.classList.add('wow' , 'animated' , 'fadeInLeft' , 'slow');
+    successMessage.style.display = 'flex';
+
+    // Hide Success Message
+    setTimeout(() =>{
+      successMessage.classList.add('fadeOutLeft');
+
+      setTimeout(() =>{
+        successMessage.style.display = 'none';
+      }, 1000);
+    }, 3000);
   }
-
-  // Create an user
-  const storageRef = firebase.storage().ref();
-  const uploadTask = storageRef.child('certifications/' + fileToUpload.name).put(fileToUpload);
-
-  // Upload storage handler
-  uploadTask.on('state_changed', function(snapshot){
-    var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-    console.log('Upload is ' + progress + '% done');
-
-    switch (snapshot.state) {
-      case firebase.storage.TaskState.PAUSED: // or 'paused'
-        console.log('Upload is paused');
-        break;
-      case firebase.storage.TaskState.RUNNING: // or 'running'
-        console.log('Upload is running');
-        break;
-    }
-      // Show progress bar
-     $("#progress-bar").show();
-     document.querySelector("#progress-bar").value = progress;
-
-    }, function(error) {
-        $("#progress-bar").hide();
-    }, function() {
-    uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL) {
-      $("#progress-bar").hide();
-
-      // Call create node in data base function
-      createNodeInDataBase(fileToUpload.name , downloadURL);
-    });
-  });
 }
 
 // Assign certificate to a user

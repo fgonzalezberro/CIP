@@ -1647,7 +1647,7 @@ footer .social-networks i:hover {
   color: #39496a;
   cursor: pointer;
 }
-.generate-certifications-section .success-assign-cert-message {
+.generate-certifications-section .success-assign-cert-message, .generate-certifications-section .success-charge-document, .generate-certifications-section .success-select-document {
   width: 40%;
   height: 80px;
   position: absolute;
@@ -1663,6 +1663,25 @@ footer .social-networks i:hover {
   align-items: center;
   flex-direction: row;
   background-color: rgba(35, 203, 167, 0.8);
+  color: #fff;
+  display: none;
+}
+.generate-certifications-section .error-update-document {
+  width: 40%;
+  height: 80px;
+  position: absolute;
+  top: 1vh;
+  right: 2%;
+  text-align: center;
+  -webkit-box-shadow: 0px 0px 10px 0px #e3e3e3;
+  -moz-box-shadow: 0px 0px 10px 0px #e3e3e3;
+  box-shadow: 0px 0px 10px 0px #e3e3e3;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: rgba(255, 99, 71, 0.8);
   color: #fff;
   display: none;
 }
