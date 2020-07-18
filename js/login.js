@@ -156,6 +156,7 @@ const loginUsers = () =>{
             // Save data into Locas Storage
             localStorage.setItem('temporalUser' ,  loginUserName.value);
             localStorage.setItem('temporalUserPass' ,  loginPassword.value);
+            localStorage.setItem('userKey' , key);
 
             // Hide Success Message
             setTimeout(() =>{

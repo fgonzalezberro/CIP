@@ -11,6 +11,8 @@ import { addNewUser , setUserImage } from './add-users.js';
 import { addGenerateCertificationsAnimation , removeGenerateCertificationsAnimation , chargeSelectUsers , clickSelectCertFileInput , uploadCertificatesOnDB , inputFileChange , chargeSelectCertificates , assignCertificate } from './generate-certifications.js';
 import { mobileNavToggle , hideAdminDashNavMobile } from './admin-dashboard-mobile-nav.js';
 import { normalUserLogOut } from './normal-user-log-out.js';
+import { requestUserDashboard } from './request-user-dashboard-components.js';
+import { chargeCertificationsTable } from './charge-certifications-table.js';
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
@@ -196,5 +198,18 @@ window.addEventListener('load', ()=>{
   // Assign ceritifacte to user
   $(document).on('click' , '.assign-cert-btn', function(){
     assignCertificate();
+  });
+
+  // Charge certification table
+  $(document).on('click' , '.nav-users-cert-btn' , function(){
+    requestUserDashboard('../components/user-certifications.html');
+
+  });
+
+  // Charge certificates in user table
+  $(document).on('click' , '.acept-cert-table-message' , function(){
+    chargeCertificationsTable();
+    const certificateMessage = document.querySelector('.charge-certifications-in-table');
+    $(certificateMessage).slideUp();
   });
 });

@@ -1785,4 +1785,94 @@ footer .social-networks i:hover {
   display: none;
 }
 
+.user-certification {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.user-certification h2 {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #39496a;
+  margin-bottom: 5%;
+  text-shadow: 0px 0px 5px #969696;
+}
+.user-certification .charge-certifications-in-table {
+  position: absolute;
+  top: 30vh;
+  left: 20%;
+  width: 60%;
+  padding: 20px 0;
+  border: 2px solid #39496a;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 5px 0px #363636;
+  -moz-box-shadow: 0px 0px 5px 0px #363636;
+  box-shadow: 0px 0px 5px 0px #363636;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.user-certification .charge-certifications-in-table p {
+  color: #39496a;
+  font-family: "Open Sans Condensed", sans-serif;
+  letter-spacing: 1px;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+.user-certification .charge-certifications-in-table input[type=button] {
+  padding: 10px 30px;
+  border-radius: 50px;
+  background-color: #39496a;
+  border: 1px solid #39496a;
+  color: #fff;
+  transition: 1s;
+  margin: 0 20px;
+  cursor: pointer;
+}
+.user-certification .charge-certifications-in-table input[type=button]:hover {
+  padding: 10px 30px;
+  border-radius: 50px;
+  background-color: #fff;
+  border: 1px solid #39496a;
+  color: #39496a;
+  cursor: pointer;
+}
+.user-certification table {
+  width: 80%;
+  border: 3px;
+  border: 2px solid #39496a;
+  padding: 0;
+  margin: 0;
+}
+.user-certification table tr {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.user-certification table tr th {
+  width: 50%;
+  text-align: center;
+  color: #39496a;
+  padding: 10px 0;
+  font-weight: bold;
+  font-size: 20px;
+  border-left: 1px solid #39496a;
+  background-color: #fcfcfc;
+}
+.user-certification table tr td {
+  width: 50%;
+  text-align: center;
+  color: grey;
+  padding: 10px 0;
+  border-left: 1px solid #39496a;
+}
+.user-certification table tr td a {
+  color: green;
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=styles.css.map */
