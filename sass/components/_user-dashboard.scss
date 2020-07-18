@@ -1,0 +1,20 @@
+// User main Styles Open
+.users-dashboard{
+  width: 100%;
+  position: relative;
+
+  .user-main{
+    width: 100%;
+    position: absolute;
+    top: 150px;
+    left: 0;
+    height: 70vh;
+    @include flex-column;
+
+
+    .admin-dashboard-welcome-message{
+      color: $dark-blue;
+      letter-spacing: 5px;
+    }
+  }
+}

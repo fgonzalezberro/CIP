@@ -1,5 +1,7 @@
 // Firebase Config
 import { firebaseConfig } from './firebase-config.js';
+
+// Other external Scripts
 import { ajaxRequest } from './ajax-request.js';
 import { loginValidation , loginUsers } from './login.js';
 import { logOut } from './log-out.js';
@@ -8,6 +10,7 @@ import { changePasswordNewPassValidation , changePasswordConfirmPassValidation ,
 import { addNewUser , setUserImage } from './add-users.js';
 import { addGenerateCertificationsAnimation , removeGenerateCertificationsAnimation , chargeSelectUsers , clickSelectCertFileInput , uploadCertificatesOnDB , inputFileChange , chargeSelectCertificates , assignCertificate } from './generate-certifications.js';
 import { mobileNavToggle , hideAdminDashNavMobile } from './admin-dashboard-mobile-nav.js';
+import { normalUserLogOut } from './normal-user-log-out.js';
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
@@ -68,7 +71,7 @@ window.addEventListener('load', ()=>{
   const ul = document.querySelector('.ul-component');
 
   mobileBtn.addEventListener('click' , () =>{
-    if($(window).width() < 1100){
+    if($(window).width() < 1320){
       $(ul).slideToggle(300);
       $(ul).toggleClass('flex');
     }
@@ -110,6 +113,12 @@ window.addEventListener('load', ()=>{
 
   // Log Out Function
   logOut();
+
+  // Normal User Log out
+  $(document).on('click' , '.nav-user-log-out' , function(){
+    normalUserLogOut();
+    ajaxRequest('../components/login.html');
+  });
 
   // Call 'Change Password Component'
   $(document).on('click' , '.nav-change-password' , function(){

@@ -111,7 +111,7 @@ header{
 }
 
 // Tablet lanscape down
-@media screen and (max-width: 1100px){
+@media screen and (max-width: 1320px){
   header{
     nav{
       .mobile-nav-btn , .mobile-nav-btn-admin{
@@ -153,6 +153,7 @@ header{
         color: $dark-blue;
         padding: 0 0 2rem 0;
         text-align: center;
+        border-bottom: 2px solid $dark-blue;
 
         li{
           border-bottom: 1px solid #e3e3e3;
@@ -165,7 +166,7 @@ header{
 }
 
 // Desktop portait up
-@media screen and (min-width: 1200px){
+@media screen and (min-width: 1321px){
   header{
     nav{
       width: 100%;

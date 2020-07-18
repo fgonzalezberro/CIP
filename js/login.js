@@ -169,6 +169,10 @@ const loginUsers = () =>{
                 successMessage.style.display = 'none';
               }, 1000);
             }, 3000);
+
+            setTimeout(() =>{
+              ajaxRequest('../components/users-dashboard.html');
+            },3000);
           }
         }
       });
@@ -188,7 +192,7 @@ const loginUsers = () =>{
             },1000);
           }, 3000);
         }
-      }, 1000);
+      }, 4000);
     }else{
       errorMessage2.classList.remove('fadeOutLeft');
       errorMessage2.classList.add('wow' , 'animated' , 'fadeInLeft' , 'slower');

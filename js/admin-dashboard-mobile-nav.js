@@ -2,7 +2,7 @@
 const mobileNavToggle = () =>{
   const mobileComponent = document.querySelector('.ul-component-admin');
 
-  if($(window).width() < 1100){
+  if($(window).width() <= 1320){
     $(mobileComponent).slideToggle(300);
     $(mobileComponent).toggleClass('flex');
   }
