@@ -64,7 +64,7 @@ header nav .logo-icon {
   color: #39496a;
   letter-spacing: 8px;
 }
-header nav .mobile-nav-btn {
+header nav .mobile-nav-btn, header nav .mobile-nav-btn-admin {
   color: #39496a;
   border: 2px solid #39496a;
   background-color: #fff;
@@ -77,7 +77,7 @@ header nav .mobile-nav-btn {
   top: 25px;
   display: none;
 }
-header nav .mobile-nav-btn:hover {
+header nav .mobile-nav-btn:hover, header nav .mobile-nav-btn-admin:hover {
   color: #fff;
   border: 2px solid #39496a;
   background-color: #39496a;
@@ -134,7 +134,7 @@ header nav ul .login-nav-btn:hover {
   }
 }
 @media screen and (max-width: 1100px) {
-  header nav .mobile-nav-btn {
+  header nav .mobile-nav-btn, header nav .mobile-nav-btn-admin {
     color: #39496a;
     border: 2px solid #39496a;
     border-radius: 5px;
@@ -148,7 +148,7 @@ header nav ul .login-nav-btn:hover {
     top: 25px;
     display: block;
   }
-  header nav .mobile-nav-btn:hover {
+  header nav .mobile-nav-btn:hover, header nav .mobile-nav-btn-admin:hover {
     color: #fff;
     border: 2px solid #39496a;
     border-radius: 5px;
@@ -176,6 +176,84 @@ header nav ul .login-nav-btn:hover {
     border-bottom: 1px solid #e3e3e3;
     padding: 10px 0;
     text-align: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  header nav {
+    width: 100%;
+    height: 100px;
+    z-index: 1590897978359414784;
+    -webkit-box-shadow: 0px 1px 6px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 1px 6px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 1px 6px 1px rgba(0, 0, 0, 0.75);
+    background-color: #fff;
+    position: fixed;
+  }
+  header nav .logo-icon {
+    font-size: 40px;
+    position: absolute;
+    top: 30px;
+    left: 100px;
+    cursor: pointer;
+    color: #39496a;
+    letter-spacing: 8px;
+  }
+  header nav .mobile-nav-btn, header nav .mobile-nav-btn-admin {
+    color: #39496a;
+    border: 2px solid #39496a;
+    background-color: #fff;
+    transition: 1s;
+    cursor: pointer;
+    position: absolute;
+    font-size: 30px;
+    padding: 10px;
+    right: 70px;
+    top: 25px;
+    display: none;
+  }
+  header nav .mobile-nav-btn:hover, header nav .mobile-nav-btn-admin:hover {
+    color: #fff;
+    border: 2px solid #39496a;
+    background-color: #39496a;
+    transition: 1s;
+    cursor: pointer;
+    font-size: 30px;
+    padding: 10px;
+    right: 70px;
+    top: 25px;
+  }
+  header nav ul {
+    position: absolute;
+    top: 40px;
+    right: 50px;
+    display: flex;
+  }
+  header nav ul li {
+    width: auto;
+    margin: 0 10px;
+    color: #39496a;
+    font-size: 17px;
+    padding: 5px 10px;
+    font-family: "Open Sans Condensed", sans-serif;
+    letter-spacing: 1px;
+  }
+  header nav ul li:hover {
+    color: #e3e3e3;
+  }
+  header nav ul .login-nav-btn {
+    background-color: #39496a;
+    border-radius: 20px;
+    box-sizing: content-box;
+    padding: 5px 20px;
+    color: #fff;
+    transition: 1s;
+    font-size: 17px;
+    border: 1px solid #39496a;
+  }
+  header nav ul .login-nav-btn:hover {
+    background-color: #fff;
+    color: #39496a;
+    border: 1px solid #39496a;
   }
 }
 .cover {

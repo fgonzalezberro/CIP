@@ -7,6 +7,7 @@ const requestAdminDashboardComponents = (componentUrl) =>{
     },
 
     success: (data) =>{
+
       setTimeout(() =>{
         $(".loading-section").slideUp();
         $(".admin-main").html('');

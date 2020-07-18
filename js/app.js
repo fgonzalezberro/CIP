@@ -7,6 +7,7 @@ import { requestAdminDashboardComponents } from './request-admin-dashboard-compo
 import { changePasswordNewPassValidation , changePasswordConfirmPassValidation , changePassword } from './change-password.js';
 import { addNewUser , setUserImage } from './add-users.js';
 import { addGenerateCertificationsAnimation , removeGenerateCertificationsAnimation , chargeSelectUsers , clickSelectCertFileInput , uploadCertificatesOnDB , inputFileChange , chargeSelectCertificates , assignCertificate } from './generate-certifications.js';
+import { mobileNavToggle , hideAdminDashNavMobile } from './admin-dashboard-mobile-nav.js';
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
@@ -78,6 +79,15 @@ window.addEventListener('load', ()=>{
       $(ul).slideToggle(300);
       $(ul).toggleClass('flex');
     }
+  });
+
+  // Mobile admin nav button functionality
+  $(document).on('click' , '.mobile-nav-btn-admin' , function(){
+    mobileNavToggle();
+  });
+
+  $(document).on('click' , '.mobile-admin-dash' , function(){
+    hideAdminDashNavMobile();
   });
 
   // Capture login button element
