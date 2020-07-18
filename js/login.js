@@ -135,7 +135,60 @@ const loginUsers = () =>{
          }
        });
     }else if(selectUserRole.value !== '' && selectUserRole.value === 'client'){
-      alert('Usuario normal');
+      const dataBaseUsersRef = firebase.database().ref('/users');
+
+      dataBaseUsersRef.once("value", function(snapshot){
+        let showData = snapshot.val();
+
+        // Iterate Database and select info to display in courses Content
+        for(var key in showData){
+          if(loginUserName.value === showData[key].userEmail && loginPassword.value === showData[key].userPass){
+
+            // Show Success Message
+            successMessage.classList.remove('fadeOutLeft');
+            successMessage.classList.add('wow' , 'animated' , 'fadeInLeft' , 'slow');
+            successMessage.style.display = 'flex';
+            userCheck.style.display = 'none';
+            userUnCheck.style.display = 'none';
+            passCheck.style.display = 'none';
+            passUnCheck.style.display = 'none';
+
+            // Save data into Locas Storage
+            localStorage.setItem('temporalUser' ,  loginUserName.value);
+            localStorage.setItem('temporalUserPass' ,  loginPassword.value);
+
+            // Hide Success Message
+            setTimeout(() =>{
+              successMessage.classList.add('fadeOutLeft');
+
+              // Clean input fields
+              loginUserName.value = '';
+              loginPassword.value = '';
+
+              setTimeout(() =>{
+                successMessage.style.display = 'none';
+              }, 1000);
+            }, 3000);
+          }
+        }
+      });
+
+      setTimeout(() =>{
+        if(localStorage.getItem('temporalUser') === null){
+          errorMessage.classList.remove('fadeOutLeft');
+          errorMessage.classList.add('wow' , 'animated' , 'fadeInLeft' , 'slower');
+          errorMessage.style.display = 'flex';
+
+          // Hide Error message
+          setTimeout(() =>{
+            errorMessage.classList.add('fadeOutLeft');
+
+            setTimeout(() => {
+              errorMessage.style.display = 'none';
+            },1000);
+          }, 3000);
+        }
+      }, 1000);
     }else{
       errorMessage2.classList.remove('fadeOutLeft');
       errorMessage2.classList.add('wow' , 'animated' , 'fadeInLeft' , 'slower');
