@@ -6,7 +6,7 @@ import { logOut } from './log-out.js';
 import { requestAdminDashboardComponents } from './request-admin-dashboard-components.js';
 import { changePasswordNewPassValidation , changePasswordConfirmPassValidation , changePassword } from './change-password.js';
 import { addNewUser , setUserImage } from './add-users.js';
-import { addGenerateCertificationsAnimation , removeGenerateCertificationsAnimation , chargeSelectUsers , clickSelectCertFileInput , uploadCertificatesOnDB , inputFileChange , chargeSelectCertificates } from './generate-certifications.js';
+import { addGenerateCertificationsAnimation , removeGenerateCertificationsAnimation , chargeSelectUsers , clickSelectCertFileInput , uploadCertificatesOnDB , inputFileChange , chargeSelectCertificates , assignCertificate } from './generate-certifications.js';
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
@@ -172,5 +172,10 @@ window.addEventListener('load', ()=>{
     // Hide Certificate Message
     const certificateMessage = document.querySelector('.certificate-message');
     $(certificateMessage).slideUp();
+  });
+
+  // Assign ceritifacte to user
+  $(document).on('click' , '.assign-cert-btn', function(){
+    assignCertificate();
   });
 });

@@ -19,14 +19,14 @@ const chargeSelectUsers = () =>{
   const selectUser = document.querySelector('.select-user');
   const dataBaseUsersRef = firebase.database().ref('/users');
 
-  dataBaseUsersRef.on("value", function(snapshot){
+  dataBaseUsersRef.once("value", function(snapshot){
     let showData = snapshot.val();
     let usersToParseIntoOption = '';
 
     // Iterate Database and select info to display in courses Content
     for(var key in showData){
       usersToParseIntoOption += `
-                                  <option>${showData[key].userName}</option>
+                                  <option value="${key}">${showData[key].userName}</option>
                                 `;
     }
 
@@ -40,14 +40,14 @@ const chargeSelectCertificates = () =>{
   const selectCertificate = document.querySelector('.select-certificate');
   const dataBaseUsersRef = firebase.database().ref('/certifications');
 
-  dataBaseUsersRef.on("value", function(snapshot){
+  dataBaseUsersRef.once("value", function(snapshot){
     let showData = snapshot.val();
     let certToParseIntoOption = '';
 
     // Iterate Database and select info to display in courses Content
     for(var key in showData){
       certToParseIntoOption += `
-                                  <option>${showData[key].fileName}</option>
+                                  <option value="${key}">${showData[key].fileName}</option>
                                 `;
     }
 
@@ -128,4 +128,56 @@ const uploadCertificatesOnDB = () =>{
   });
 }
 
-export{ addGenerateCertificationsAnimation , removeGenerateCertificationsAnimation , chargeSelectUsers , clickSelectCertFileInput , uploadCertificatesOnDB , inputFileChange , chargeSelectCertificates };
+// Assign certificate to a user
+const assignCertificate = () =>{
+  const storageRef = firebase.database().ref();
+  const dataBaseUsersRef  = firebase.database().ref('/users');
+  const dataBaseCertRef = firebase.database().ref('/certifications');
+  const userSelect = document.querySelector('.select-user');
+  const certificateSelect = document.querySelector('.select-certificate');
+
+  dataBaseUsersRef.once("value", function(snapshot){
+    let showData = snapshot.val();
+
+    for(var key in showData){
+      const selectedUser = userSelect.value;
+
+      if(selectedUser === key){
+        const trueKey = key;
+        dataBaseCertRef.once("value", function(snapshot){
+          let certData = snapshot.val();
+
+          for(var certKey in certData){
+            const certSelected = certificateSelect.value;
+
+            if(certSelected === certKey){
+              const usCertDataBaseRef = firebase.database().ref(`/users/${trueKey}/certifications`);
+              usCertDataBaseRef.push({
+                certName: certData[certKey].fileName,
+                certURL: certData[certKey].fileURL
+              });
+
+              const successMessage = document.querySelector('.success-assign-cert-message');
+
+              // Show Success Message
+              successMessage.classList.remove('fadeOutLeft');
+              successMessage.classList.add('wow' , 'animated' , 'fadeInLeft' , 'slow');
+              successMessage.style.display = 'flex';
+
+              // Hide Success Message
+              setTimeout(() =>{
+                successMessage.classList.add('fadeOutLeft');
+
+                setTimeout(() =>{
+                  successMessage.style.display = 'none';
+                }, 1000);
+              }, 3000);
+            }
+          }
+        });
+      }
+    }
+  });
+}
+
+export{ addGenerateCertificationsAnimation , removeGenerateCertificationsAnimation , chargeSelectUsers , clickSelectCertFileInput , uploadCertificatesOnDB , inputFileChange , chargeSelectCertificates, assignCertificate };
