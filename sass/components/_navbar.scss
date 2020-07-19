@@ -83,6 +83,18 @@ header{
         border: 1px solid $dark-blue;
       }
     }
+
+    .current-user-image{
+      top: 30px;
+      left: 300px;
+      position: absolute;
+      cursor: pointer;
+
+      img{
+        width: 100px;
+        height: auto;
+      }
+    }
   }
 }
 

@@ -121,6 +121,16 @@ header nav ul .login-nav-btn:hover {
   color: #39496a;
   border: 1px solid #39496a;
 }
+header nav .current-user-image {
+  top: 30px;
+  left: 300px;
+  position: absolute;
+  cursor: pointer;
+}
+header nav .current-user-image img {
+  width: 100px;
+  height: auto;
+}
 
 @media screen and (max-width: 599px) {
   header nav .logo-icon {
@@ -273,7 +283,7 @@ header nav ul .login-nav-btn:hover {
 .cover h1 {
   color: #fff;
   letter-spacing: 10px;
-  font-size: 60px;
+  font-size: 75px;
 }
 .cover h2 {
   color: #fff;
@@ -284,7 +294,7 @@ header nav ul .login-nav-btn:hover {
 .cover p {
   color: #fff;
   letter-spacing: 5px;
-  font-size: 15px;
+  font-size: 20px;
   font-family: "Open Sans Condensed", sans-serif;
   margin-top: 10px;
 }
@@ -335,12 +345,14 @@ header nav ul .login-nav-btn:hover {
 }
 .company h2 {
   color: #39496a;
+  font-size: 30px;
 }
 .company p {
   text-align: center;
   color: grey;
   font-family: "Poiret One", cursive;
   margin-bottom: 2%;
+  font-size: 17px;
 }
 .company .company-info {
   padding: 3% 20%;
@@ -350,6 +362,11 @@ header nav ul .login-nav-btn:hover {
 }
 .company .company-info p {
   margin-bottom: 2%;
+  color: #39496a;
+}
+.company .company-info p strong {
+  color: #363636;
+  font-size: 20px;
 }
 .company .company-features {
   padding: 3% 10%;
@@ -375,6 +392,7 @@ header nav ul .login-nav-btn:hover {
   padding: 3% 20%;
   text-align: center;
   color: grey;
+  font-size: 19px;
   font-family: "Poiret One", cursive;
 }
 
@@ -405,12 +423,14 @@ header nav ul .login-nav-btn:hover {
 }
 .our-services h2 {
   color: #39496a;
+  font-size: 30px;
 }
 .our-services p {
   text-align: center;
   color: grey;
   font-family: "Poiret One", cursive;
   margin-bottom: 5%;
+  font-size: 22px;
 }
 .our-services .services {
   display: flex;
@@ -446,12 +466,12 @@ header nav ul .login-nav-btn:hover {
   margin-bottom: 5%;
 }
 .our-services .services .content h4 {
-  font-size: 16px;
+  font-size: 20px;
   margin-bottom: 3%;
   color: #39496a;
 }
 .our-services .services .content p {
-  font-size: 14px;
+  font-size: 19px;
   color: #39496a;
 }
 .our-services .services .image {
@@ -523,12 +543,14 @@ header nav ul .login-nav-btn:hover {
 }
 .staff h2 {
   color: #39496a;
+  font-size: 30px;
 }
 .staff p {
   text-align: center;
   color: grey;
   font-family: "Poiret One", cursive;
   margin-bottom: 2%;
+  font-size: 22px;
 }
 .staff .staff-content {
   display: flex;
@@ -564,7 +586,7 @@ header nav ul .login-nav-btn:hover {
 .staff .staff-content .professional p {
   color: grey;
   font-family: "Poiret One", cursive;
-  font-size: 15px;
+  font-size: 19px;
   margin-bottom: 3%;
 }
 
@@ -600,12 +622,14 @@ header nav ul .login-nav-btn:hover {
 }
 .location h2 {
   color: #39496a;
+  font-size: 30px;
 }
 .location p {
   text-align: center;
   color: grey;
   font-family: "Poiret One", cursive;
   margin-bottom: 2%;
+  font-size: 17px;
 }
 .location img {
   width: 40%;
@@ -631,7 +655,7 @@ header nav ul .login-nav-btn:hover {
     color: grey;
     font-family: "Poiret One", cursive;
     margin-bottom: 2%;
-    font-size: 16px;
+    font-size: 19px;
   }
   .location img {
     width: 80%;
@@ -716,6 +740,9 @@ footer .social-networks i:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  font-size: 20px;
+  font-family: "Open Sans Condensed", sans-serif;
+  letter-spacing: 3px;
 }
 
 @media screen and (max-width: 992px) {
@@ -747,12 +774,14 @@ footer .social-networks i:hover {
 }
 .our-clients h2 {
   color: #39496a;
+  font-size: 30px;
 }
 .our-clients p {
   text-align: center;
   color: grey;
   font-family: "Poiret One", cursive;
   margin-bottom: 2%;
+  font-size: 22px;
 }
 .our-clients .carousel-content {
   width: 100%;
@@ -801,7 +830,6 @@ footer .social-networks i:hover {
 .our-clients .carousel-content .our-clients-carousel div img {
   height: auto;
   width: 150px;
-  filter: grayscale(100%);
 }
 
 @media screen and (max-width: 992px) {
@@ -901,12 +929,14 @@ footer .social-networks i:hover {
 }
 .form-contact h2 {
   color: #39496a;
+  font-size: 30px;
 }
 .form-contact p {
   text-align: center;
   color: grey;
   font-family: "Poiret One", cursive;
   margin-bottom: 3%;
+  font-size: 22px;
 }
 .form-contact form {
   display: flex;

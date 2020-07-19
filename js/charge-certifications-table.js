@@ -1,8 +1,8 @@
 // Charge certifications table
 const chargeCertificationsTable = () =>{
   const actualUser = localStorage.getItem('userKey');
-  console.log(actualUser);
   const dataBaseUsersRef = firebase.database().ref(`/users/${actualUser}/certifications`);
+  const actualUserDatabase = firebase.database().ref(`/users/${actualUser}`);
 
   dataBaseUsersRef.once("value", function(snapshot){
     let showData = snapshot.val();
@@ -23,4 +23,26 @@ const chargeCertificationsTable = () =>{
   });
 }
 
-export { chargeCertificationsTable };
+// Set the user data on user dashboard
+const setUserStyles = () =>{
+  const actualUser = localStorage.getItem('userKey');
+  const dataBaseUsersRef = firebase.database().ref(`/users/${actualUser}/certifications`);
+  const actualUserDatabase = firebase.database().ref(`/users/${actualUser}`);
+  const currentUserNav = document.querySelector('.current-user-nav');
+
+  actualUserDatabase.once("value", function(snapshot){
+    let showData = snapshot.val();
+    let newUserInfo = ''
+
+    // Iterate Database and select info to display in courses Content
+    for(var key in showData){
+      newUserInfo = `<img class='current-user-logo' src="${showData.imageURL}" alt="">`;
+      $(currentUserNav).css('background-color' , showData.background);
+      $('.li').css('color', showData.textColor);
+    }
+
+    $('.current-user-image').html(newUserInfo);
+  });
+}
+
+export { chargeCertificationsTable , setUserStyles };

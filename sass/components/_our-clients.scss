@@ -6,6 +6,7 @@
 
   h2{
     color: $dark-blue;
+    font-size: 30px;
   }
 
   p{
@@ -13,6 +14,7 @@
     color: grey;
     font-family: 'Poiret One', cursive;
     margin-bottom: 2%;
+    font-size: 22px;
   }
 
   .carousel-content{
@@ -58,7 +60,7 @@
         img{
           height: auto;
           width: 150px;
-          filter: grayscale(100%);
+          //filter: grayscale(100%);
         }
       }
     }

@@ -12,7 +12,7 @@ import { addGenerateCertificationsAnimation , removeGenerateCertificationsAnimat
 import { mobileNavToggle , hideAdminDashNavMobile } from './admin-dashboard-mobile-nav.js';
 import { normalUserLogOut } from './normal-user-log-out.js';
 import { requestUserDashboard } from './request-user-dashboard-components.js';
-import { chargeCertificationsTable } from './charge-certifications-table.js';
+import { chargeCertificationsTable , setUserStyles } from './charge-certifications-table.js';
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
@@ -211,5 +211,6 @@ window.addEventListener('load', ()=>{
     chargeCertificationsTable();
     const certificateMessage = document.querySelector('.charge-certifications-in-table');
     $(certificateMessage).slideUp();
+    setUserStyles();
   });
 });
