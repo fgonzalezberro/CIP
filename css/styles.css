@@ -610,6 +610,15 @@ header nav .current-user-image img {
   .staff .staff-content .professional h3 {
     font-size: 20px;
   }
+  .staff .staff-content .patricio {
+    order: 1;
+  }
+  .staff .staff-content .santiago {
+    order: 2;
+  }
+  .staff .staff-content .francisco {
+    order: 3;
+  }
 }
 .location {
   width: 100%;
