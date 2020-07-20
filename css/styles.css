@@ -987,6 +987,17 @@ footer .social-networks i:hover {
   margin: 1rem;
   background-color: #fcfcfc;
 }
+.form-contact form .form-content input[type=tel] {
+  width: 40%;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: 1px solid #39496a;
+  margin: 1rem;
+  background-color: #fcfcfc;
+}
 .form-contact form .form-content textarea {
   width: 40%;
   height: 100px;

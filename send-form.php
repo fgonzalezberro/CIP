@@ -2,6 +2,7 @@
    // Call inputs values
    $email = $_POST["email"];
    $affair = $_POST["affair"];
+   $telephone = $_POST["telephone"];
    $message = $_POST["message"];
 
    // Email data
@@ -10,6 +11,7 @@
    $emailMessage = "De: $email \n";
    $emailMessage .= "E-mail: $email \n";
    $emailMessage .= "Asunto: $affair \n";
+   $emailMessage .= "Asunto: $telephone \n";
    $emailMessage .= "Mensaje: $message";
 
    // Aditional Headers
