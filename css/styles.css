@@ -629,7 +629,7 @@ header nav .current-user-image img {
   color: grey;
   font-family: "Poiret One", cursive;
   margin-bottom: 2%;
-  font-size: 17px;
+  font-size: 19px;
 }
 .location img {
   width: 40%;
@@ -742,7 +742,7 @@ footer .social-networks i:hover {
   flex-direction: column;
   font-size: 20px;
   font-family: "Open Sans Condensed", sans-serif;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
 }
 
 @media screen and (max-width: 992px) {
