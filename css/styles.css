@@ -509,6 +509,7 @@ header nav .current-user-image img {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 5% 0;
   }
   .our-services .services .content, .our-services .services .image {
     height: 300px;
@@ -516,7 +517,7 @@ header nav .current-user-image img {
     text-align: center;
   }
   .our-services .services .content {
-    padding: 5%;
+    padding: 10% 0;
   }
   .our-services .services .content i {
     font-size: 3rem;
@@ -679,15 +680,34 @@ footer {
   width: 100%;
   height: auto;
   padding: 5% 0;
-  background-color: #363636;
+  background-color: #101010;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-footer p {
+footer .logo-icon-footer {
+  font-size: 40px;
+  cursor: pointer;
+  color: grey;
+  margin: 2rem 0;
+  transition: 1s;
+}
+footer .logo-icon-footer i {
+  margin: 0 2px;
+}
+footer .logo-icon-footer:hover {
+  font-size: 40px;
+  cursor: pointer;
   color: #fff;
+  margin: 2rem 0;
+}
+footer .logo-icon-footer:hover i {
+  margin: 0 2px;
+}
+footer p {
+  color: grey;
   font-size: 16px;
   font-family: "Poiret One", cursive;
   margin-bottom: 2%;
@@ -711,7 +731,7 @@ footer .social-networks i:hover {
     width: 100%;
     height: auto;
     padding: 5% 0;
-    background-color: #363636;
+    background-color: #101010;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -719,7 +739,7 @@ footer .social-networks i:hover {
     flex-direction: column;
   }
   footer p {
-    color: #fff;
+    color: grey;
     font-size: 13px;
     font-family: "Poiret One", cursive;
     margin-bottom: 1rem;
@@ -934,7 +954,9 @@ footer .social-networks i:hover {
 .form-contact {
   padding: 10% 0;
   width: 100%;
-  background-color: #fcfcfc;
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("../img/cover-image-1.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -976,9 +998,10 @@ footer .social-networks i:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border-bottom: 1px solid #39496a;
+  border-bottom: 1px solid #fff;
   margin: 1rem;
-  background-color: #fcfcfc;
+  background-color: transparent;
+  color: #fff;
 }
 .form-contact form .form-content input[type=text] {
   width: 40%;
@@ -987,9 +1010,10 @@ footer .social-networks i:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border-bottom: 1px solid #39496a;
+  border-bottom: 1px solid #fff;
   margin: 1rem;
-  background-color: #fcfcfc;
+  background-color: transparent;
+  color: #fff;
 }
 .form-contact form .form-content input[type=tel] {
   width: 40%;
@@ -998,19 +1022,21 @@ footer .social-networks i:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border-bottom: 1px solid #39496a;
+  border-bottom: 1px solid #fff;
   margin: 1rem;
-  background-color: #fcfcfc;
+  background-color: transparent;
+  color: #fff;
 }
 .form-contact form .form-content textarea {
   width: 40%;
   height: 100px;
   padding: 20px;
   color: #343434;
-  border: 1px solid #39496a;
+  border: 1px solid #fff;
   margin: 1rem 0;
   border-radius: 20px;
-  background-color: #fcfcfc;
+  background-color: transparent;
+  color: #fff;
 }
 .form-contact form .form-content .required-field {
   color: tomato;
@@ -1032,7 +1058,7 @@ footer .social-networks i:hover {
   margin: 10px 0;
   padding: 10px 30px;
   border: 1px solid #39496a;
-  background-color: #fff;
+  background-color: transparent;
   border-radius: 30px;
   color: #39496a;
 }
@@ -1041,7 +1067,9 @@ footer .social-networks i:hover {
   .form-contact {
     padding: 10% 0;
     width: 100%;
-    background-color: #fcfcfc;
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../img/cover-image-1.jpg");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1049,14 +1077,14 @@ footer .social-networks i:hover {
   }
   .form-contact h2 {
     color: #39496a;
-    font-size: 22px;
+    font-size: 30px;
   }
   .form-contact p {
     text-align: center;
     color: grey;
     font-family: "Poiret One", cursive;
     margin-bottom: 3%;
-    font-size: 16px;
+    font-size: 22px;
   }
   .form-contact form {
     display: flex;
@@ -1073,7 +1101,7 @@ footer .social-networks i:hover {
     width: 100%;
   }
   .form-contact form .form-content i {
-    font-size: 12px;
+    font-size: 2rem;
     color: #39496a;
   }
   .form-contact form .form-content input[type=email] {
@@ -1083,9 +1111,10 @@ footer .social-networks i:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-bottom: 1px solid #39496a;
-    margin: 1rem 5px;
-    background-color: #fcfcfc;
+    border-bottom: 1px solid #fff;
+    margin: 1rem;
+    background-color: transparent;
+    color: #fff;
   }
   .form-contact form .form-content input[type=text] {
     width: 60%;
@@ -1094,9 +1123,10 @@ footer .social-networks i:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-bottom: 1px solid #39496a;
-    margin: 1rem 5px;
-    background-color: #fcfcfc;
+    border-bottom: 1px solid #fff;
+    margin: 1rem;
+    background-color: transparent;
+    color: #fff;
   }
   .form-contact form .form-content input[type=tel] {
     width: 60%;
@@ -1105,23 +1135,25 @@ footer .social-networks i:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-bottom: 1px solid #39496a;
+    border-bottom: 1px solid #fff;
     margin: 1rem;
-    background-color: #fcfcfc;
+    background-color: transparent;
+    color: #fff;
   }
   .form-contact form .form-content textarea {
     width: 60%;
     height: 100px;
     padding: 20px;
     color: #343434;
-    border: 1px solid #39496a;
+    border: 1px solid #fff;
     margin: 1rem 0;
     border-radius: 20px;
-    background-color: #fcfcfc;
+    background-color: transparent;
+    color: #fff;
   }
   .form-contact form .form-content .required-field {
     color: tomato;
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   .form-contact form input[type=submit] {
     min-width: 200px;
@@ -1139,7 +1171,7 @@ footer .social-networks i:hover {
     margin: 10px 0;
     padding: 10px 30px;
     border: 1px solid #39496a;
-    background-color: #fff;
+    background-color: transparent;
     border-radius: 30px;
     color: #39496a;
   }

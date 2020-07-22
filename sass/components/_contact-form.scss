@@ -2,7 +2,9 @@
 .form-contact{
   padding: 10% 0;
   width: 100%;
-  background-color: #fcfcfc;
+  background: -webkit-linear-gradient(rgba(0,0,0,.9),rgba(0,0,0, .9)), url("../img/cover-image-1.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
   @include flex-column;
 
   h2{
@@ -35,27 +37,30 @@
         width: 40%;
         padding: 10px 20px;
         @include flex-column;
-        border-bottom: 1px solid $dark-blue;
+        border-bottom: 1px solid #fff;
         margin: 1rem;
-        background-color: #fcfcfc;
+        background-color: transparent;
+        color: #fff;
       }
 
       input[type = 'text']{
         width: 40%;
         padding: 10px 20px;
         @include flex-column;
-        border-bottom: 1px solid $dark-blue;
+        border-bottom: 1px solid #fff;
         margin: 1rem;
-        background-color: #fcfcfc;
+        background-color: transparent;
+        color: #fff;
       }
 
       input[type = 'tel']{
         width: 40%;
         padding: 10px 20px;
         @include flex-column;
-        border-bottom: 1px solid $dark-blue;
+        border-bottom: 1px solid #fff;
         margin: 1rem;
-        background-color: #fcfcfc;
+        background-color: transparent;
+        color: #fff;
       }
 
       textarea{
@@ -63,10 +68,11 @@
         height: 100px;
         padding: 20px;
         color: #343434;
-        border: 1px solid $dark-blue;
+        border: 1px solid #fff;
         margin: 1rem 0;
         border-radius: 20px;
-        background-color: #fcfcfc;
+        background-color: transparent;
+        color: #fff;
       }
 
       .required-field{
@@ -92,7 +98,7 @@
       margin: 10px 0;
       padding: 10px 30px;
       border: 1px solid $dark-blue;
-      background-color: #fff;
+      background-color: transparent;
       border-radius: 30px;
       color: $dark-blue;
     }
@@ -101,15 +107,18 @@
 
 // Media Querys Open //
 @media screen and (max-width: 992px){
+  // Contact Form Styles Open
   .form-contact{
     padding: 10% 0;
     width: 100%;
-    background-color: #fcfcfc;
+    background: -webkit-linear-gradient(rgba(0,0,0,.8),rgba(0,0,0, .8)), url("../img/cover-image-1.jpg");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
     @include flex-column;
 
     h2{
       color: $dark-blue;
-      font-size: 22px;
+      font-size: 30px;
     }
 
     p{
@@ -117,9 +126,8 @@
       color: grey;
       font-family: 'Poiret One', cursive;
       margin-bottom: 3%;
-      font-size: 16px;
+      font-size: 22px;
     }
-
 
     form{
       @include flex-column;
@@ -130,7 +138,7 @@
         width: 100%;
 
         i{
-          font-size: 12px;
+          font-size: 2rem;
           color: $dark-blue;
         }
 
@@ -138,27 +146,30 @@
           width: 60%;
           padding: 10px 20px;
           @include flex-column;
-          border-bottom: 1px solid $dark-blue;
-          margin: 1rem 5px;
-          background-color: #fcfcfc;
+          border-bottom: 1px solid #fff;
+          margin: 1rem;
+          background-color: transparent;
+          color: #fff;
         }
 
         input[type = 'text']{
           width: 60%;
           padding: 10px 20px;
           @include flex-column;
-          border-bottom: 1px solid $dark-blue;
-          margin: 1rem 5px;
-          background-color: #fcfcfc;
+          border-bottom: 1px solid #fff;
+          margin: 1rem;
+          background-color: transparent;
+          color: #fff;
         }
 
         input[type = 'tel']{
           width: 60%;
           padding: 10px 20px;
           @include flex-column;
-          border-bottom: 1px solid $dark-blue;
+          border-bottom: 1px solid #fff;
           margin: 1rem;
-          background-color: #fcfcfc;
+          background-color: transparent;
+          color: #fff;
         }
 
         textarea{
@@ -166,15 +177,16 @@
           height: 100px;
           padding: 20px;
           color: #343434;
-          border: 1px solid $dark-blue;
+          border: 1px solid #fff;
           margin: 1rem 0;
           border-radius: 20px;
-          background-color: #fcfcfc;
+          background-color: transparent;
+          color: #fff;
         }
 
         .required-field{
           color: tomato;
-          font-size: 1rem;
+          font-size: 1.5rem;
         }
       }
 
@@ -195,7 +207,7 @@
         margin: 10px 0;
         padding: 10px 30px;
         border: 1px solid $dark-blue;
-        background-color: #fff;
+        background-color: transparent;
         border-radius: 30px;
         color: $dark-blue;
       }

@@ -3,12 +3,35 @@ footer{
   width: 100%;
   height: auto;
   padding: 5% 0;
-  background-color: #363636;
+  background-color: #101010;
   text-align: center;
   @include flex-column;
 
-  p{
+  .logo-icon-footer{
+    font-size: 40px;
+    cursor: pointer;
+    color: grey;
+    margin: 2rem 0;
+    transition: 1s;
+
+    i{
+      margin: 0 2px;
+    }
+  }
+
+  .logo-icon-footer:hover{
+    font-size: 40px;
+    cursor: pointer;
     color: #fff;
+    margin: 2rem 0;
+
+    i{
+      margin: 0 2px;
+    }
+  }
+
+  p{
+    color: grey;
     font-size: 16px;
     font-family: 'Poiret One', cursive;
     margin-bottom: 2%;
@@ -41,12 +64,12 @@ footer{
     width: 100%;
     height: auto;
     padding: 5% 0;
-    background-color: #363636;
+    background-color: #101010;
     text-align: center;
     @include flex-column;
 
     p{
-      color: #fff;
+      color: grey;
       font-size: 13px;
       font-family: 'Poiret One', cursive;
       margin-bottom: 1rem;
