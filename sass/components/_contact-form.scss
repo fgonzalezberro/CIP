@@ -152,6 +152,15 @@
           background-color: #fcfcfc;
         }
 
+        input[type = 'tel']{
+          width: 40%;
+          padding: 10px 20px;
+          @include flex-column;
+          border-bottom: 1px solid $dark-blue;
+          margin: 1rem;
+          background-color: #fcfcfc;
+        }
+
         textarea{
           width: 60%;
           height: 100px;
