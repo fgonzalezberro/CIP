@@ -402,6 +402,7 @@ header nav .current-user-image img {
   }
   .company p {
     font-size: 16px;
+    margin-bottom: 3%;
   }
   .company .company-features {
     display: flex;
@@ -513,6 +514,9 @@ header nav .current-user-image img {
     height: 300px;
     width: 100%;
     text-align: center;
+  }
+  .our-services .services .content {
+    padding: 5%;
   }
   .our-services .services .content i {
     font-size: 3rem;
@@ -664,7 +668,7 @@ header nav .current-user-image img {
     color: grey;
     font-family: "Poiret One", cursive;
     margin-bottom: 2%;
-    font-size: 19px;
+    font-size: 15px;
   }
   .location img {
     width: 80%;
@@ -1095,7 +1099,7 @@ footer .social-networks i:hover {
     background-color: #fcfcfc;
   }
   .form-contact form .form-content input[type=tel] {
-    width: 40%;
+    width: 60%;
     padding: 10px 20px;
     display: flex;
     justify-content: center;
@@ -1540,6 +1544,34 @@ footer .social-networks i:hover {
   .change-password .success-change-password-message p, .change-password .error-change-password-message p {
     color: #fff;
     font-size: 12px;
+  }
+}
+@media screen and (min-width: 500px) {
+  .change-password .success-change-password-message, .change-password .error-change-password-message {
+    width: 50%;
+    height: 80px;
+    position: absolute;
+    top: 5vh;
+    right: 2%;
+    padding: 5px 10px;
+    text-align: center;
+    -webkit-box-shadow: 0px 0px 10px 0px #e3e3e3;
+    -moz-box-shadow: 0px 0px 10px 0px #e3e3e3;
+    box-shadow: 0px 0px 10px 0px #e3e3e3;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  .change-password .success-change-password-message i, .change-password .error-change-password-message i {
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 0 5px;
+  }
+  .change-password .success-change-password-message p, .change-password .error-change-password-message p {
+    color: #fff;
+    font-size: 11px;
   }
 }
 .add-users {
