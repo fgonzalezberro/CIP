@@ -18,7 +18,6 @@ import { chargeCertificationsTable , setUserStyles } from './charge-certificatio
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
-
 // Firebase Database Ref
 const storageRef = firebase.storage().ref();
 
@@ -68,22 +67,26 @@ window.addEventListener('load', ()=>{
     document.querySelector('.slick-next').click();
   });
 
-  // Mobile button functionality
-  const mobileBtn = document.querySelector('.mobile-nav-btn');
-  const ul = document.querySelector('.ul-component');
+  // Mobile button functionaliy
+  // Control flag
+  let mobileState = false;
 
-  mobileBtn.addEventListener('click' , () =>{
-    if($(window).width() < 1320){
-      $(ul).slideToggle(300);
-      $(ul).toggleClass('flex');
+  $(document).on('click' , '.mobile-nav-btn' , function(){
+    if(!mobileState){
+      $('.mobile-options').css('width' , '100%');
+      $('.nav-li').css('display' , 'block');
+      mobileState = true;
+    }else{
+      $('.mobile-options').css('width' , '0%');
+      $('.nav-li').css('display' , 'none');
+      mobileState = false;
     }
   });
 
-  $(ul).children('a').click(() =>{
-    if($(window).width() < 1100){
-      $(ul).slideToggle(300);
-      $(ul).toggleClass('flex');
-    }
+  $(document).on('click' , '.nav-li' , function(){
+    $('.mobile-options').css('width' , '0%');
+    $('.nav-li').css('display' , 'none');
+    mobileState = false;
   });
 
   // Mobile admin nav button functionality
@@ -95,11 +98,8 @@ window.addEventListener('load', ()=>{
     hideAdminDashNavMobile();
   });
 
-  // Capture login button element
-  const loginNavBtn = document.getElementById('login-nav-btn');
-
-  // This function is exectued when the user clicked in 'Login Nav Button'
-  loginNavBtn.addEventListener('click' , ()=>{
+  $(document).on('click' , '.login-nav-btn' , function(){
+    console.log('sasukeeeeeee');
     ajaxRequest('../components/login.html');
   });
 
