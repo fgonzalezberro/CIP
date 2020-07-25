@@ -16,8 +16,6 @@ const addNewUser = () =>{
   const userEmail = document.querySelector('.new-user-email');
   const userPass = document.querySelector('.new-user-pass');
   const userLocation = document.querySelector('.new-user-location');
-  const userBackground = document.querySelector('.new-user-background');
-  const userColor = document.querySelector('.new-user-color');
   const inputFile = document.querySelector('.new-user-logo-btn');
   const logoToUpload = inputFile.files[0];
 
@@ -36,8 +34,6 @@ const addNewUser = () =>{
       userEmail: userEmail.value,
       userPass: userPass.value,
       userLocation: userLocation.value,
-      textColor: userColor.value,
-      background: userBackground.value,
       imageURL: imageUrl,
       imageName: imageName
     });

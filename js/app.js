@@ -99,7 +99,6 @@ window.addEventListener('load', ()=>{
   });
 
   $(document).on('click' , '.login-nav-btn' , function(){
-    console.log('sasukeeeeeee');
     ajaxRequest('../components/login.html');
   });
 
