@@ -35,7 +35,7 @@ const chargeSelectUsers = () =>{
   });
 }
 
-// Charge all users in dropbox
+// Charge all certificates in dropbox
 const chargeSelectCertificates = () =>{
   const selectCertificate = document.querySelector('.select-certificate');
   const dataBaseUsersRef = firebase.database().ref('/certifications');
@@ -47,7 +47,7 @@ const chargeSelectCertificates = () =>{
     // Iterate Database and select info to display in courses Content
     for(var key in showData){
       certToParseIntoOption += `
-                                  <option value="${key}">${showData[key].fileName}</option>
+                                  <option value="${key}">${showData[key].name}</option>
                                 `;
     }
 
@@ -89,9 +89,10 @@ const inputFileChange = () =>{
 // Charge certifications files in Database
 const uploadCertificatesOnDB = () =>{
   const inputFile = document.querySelector('.select-certificate-to-upload');
+  const nameFile = document.querySelector('.certificate-name');
   const fileToUpload = inputFile.files[0];
 
-  if(inputFile.value !== ''){
+  if(inputFile.value !== '' && nameFile.value !== ''){
     // Create an user
     const storageRef = firebase.storage().ref();
     const uploadTask = storageRef.child('certifications/' + fileToUpload.name).put(fileToUpload);
@@ -120,7 +121,7 @@ const uploadCertificatesOnDB = () =>{
         $("#progress-bar").hide();
 
         // Call create node in data base function
-        createNodeInDataBase(fileToUpload.name , downloadURL);
+        createNodeInDataBase(fileToUpload.name , nameFile.value , downloadURL);
       });
     });
   }else{
@@ -142,7 +143,7 @@ const uploadCertificatesOnDB = () =>{
   }
 
   // Set data in DataBase
-  const createNodeInDataBase = (fileName , fileURL) =>{
+  const createNodeInDataBase = (fileName , name , fileURL) =>{
     // Capture current user ID
     let user = firebase.auth().currentUser;
     let uid = user.uid;
@@ -153,7 +154,8 @@ const uploadCertificatesOnDB = () =>{
     // Set the User data in data base
     dataBaseRef.push({
       fileURL: fileURL,
-      fileName: fileName
+      fileName: fileName,
+      name: name
     });
 
     // Success Messagge
@@ -200,7 +202,7 @@ const assignCertificate = () =>{
             if(certSelected === certKey){
               const usCertDataBaseRef = firebase.database().ref(`/users/${trueKey}/certifications`);
               usCertDataBaseRef.push({
-                certName: certData[certKey].fileName,
+                certName: certData[certKey].name,
                 certURL: certData[certKey].fileURL
               });
 
