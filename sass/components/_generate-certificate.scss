@@ -39,6 +39,16 @@
       display: none;
     }
 
+    input[type = 'text']{
+      @include flex-column;
+      border-bottom: $dark-blue 1px solid;
+      width: 50%;
+      padding: 10px 0;
+      color: #485761;
+      margin: 1rem 0;
+      color: $dark-blue;
+    }
+
     input[type = 'button']{
       width: auto;
       margin: 10px 0;
@@ -76,7 +86,6 @@
     select{
       @include flex-column;
       border-bottom: $dark-blue 1px solid;
-      //border-radius: 10px;
       width: 50%;
       padding: 10px 0;
       color: #485761;

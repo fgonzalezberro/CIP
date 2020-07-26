@@ -1668,6 +1668,18 @@ footer .social-networks i:hover {
 .generate-certifications-section .upload-certifiction .select-certificate-to-upload {
   display: none;
 }
+.generate-certifications-section .upload-certifiction input[type=text] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: #39496a 1px solid;
+  width: 50%;
+  padding: 10px 0;
+  color: #485761;
+  margin: 1rem 0;
+  color: #39496a;
+}
 .generate-certifications-section .upload-certifiction input[type=button] {
   width: auto;
   margin: 10px 0;
