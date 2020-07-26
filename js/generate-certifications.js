@@ -229,4 +229,16 @@ const assignCertificate = () =>{
   });
 }
 
-export{ addGenerateCertificationsAnimation , removeGenerateCertificationsAnimation , chargeSelectUsers , clickSelectCertFileInput , uploadCertificatesOnDB , inputFileChange , chargeSelectCertificates, assignCertificate };
+const displayCertificationsOptions = () =>{
+  $(document).on('click' , '.upload-certifications-slider' , function(){
+    $('.upload-certifiction').slideToggle();
+    $('.upload-certifiction').css('display' , 'flex');
+  });
+
+  $(document).on('click' , '.assign-certificate-slider' , function(){
+    $('.assign-certifiction-to-user').slideToggle();
+    $('.assign-certifiction-to-user').css('display' , 'flex');
+  });
+}
+
+export{ addGenerateCertificationsAnimation , removeGenerateCertificationsAnimation , chargeSelectUsers , clickSelectCertFileInput , uploadCertificatesOnDB , inputFileChange , chargeSelectCertificates, assignCertificate , displayCertificationsOptions};

@@ -1627,19 +1627,37 @@ footer .social-networks i:hover {
   align-items: center;
   flex-direction: column;
 }
+.generate-certifications-section .upload-certifications-slider, .generate-certifications-section .assign-certificate-slider {
+  width: 70%;
+  border-radius: 5px;
+  background-color: #39496a;
+  margin: 1rem 0;
+  padding: 1rem 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.generate-certifications-section .upload-certifications-slider h2, .generate-certifications-section .assign-certificate-slider h2 {
+  font-size: 30px;
+  letter-spacing: 5px;
+  color: #fff;
+  text-shadow: 0px 0px 5px #969696;
+}
+.generate-certifications-section .upload-certifications-slider i, .generate-certifications-section .assign-certificate-slider i {
+  margin: 0 1rem;
+  font-size: 2.5rem;
+  color: #fff;
+}
 .generate-certifications-section .upload-certifiction {
-  margin-bottom: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
-.generate-certifications-section .upload-certifiction h2 {
-  font-size: 30px;
-  letter-spacing: 5px;
-  color: #39496a;
-  margin-bottom: 5%;
-  text-shadow: 0px 0px 5px #969696;
+  display: none;
+  width: 60%;
+  margin: 2rem 0;
 }
 .generate-certifications-section .upload-certifiction .upload-certification-content {
   margin: 20px 0;
@@ -1700,6 +1718,9 @@ footer .social-networks i:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  display: none;
+  width: 60%;
+  margin: 2rem 0;
 }
 .generate-certifications-section .assign-certifiction-to-user h2 {
   font-size: 30px;
