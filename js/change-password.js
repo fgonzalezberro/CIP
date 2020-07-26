@@ -66,6 +66,8 @@ const changePassword = () =>{
       successMessage.classList.remove('fadeOutLeft');
       successMessage.classList.add('wow' , 'animated' , 'fadeInLeft' , 'slow');
       successMessage.style.display = 'flex';
+      successMessage.style.justifyContent = 'center';
+      successMessage.style.alignItems = 'center';
       confirmPassUnCheck.style.display = 'none';
       confirmPassCheck.style.display = 'none';
       newPassUnCheck.style.display = 'none';
@@ -90,6 +92,8 @@ const changePassword = () =>{
     errorMessage.classList.remove('fadeOutLeft');
     errorMessage.classList.add('wow' , 'animated' , 'fadeInLeft' , 'slower');
     errorMessage.style.display = 'flex';
+    errorMessage.style.justifyContent = 'center';
+    errorMessage.style.alignItems = 'center';
     confirmPassUnCheck.style.display = 'none';
     confirmPassCheck.style.display = 'none';
     newPassUnCheck.style.display = 'none';

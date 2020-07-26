@@ -1431,10 +1431,7 @@ footer .social-networks i:hover {
   -moz-box-shadow: 0px 0px 10px 0px #e3e3e3;
   box-shadow: 0px 0px 10px 0px #e3e3e3;
   border-radius: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
+  display: none;
 }
 .change-password .success-change-password-message i, .change-password .error-change-password-message i {
   font-size: 1.5rem;
@@ -1469,6 +1466,7 @@ footer .social-networks i:hover {
     -moz-box-shadow: 0px 0px 10px 0px #e3e3e3;
     box-shadow: 0px 0px 10px 0px #e3e3e3;
     border-radius: 100px;
+    display: none;
   }
   .change-password .success-change-password-message i, .change-password .error-change-password-message i {
     font-size: 1.5rem;
@@ -1493,10 +1491,7 @@ footer .social-networks i:hover {
     -moz-box-shadow: 0px 0px 10px 0px #e3e3e3;
     box-shadow: 0px 0px 10px 0px #e3e3e3;
     border-radius: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+    display: none;
   }
   .change-password .success-change-password-message i, .change-password .error-change-password-message i {
     font-size: 1.5rem;
