@@ -48,12 +48,18 @@
   </div>
 
   <div class="certificates-crud">
-    <table class="certificates-crud-table">
-      <tr>
-        <th>Nombre Cert.</th>
-        <th>Editar</th>
-        <th>Eliminar</th>
-      </tr>
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre Cert.</th>
+          <th>Editar</th>
+          <th>Eliminar</th>
+        </tr>
+      </thead>
+
+      <tbody class="certificates-crud-table">
+
+      </tbody>
     </table>
   </div>
   <!-- Certificates CRUD Section Close -->
@@ -69,6 +75,17 @@
   </div>
   <!-- Crud Delete Certificate Select Close -->
 
+  <!-- Crud Edit Certificate Select Open -->
+  <div class='crud-edit-option'>
+    <input class='new-certification-name' type="text" placeholder="Editar nombre del archivo">
+
+    <div class="crud-edit-select-btn">
+      <input type="button" value='Editar' class='edit-cert-button'>
+      <input type="button" value='Cancelar' class='do-not-edit-cert-button'>
+    </div>
+  </div>
+  <!-- Crud Edit Certificate Select Close -->
+
   <!-- Certificate messagge Open -->
   <div class='certificate-message'>
     <p>En esta sección el usuario adminstrador podra subir documentos a la plataforma y asignarle dichos documentos a determinados usuarios.</p>
@@ -80,6 +97,13 @@
   <div class="success-delete-cert">
     <i class="fa fa-unlock" aria-hidden="true"></i>
     <p>¡ Se elimino el certificado correctamente !</p>
+  </div>
+  <!-- Success Assign Certificate Message Close -->
+
+  <!-- Success Assign Certificate Message Open -->
+  <div class="success-edit-cert">
+    <i class="fa fa-unlock" aria-hidden="true"></i>
+    <p>¡ Se edito el certificado correctamente !</p>
   </div>
   <!-- Success Assign Certificate Message Close -->
 

@@ -1776,6 +1776,9 @@ footer .social-networks i:hover {
   border: 1px solid #e3e3e3;
   border-radius: 5px;
 }
+.generate-certifications-section .certificates-crud table thead, .generate-certifications-section .certificates-crud table tbody {
+  width: 100%;
+}
 .generate-certifications-section .certificates-crud table tr {
   width: 100%;
 }
@@ -1806,8 +1809,8 @@ footer .social-networks i:hover {
   text-align: center;
   padding: 1rem 0;
 }
-.generate-certifications-section .crud-delete-option {
-  position: absolute;
+.generate-certifications-section .crud-delete-option, .generate-certifications-section .crud-edit-option {
+  position: fixed;
   top: 30vh;
   left: 20%;
   width: 60%;
@@ -1823,17 +1826,29 @@ footer .social-networks i:hover {
   justify-content: center;
   align-items: center;
 }
-.generate-certifications-section .crud-delete-option p {
+.generate-certifications-section .crud-delete-option p, .generate-certifications-section .crud-edit-option p {
   color: #39496a;
   margin-bottom: 2rem;
 }
-.generate-certifications-section .crud-delete-option .crud-select-btn {
+.generate-certifications-section .crud-delete-option input[type=text], .generate-certifications-section .crud-edit-option input[type=text] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: #39496a 1px solid;
+  width: 50%;
+  padding: 10px 0;
+  color: #485761;
+  margin: 1rem 0;
+  color: #39496a;
+}
+.generate-certifications-section .crud-delete-option .crud-select-btn, .generate-certifications-section .crud-delete-option .crud-edit-select-btn, .generate-certifications-section .crud-edit-option .crud-select-btn, .generate-certifications-section .crud-edit-option .crud-edit-select-btn {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
 }
-.generate-certifications-section .crud-delete-option .crud-select-btn input[type=button] {
+.generate-certifications-section .crud-delete-option .crud-select-btn input[type=button], .generate-certifications-section .crud-delete-option .crud-edit-select-btn input[type=button], .generate-certifications-section .crud-edit-option .crud-select-btn input[type=button], .generate-certifications-section .crud-edit-option .crud-edit-select-btn input[type=button] {
   width: auto;
   margin: 0 10px;
   padding: 10px 30px;
@@ -1844,7 +1859,7 @@ footer .social-networks i:hover {
   transition: 1s;
   cursor: pointer;
 }
-.generate-certifications-section .crud-delete-option .crud-select-btn input[type=button]:hover {
+.generate-certifications-section .crud-delete-option .crud-select-btn input[type=button]:hover, .generate-certifications-section .crud-delete-option .crud-edit-select-btn input[type=button]:hover, .generate-certifications-section .crud-edit-option .crud-select-btn input[type=button]:hover, .generate-certifications-section .crud-edit-option .crud-edit-select-btn input[type=button]:hover {
   width: auto;
   margin: 0 10px;
   padding: 10px 30px;
@@ -1895,7 +1910,7 @@ footer .social-networks i:hover {
   color: #39496a;
   cursor: pointer;
 }
-.generate-certifications-section .success-assign-cert-message, .generate-certifications-section .success-charge-document, .generate-certifications-section .success-select-document, .generate-certifications-section .success-delete-cert {
+.generate-certifications-section .success-assign-cert-message, .generate-certifications-section .success-charge-document, .generate-certifications-section .success-select-document, .generate-certifications-section .success-delete-cert, .generate-certifications-section .success-edit-cert {
   width: 40%;
   height: 80px;
   position: absolute;

@@ -41,7 +41,7 @@ const chargeSelectCertificates = () =>{
   const certificateCrudTable = document.querySelector('.certificates-crud-table');
   const dataBaseUsersRef = firebase.database().ref('/certifications');
 
-  dataBaseUsersRef.once("value", function(snapshot){
+  dataBaseUsersRef.on("value", function(snapshot){
     let showData = snapshot.val();
     let certToParseIntoOption = '';
     let certToParseIntoCrudTable = ''
@@ -55,15 +55,15 @@ const chargeSelectCertificates = () =>{
       certToParseIntoCrudTable += `
                                   <tr value="${key}">
                                     <td>${showData[key].name}</td>
-                                    <td><i class="fas fa-edit edit-cert"></i></td>
+                                    <td><i class="fas fa-edit edit-cert ${key}" value="${key}"></i></td>
                                     <td><i class="fas fa-trash-alt delete-cert ${key}" value="${key}"></i></td>
                                   </tr>
                                `;
     }
 
     // Display the Database info in 'Usr Select'
-    $(selectCertificate).append(certToParseIntoOption);
-    $(certificateCrudTable).append(certToParseIntoCrudTable);
+    $(selectCertificate).html(certToParseIntoOption);
+    $(certificateCrudTable).html(certToParseIntoCrudTable);
   });
 }
 
@@ -151,6 +151,9 @@ const uploadCertificatesOnDB = () =>{
         errorMessage.style.display = 'none';
       },1000);
     }, 3000);
+
+    $(inputFile).val('');
+    $(nameFile).val('');
   }
 
   // Set data in DataBase
@@ -185,6 +188,9 @@ const uploadCertificatesOnDB = () =>{
         successMessage.style.display = 'none';
       }, 1000);
     }, 3000);
+
+    $(inputFile).val('');
+    $(nameFile).val('');
   }
 }
 
@@ -294,6 +300,7 @@ const displayCertificationsOptions = () =>{
 // CRUD functionalities
 const certificatesCrud = () =>{
   let certificateToDelete = '';
+  let certificateToEdit = '';
 
   $(document).on('click' , '.delete-cert' , function(){
     certificateToDelete = $(this)[0].getAttribute('value');
@@ -304,8 +311,6 @@ const certificatesCrud = () =>{
 
   $(document).on('click' , '.delete-cert-button' , function(){
     const dataBaseCertRef = firebase.database().ref('/certifications/'+certificateToDelete);
-    const dataBaseUsersRef  = firebase.database().ref('/users');
-
     dataBaseCertRef.remove();
 
     $('.crud-delete-option').slideUp();
@@ -330,6 +335,45 @@ const certificatesCrud = () =>{
   $(document).on('click' , '.undelete-cert-button' , function(){
     $('.crud-delete-option').slideUp();
   });
+
+  $(document).on('click' , '.edit-cert' , function(){
+    certificateToEdit = $(this)[0].getAttribute('value');
+
+    $('.crud-edit-option').slideDown();
+    $('.crud-edit-option').css('display' , 'flex');
+  });
+
+  $(document).on('click' , '.edit-cert-button' , function(){
+    const dataBaseCertRef = firebase.database().ref('/certifications/'+certificateToEdit);
+    let newCertName = document.querySelector('.new-certification-name');
+
+    dataBaseCertRef.update({
+      name: newCertName.value
+    });
+
+    const succesEditMessage = document.querySelector('.success-edit-cert');
+
+    // Show Success Message
+    succesEditMessage.classList.remove('fadeOutLeft');
+    succesEditMessage.classList.add('wow' , 'animated' , 'fadeInLeft' , 'slow');
+    succesEditMessage.style.display = 'flex';
+
+    // Hide Success Message
+    setTimeout(() =>{
+      succesEditMessage.classList.add('fadeOutLeft');
+
+      setTimeout(() =>{
+        succesEditMessage.style.display = 'none';
+      }, 1000);
+    }, 3000);
+
+    $(newCertName).val('');
+    $('.crud-edit-option').slideUp();
+  });
+
+  $(document).on('click' , '.do-not-edit-cert-button' , function(){
+    $('.crud-edit-option').slideUp();
+  });
 }
 
-export{ addGenerateCertificationsAnimation , removeGenerateCertificationsAnimation , chargeSelectUsers , clickSelectCertFileInput , uploadCertificatesOnDB , inputFileChange , chargeSelectCertificates, assignCertificate , displayCertificationsOptions , certificatesCrud};
+export{ addGenerateCertificationsAnimation , removeGenerateCertificationsAnimation , chargeSelectUsers , clickSelectCertFileInput , uploadCertificatesOnDB , inputFileChange , chargeSelectCertificates, assignCertificate , displayCertificationsOptions , certificatesCrud };
