@@ -8,7 +8,7 @@ import { logOut } from './log-out.js';
 import { requestAdminDashboardComponents } from './request-admin-dashboard-components.js';
 import { changePasswordNewPassValidation , changePasswordConfirmPassValidation , changePassword } from './change-password.js';
 import { addNewUser , setUserImage } from './add-users.js';
-import { addGenerateCertificationsAnimation , removeGenerateCertificationsAnimation , chargeSelectUsers , clickSelectCertFileInput , uploadCertificatesOnDB , inputFileChange , chargeSelectCertificates , assignCertificate , displayCertificationsOptions } from './generate-certifications.js';
+import { addGenerateCertificationsAnimation , removeGenerateCertificationsAnimation , chargeSelectUsers , clickSelectCertFileInput , uploadCertificatesOnDB , inputFileChange , chargeSelectCertificates , assignCertificate , displayCertificationsOptions , certificatesCrud } from './generate-certifications.js';
 import { mobileNavToggle , hideAdminDashNavMobile } from './admin-dashboard-mobile-nav.js';
 import { normalUserLogOut } from './normal-user-log-out.js';
 import { requestUserDashboard } from './request-user-dashboard-components.js';
@@ -215,4 +215,7 @@ window.addEventListener('load', ()=>{
 
   // Display certifications options
   displayCertificationsOptions();
+
+  // Certification CRUD functionalities
+  certificatesCrud();
 });

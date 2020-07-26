@@ -2,9 +2,12 @@
 .generate-certifications-section{
   width: 100%;
   height: 70vh;
-  @include flex-column;
+  padding-top: 10vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 
-  .upload-certifications-slider , .assign-certificate-slider{
+  .upload-certifications-slider , .assign-certificate-slider , .certificates-crud-slider{
     width: 70%;
     border-radius: 5px;
     background-color: $dark-blue;
@@ -35,7 +38,9 @@
 
     .upload-certification-content{
       margin: 20px 0;
-      padding: 5px 20px;
+      padding: 10px 0;
+      width: 50%;
+      border-bottom: $dark-blue 1px solid;
       height: 30px;
       text-align: center;
       transition: 2s;
@@ -135,6 +140,107 @@
     }
   }
 
+  .certificates-crud{
+    @include flex-column;
+    display: none;
+    width: 60%;
+    margin: 2rem 0;
+
+    table{
+      width: 100%;
+      border: 1px solid #e3e3e3;
+      border-radius: 5px;
+
+      tr{
+        width: 100%;
+
+        th{
+          color: #fff;
+          font-weight: bold;
+          background-color: $dark-blue;
+        }
+
+        td{
+          color: #444;
+
+          .fa-edit{
+            color: #8FE255;
+            cursor: pointer;
+          }
+
+          .fa-edit:hover{
+            color: green;
+          }
+
+          .fa-trash-alt{
+            color: tomato;
+            cursor: pointer;
+          }
+
+          .fa-trash-alt:hover{
+            color: red;
+          }
+        }
+
+        th , td{
+          width: 33.3%;
+          text-align: center;
+          padding: 1rem 0;
+        }
+      }
+    }
+  }
+
+  .crud-delete-option{
+    position: absolute;
+    top: 30vh;
+    left: 20%;
+    width: 60%;
+    padding: 2rem 0;
+    border: 2px solid $dark-blue;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(54,54,54,1);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(54,54,54,1);
+    box-shadow: 0px 0px 5px 0px rgba(54,54,54,1);
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p{
+      color: $dark-blue;
+      margin-bottom: 2rem;
+    }
+
+
+    .crud-select-btn{
+      @include flex-row;
+
+      input[type = 'button']{
+        width: auto;
+        margin: 0 10px;
+        padding: 10px 30px;
+        border: 1px solid $dark-blue;
+        background-color: $dark-blue;
+        border-radius: 30px;
+        color: #fff;
+        transition: 1s;
+        cursor: pointer;
+      }
+
+      input[type = 'button']:hover{
+        width: auto;
+        margin: 0 10px;
+        padding: 10px 30px;
+        border: 1px solid $dark-blue;
+        background-color: #fff;
+        border-radius: 30px;
+        color: $dark-blue;
+      }
+    }
+  }
+
   .certificate-message{
     position: absolute;
     top: 30vh;
@@ -178,7 +284,7 @@
     }
   }
 
-  .success-assign-cert-message , .success-charge-document , .success-select-document{
+  .success-assign-cert-message , .success-charge-document , .success-select-document , .success-delete-cert{
     width: 40%;
     height: 80px;
     position: absolute;

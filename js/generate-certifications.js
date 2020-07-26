@@ -38,21 +38,32 @@ const chargeSelectUsers = () =>{
 // Charge all certificates in dropbox
 const chargeSelectCertificates = () =>{
   const selectCertificate = document.querySelector('.select-certificate');
+  const certificateCrudTable = document.querySelector('.certificates-crud-table');
   const dataBaseUsersRef = firebase.database().ref('/certifications');
 
   dataBaseUsersRef.once("value", function(snapshot){
     let showData = snapshot.val();
     let certToParseIntoOption = '';
+    let certToParseIntoCrudTable = ''
 
     // Iterate Database and select info to display in courses Content
     for(var key in showData){
       certToParseIntoOption += `
                                   <option value="${key}">${showData[key].name}</option>
                                 `;
+
+      certToParseIntoCrudTable += `
+                                  <tr value="${key}">
+                                    <td>${showData[key].name}</td>
+                                    <td><i class="fas fa-edit edit-cert"></i></td>
+                                    <td><i class="fas fa-trash-alt delete-cert ${key}" value="${key}"></i></td>
+                                  </tr>
+                               `;
     }
 
     // Display the Database info in 'Usr Select'
     $(selectCertificate).append(certToParseIntoOption);
+    $(certificateCrudTable).append(certToParseIntoCrudTable);
   });
 }
 
@@ -230,15 +241,95 @@ const assignCertificate = () =>{
 }
 
 const displayCertificationsOptions = () =>{
+  let uploadFlagState = false;
+  let assingFlagState = false;
+  let crudFlagState = false;
+
   $(document).on('click' , '.upload-certifications-slider' , function(){
     $('.upload-certifiction').slideToggle();
     $('.upload-certifiction').css('display' , 'flex');
+
+    if(!uploadFlagState){
+      $(this).children('i').addClass('fa-caret-up');
+      $(this).children('i').removeClass('fa-caret-down');
+      uploadFlagState = true;
+    }else{
+      $(this).children('i').addClass('fa-caret-down');
+      $(this).children('i').removeClass('fa-caret-up');
+      uploadFlagState = false;
+    }
   });
 
   $(document).on('click' , '.assign-certificate-slider' , function(){
     $('.assign-certifiction-to-user').slideToggle();
     $('.assign-certifiction-to-user').css('display' , 'flex');
+
+    if(!assingFlagState ){
+      $(this).children('i').addClass('fa-caret-up');
+      $(this).children('i').removeClass('fa-caret-down');
+      assingFlagState  = true;
+    }else{
+      $(this).children('i').addClass('fa-caret-down');
+      $(this).children('i').removeClass('fa-caret-up');
+      assingFlagState  = false;
+    }
+  });
+
+  $(document).on('click' , '.certificates-crud-slider' , function(){
+    $('.certificates-crud').slideToggle();
+    $('.certificates-crud').css('display' , 'flex');
+
+    if(!crudFlagState){
+      $(this).children('i').addClass('fa-caret-up');
+      $(this).children('i').removeClass('fa-caret-down');
+      crudFlagState = true;
+    }else{
+      $(this).children('i').addClass('fa-caret-down');
+      $(this).children('i').removeClass('fa-caret-up');
+      crudFlagState = false;
+    }
   });
 }
 
-export{ addGenerateCertificationsAnimation , removeGenerateCertificationsAnimation , chargeSelectUsers , clickSelectCertFileInput , uploadCertificatesOnDB , inputFileChange , chargeSelectCertificates, assignCertificate , displayCertificationsOptions};
+// CRUD functionalities
+const certificatesCrud = () =>{
+  let certificateToDelete = '';
+
+  $(document).on('click' , '.delete-cert' , function(){
+    certificateToDelete = $(this)[0].getAttribute('value');
+
+    $('.crud-delete-option').slideDown();
+    $('.crud-delete-option').css('display' , 'flex');
+  });
+
+  $(document).on('click' , '.delete-cert-button' , function(){
+    const dataBaseCertRef = firebase.database().ref('/certifications/'+certificateToDelete);
+    const dataBaseUsersRef  = firebase.database().ref('/users');
+
+    dataBaseCertRef.remove();
+
+    $('.crud-delete-option').slideUp();
+
+    const successDeleteMessage = document.querySelector('.success-delete-cert');
+
+    // Show Success Message
+    successDeleteMessage.classList.remove('fadeOutLeft');
+    successDeleteMessage.classList.add('wow' , 'animated' , 'fadeInLeft' , 'slow');
+    successDeleteMessage.style.display = 'flex';
+
+    // Hide Success Message
+    setTimeout(() =>{
+      successDeleteMessage.classList.add('fadeOutLeft');
+
+      setTimeout(() =>{
+        successDeleteMessage.style.display = 'none';
+      }, 1000);
+    }, 3000);
+  });
+
+  $(document).on('click' , '.undelete-cert-button' , function(){
+    $('.crud-delete-option').slideUp();
+  });
+}
+
+export{ addGenerateCertificationsAnimation , removeGenerateCertificationsAnimation , chargeSelectUsers , clickSelectCertFileInput , uploadCertificatesOnDB , inputFileChange , chargeSelectCertificates, assignCertificate , displayCertificationsOptions , certificatesCrud};
