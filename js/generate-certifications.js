@@ -377,4 +377,15 @@ const certificatesCrud = () =>{
   });
 }
 
-export{ addGenerateCertificationsAnimation , removeGenerateCertificationsAnimation , chargeSelectUsers , clickSelectCertFileInput , uploadCertificatesOnDB , inputFileChange , chargeSelectCertificates, assignCertificate , displayCertificationsOptions , certificatesCrud };
+export{
+        addGenerateCertificationsAnimation,
+        removeGenerateCertificationsAnimation,
+        chargeSelectUsers,
+        clickSelectCertFileInput,
+        uploadCertificatesOnDB,
+        inputFileChange,
+        chargeSelectCertificates,
+        assignCertificate,
+        displayCertificationsOptions,
+        certificatesCrud
+      };

@@ -8,7 +8,18 @@ import { logOut } from './log-out.js';
 import { requestAdminDashboardComponents } from './request-admin-dashboard-components.js';
 import { changePasswordNewPassValidation , changePasswordConfirmPassValidation , changePassword } from './change-password.js';
 import { addNewUser , setUserImage } from './add-users.js';
-import { addGenerateCertificationsAnimation , removeGenerateCertificationsAnimation , chargeSelectUsers , clickSelectCertFileInput , uploadCertificatesOnDB , inputFileChange , chargeSelectCertificates , assignCertificate , displayCertificationsOptions , certificatesCrud } from './generate-certifications.js';
+import {
+  addGenerateCertificationsAnimation,
+  removeGenerateCertificationsAnimation,
+  chargeSelectUsers,
+  clickSelectCertFileInput,
+  uploadCertificatesOnDB,
+  inputFileChange,
+  chargeSelectCertificates,
+  assignCertificate,
+  displayCertificationsOptions,
+  certificatesCrud
+ } from './generate-certifications.js';
 import { mobileNavToggle , hideAdminDashNavMobile } from './admin-dashboard-mobile-nav.js';
 import { normalUserLogOut } from './normal-user-log-out.js';
 import { requestUserDashboard } from './request-user-dashboard-components.js';
@@ -202,7 +213,6 @@ window.addEventListener('load', ()=>{
   // Charge certification table
   $(document).on('click' , '.nav-users-cert-btn' , function(){
     requestUserDashboard('../components/user-certifications.html');
-
   });
 
   // Charge certificates in user table
