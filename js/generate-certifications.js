@@ -246,6 +246,7 @@ const assignCertificate = () =>{
   });
 }
 
+// Slide Certification options
 const displayCertificationsOptions = () =>{
   let uploadFlagState = false;
   let assingFlagState = false;

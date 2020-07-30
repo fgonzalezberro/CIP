@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Poiret+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100&family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 
 // General Styles Open
 *{
@@ -23,6 +24,11 @@ a{
 
 // Variables
 $dark-blue : #39496a;
+
+// Hide Cip Email logo
+.cip-email-image{
+  display: none;
+}
 
 // Mixin´s
 @mixin flex-column{

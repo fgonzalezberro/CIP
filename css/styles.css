@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Poiret+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100&family=Poiret+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -16,6 +17,10 @@ body {
 
 a {
   cursor: pointer;
+}
+
+.cip-email-image {
+  display: none;
 }
 
 .close-btn {
@@ -252,7 +257,7 @@ header nav .current-user-image img {
 .company p {
   text-align: center;
   color: grey;
-  font-family: "Poiret One", cursive;
+  font-family: "Montserrat", sans-serif;
   margin-bottom: 2%;
   font-size: 17px;
 }
@@ -260,15 +265,11 @@ header nav .current-user-image img {
   padding: 3% 20%;
   text-align: center;
   color: grey;
-  font-family: "Poiret One", cursive;
+  font-family: "Montserrat", sans-serif;
 }
 .company .company-info p {
   margin-bottom: 2%;
   color: #39496a;
-}
-.company .company-info p strong {
-  color: #363636;
-  font-size: 20px;
 }
 .company .company-features {
   padding: 3% 10%;
@@ -295,7 +296,7 @@ header nav .current-user-image img {
   text-align: center;
   color: grey;
   font-size: 19px;
-  font-family: "Poiret One", cursive;
+  font-family: "Montserrat", sans-serif;
 }
 
 @media screen and (max-width: 992px) {
@@ -331,7 +332,7 @@ header nav .current-user-image img {
 .our-services p {
   text-align: center;
   color: grey;
-  font-family: "Poiret One", cursive;
+  font-family: "Montserrat", sans-serif;
   margin-bottom: 5%;
   font-size: 22px;
 }
@@ -357,7 +358,7 @@ header nav .current-user-image img {
   background-color: #fff;
 }
 .our-services .services .content i {
-  font-size: 4rem;
+  font-size: 3rem;
   margin-bottom: 3%;
   color: #39496a;
 }
@@ -374,7 +375,7 @@ header nav .current-user-image img {
   color: #39496a;
 }
 .our-services .services .content p {
-  font-size: 19px;
+  font-size: 17px;
   color: #39496a;
 }
 .our-services .services .image {
@@ -422,7 +423,7 @@ header nav .current-user-image img {
     padding: 10% 0;
   }
   .our-services .services .content i {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   .our-services .services .content h3 {
     font-size: 14px;
@@ -455,7 +456,7 @@ header nav .current-user-image img {
 .staff p {
   text-align: center;
   color: grey;
-  font-family: "Poiret One", cursive;
+  font-family: "Montserrat", sans-serif;
   margin-bottom: 2%;
   font-size: 22px;
 }
@@ -486,13 +487,13 @@ header nav .current-user-image img {
 }
 .staff .staff-content .professional h3 {
   color: #39496a;
-  font-family: "Poiret One", cursive;
+  font-family: "Montserrat", sans-serif;
   font-size: 20px;
   margin-bottom: 5%;
 }
 .staff .staff-content .professional p {
   color: grey;
-  font-family: "Poiret One", cursive;
+  font-family: "Montserrat", sans-serif;
   font-size: 19px;
   margin-bottom: 3%;
 }
@@ -543,7 +544,7 @@ header nav .current-user-image img {
 .location p {
   text-align: center;
   color: grey;
-  font-family: "Poiret One", cursive;
+  font-family: "Montserrat", sans-serif;
   margin-bottom: 2%;
   font-size: 19px;
 }
@@ -569,7 +570,7 @@ header nav .current-user-image img {
   .location p {
     text-align: center;
     color: grey;
-    font-family: "Poiret One", cursive;
+    font-family: "Montserrat", sans-serif;
     margin-bottom: 2%;
     font-size: 15px;
   }
@@ -611,7 +612,7 @@ footer .logo-icon-footer:hover i {
 footer p {
   color: grey;
   font-size: 16px;
-  font-family: "Poiret One", cursive;
+  font-family: "Montserrat", sans-serif;
   margin-bottom: 2%;
 }
 footer p .fa-map-pin {
@@ -643,7 +644,7 @@ footer .social-networks i:hover {
   footer p {
     color: grey;
     font-size: 13px;
-    font-family: "Poiret One", cursive;
+    font-family: "Montserrat", sans-serif;
     margin-bottom: 1rem;
   }
   footer p .fa-map-pin {
@@ -714,7 +715,7 @@ footer .social-networks i:hover {
 .our-clients p {
   text-align: center;
   color: grey;
-  font-family: "Poiret One", cursive;
+  font-family: "Montserrat", sans-serif;
   margin-bottom: 2%;
   font-size: 22px;
 }
@@ -871,7 +872,7 @@ footer .social-networks i:hover {
 .form-contact p {
   text-align: center;
   color: grey;
-  font-family: "Poiret One", cursive;
+  font-family: "Montserrat", sans-serif;
   margin-bottom: 3%;
   font-size: 22px;
 }
@@ -984,7 +985,7 @@ footer .social-networks i:hover {
   .form-contact p {
     text-align: center;
     color: grey;
-    font-family: "Poiret One", cursive;
+    font-family: "Montserrat", sans-serif;
     margin-bottom: 3%;
     font-size: 22px;
   }
@@ -1949,6 +1950,485 @@ footer .social-networks i:hover {
   display: none;
 }
 
+@media screen and (max-width: 600px) {
+  .generate-certifications-section {
+    width: 100%;
+    height: 70vh;
+    padding-top: 10vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .generate-certifications-section .upload-certifications-slider, .generate-certifications-section .assign-certificate-slider, .generate-certifications-section .certificates-crud-slider {
+    width: 90%;
+    border-radius: 5px;
+    background-color: #39496a;
+    margin: 1rem 0;
+    padding: 1rem 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  .generate-certifications-section .upload-certifications-slider h2, .generate-certifications-section .assign-certificate-slider h2, .generate-certifications-section .certificates-crud-slider h2 {
+    font-size: 11px;
+    letter-spacing: 5px;
+    color: #fff;
+    text-shadow: 0px 0px 5px #969696;
+  }
+  .generate-certifications-section .upload-certifications-slider i, .generate-certifications-section .assign-certificate-slider i, .generate-certifications-section .certificates-crud-slider i {
+    margin: 0 0.5rem;
+    font-size: 1rem;
+    color: #fff;
+  }
+  .generate-certifications-section .upload-certifications-slider .upload-certifiction, .generate-certifications-section .assign-certificate-slider .upload-certifiction, .generate-certifications-section .certificates-crud-slider .upload-certifiction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+    width: 60%;
+    margin: 2rem 0;
+  }
+  .generate-certifications-section .upload-certifications-slider .upload-certifiction .upload-certification-content, .generate-certifications-section .assign-certificate-slider .upload-certifiction .upload-certification-content, .generate-certifications-section .certificates-crud-slider .upload-certifiction .upload-certification-content {
+    margin: 20px 0;
+    padding: 10px 0;
+    width: 90%;
+    border-bottom: #39496a 1px solid;
+    height: 30px;
+    text-align: center;
+    transition: 2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    cursor: pointer;
+  }
+  .generate-certifications-section .upload-certifications-slider .upload-certifiction .upload-certification-content i, .generate-certifications-section .assign-certificate-slider .upload-certifiction .upload-certification-content i, .generate-certifications-section .certificates-crud-slider .upload-certifiction .upload-certification-content i {
+    color: green;
+    margin-right: 5px;
+  }
+  .generate-certifications-section .upload-certifications-slider .upload-certifiction .upload-certification-content p, .generate-certifications-section .assign-certificate-slider .upload-certifiction .upload-certification-content p, .generate-certifications-section .certificates-crud-slider .upload-certifiction .upload-certification-content p {
+    color: #39496a;
+  }
+  .generate-certifications-section .upload-certifications-slider .upload-certifiction .select-certificate-to-upload, .generate-certifications-section .assign-certificate-slider .upload-certifiction .select-certificate-to-upload, .generate-certifications-section .certificates-crud-slider .upload-certifiction .select-certificate-to-upload {
+    display: none;
+  }
+  .generate-certifications-section .upload-certifications-slider .upload-certifiction input[type=text], .generate-certifications-section .assign-certificate-slider .upload-certifiction input[type=text], .generate-certifications-section .certificates-crud-slider .upload-certifiction input[type=text] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: #39496a 1px solid;
+    width: 90%;
+    padding: 10px 0;
+    color: #485761;
+    margin: 1rem 0;
+    color: #39496a;
+  }
+  .generate-certifications-section .upload-certifications-slider .upload-certifiction input[type=button], .generate-certifications-section .assign-certificate-slider .upload-certifiction input[type=button], .generate-certifications-section .certificates-crud-slider .upload-certifiction input[type=button] {
+    width: auto;
+    margin: 10px 0;
+    padding: 10px 30px;
+    border: 1px solid #39496a;
+    background-color: #39496a;
+    border-radius: 30px;
+    color: #fff;
+    transition: 1s;
+    cursor: pointer;
+  }
+  .generate-certifications-section .upload-certifications-slider .upload-certifiction input[type=button]:hover, .generate-certifications-section .assign-certificate-slider .upload-certifiction input[type=button]:hover, .generate-certifications-section .certificates-crud-slider .upload-certifiction input[type=button]:hover {
+    width: auto;
+    margin: 10px 0;
+    padding: 10px 30px;
+    border: 1px solid #39496a;
+    background-color: #fff;
+    border-radius: 30px;
+    color: #39496a;
+  }
+  .generate-certifications-section .certificates-crud {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+    width: 90%;
+    margin: 2rem 0;
+  }
+  .generate-certifications-section .certificates-crud table {
+    width: 100%;
+    border: 1px solid #e3e3e3;
+    border-radius: 5px;
+  }
+  .generate-certifications-section .certificates-crud table thead, .generate-certifications-section .certificates-crud table tbody {
+    width: 100%;
+  }
+  .generate-certifications-section .certificates-crud table tr {
+    width: 100%;
+  }
+  .generate-certifications-section .certificates-crud table tr th {
+    color: #fff;
+    font-weight: bold;
+    background-color: #39496a;
+  }
+  .generate-certifications-section .certificates-crud table tr td {
+    color: #444;
+  }
+  .generate-certifications-section .certificates-crud table tr td .fa-edit {
+    color: #8FE255;
+    cursor: pointer;
+  }
+  .generate-certifications-section .certificates-crud table tr td .fa-edit:hover {
+    color: green;
+  }
+  .generate-certifications-section .certificates-crud table tr td .fa-trash-alt {
+    color: tomato;
+    cursor: pointer;
+  }
+  .generate-certifications-section .certificates-crud table tr td .fa-trash-alt:hover {
+    color: red;
+  }
+  .generate-certifications-section .certificates-crud table tr th, .generate-certifications-section .certificates-crud table tr td {
+    width: 33.3%;
+    font-size: 10px;
+    text-align: center;
+    padding: 1rem 0;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 992px) {
+  .generate-certifications-section {
+    width: 100%;
+    height: 70vh;
+    padding-top: 10vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .generate-certifications-section .upload-certifications-slider, .generate-certifications-section .assign-certificate-slider, .generate-certifications-section .certificates-crud-slider {
+    width: 70%;
+    border-radius: 5px;
+    background-color: #39496a;
+    margin: 1rem 0;
+    padding: 1rem 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  .generate-certifications-section .upload-certifications-slider h2, .generate-certifications-section .assign-certificate-slider h2, .generate-certifications-section .certificates-crud-slider h2 {
+    font-size: 15px;
+    letter-spacing: 5px;
+    color: #fff;
+    text-shadow: 0px 0px 5px #969696;
+  }
+  .generate-certifications-section .upload-certifications-slider i, .generate-certifications-section .assign-certificate-slider i, .generate-certifications-section .certificates-crud-slider i {
+    margin: 0 1rem;
+    font-size: 2.5rem;
+    color: #fff;
+  }
+  .generate-certifications-section .upload-certifiction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+    width: 60%;
+    margin: 2rem 0;
+  }
+  .generate-certifications-section .upload-certifiction .upload-certification-content {
+    margin: 20px 0;
+    padding: 10px 0;
+    width: 50%;
+    border-bottom: #39496a 1px solid;
+    height: 30px;
+    text-align: center;
+    transition: 2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    cursor: pointer;
+  }
+  .generate-certifications-section .upload-certifiction .upload-certification-content i {
+    color: green;
+    margin-right: 5px;
+  }
+  .generate-certifications-section .upload-certifiction .upload-certification-content p {
+    color: #39496a;
+  }
+  .generate-certifications-section .upload-certifiction .select-certificate-to-upload {
+    display: none;
+  }
+  .generate-certifications-section .upload-certifiction input[type=text] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: #39496a 1px solid;
+    width: 50%;
+    padding: 10px 0;
+    color: #485761;
+    margin: 1rem 0;
+    color: #39496a;
+  }
+  .generate-certifications-section .upload-certifiction input[type=button] {
+    width: auto;
+    margin: 10px 0;
+    padding: 10px 30px;
+    border: 1px solid #39496a;
+    background-color: #39496a;
+    border-radius: 30px;
+    color: #fff;
+    transition: 1s;
+    cursor: pointer;
+  }
+  .generate-certifications-section .upload-certifiction input[type=button]:hover {
+    width: auto;
+    margin: 10px 0;
+    padding: 10px 30px;
+    border: 1px solid #39496a;
+    background-color: #fff;
+    border-radius: 30px;
+    color: #39496a;
+  }
+  .generate-certifications-section .assign-certifiction-to-user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+    width: 60%;
+    margin: 2rem 0;
+  }
+  .generate-certifications-section .assign-certifiction-to-user h2 {
+    font-size: 30px;
+    letter-spacing: 5px;
+    color: #39496a;
+    margin-bottom: 5%;
+    text-shadow: 0px 0px 5px #969696;
+  }
+  .generate-certifications-section .assign-certifiction-to-user select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: #39496a 1px solid;
+    width: 50%;
+    padding: 10px 0;
+    color: #485761;
+    margin: 1rem 0;
+  }
+  .generate-certifications-section .assign-certifiction-to-user input[type=button] {
+    width: auto;
+    margin: 10px 0;
+    padding: 10px 30px;
+    border: 1px solid #39496a;
+    background-color: #39496a;
+    border-radius: 30px;
+    color: #fff;
+    transition: 1s;
+    cursor: pointer;
+  }
+  .generate-certifications-section .assign-certifiction-to-user input[type=button]:hover {
+    width: auto;
+    margin: 10px 0;
+    padding: 10px 30px;
+    border: 1px solid #39496a;
+    background-color: #fff;
+    border-radius: 30px;
+    color: #39496a;
+  }
+  .generate-certifications-section .certificates-crud {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+    width: 60%;
+    margin: 2rem 0;
+  }
+  .generate-certifications-section .certificates-crud table {
+    width: 100%;
+    border: 1px solid #e3e3e3;
+    border-radius: 5px;
+  }
+  .generate-certifications-section .certificates-crud table thead, .generate-certifications-section .certificates-crud table tbody {
+    width: 100%;
+  }
+  .generate-certifications-section .certificates-crud table tr {
+    width: 100%;
+  }
+  .generate-certifications-section .certificates-crud table tr th {
+    color: #fff;
+    font-weight: bold;
+    background-color: #39496a;
+  }
+  .generate-certifications-section .certificates-crud table tr td {
+    color: #444;
+  }
+  .generate-certifications-section .certificates-crud table tr td .fa-edit {
+    color: #8FE255;
+    cursor: pointer;
+  }
+  .generate-certifications-section .certificates-crud table tr td .fa-edit:hover {
+    color: green;
+  }
+  .generate-certifications-section .certificates-crud table tr td .fa-trash-alt {
+    color: tomato;
+    cursor: pointer;
+  }
+  .generate-certifications-section .certificates-crud table tr td .fa-trash-alt:hover {
+    color: red;
+  }
+  .generate-certifications-section .certificates-crud table tr th, .generate-certifications-section .certificates-crud table tr td {
+    width: 33.3%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  .generate-certifications-section .crud-delete-option, .generate-certifications-section .crud-edit-option {
+    position: fixed;
+    top: 30vh;
+    left: 20%;
+    width: 60%;
+    padding: 2rem 0;
+    border: 2px solid #39496a;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 0px 5px 0px #363636;
+    -moz-box-shadow: 0px 0px 5px 0px #363636;
+    box-shadow: 0px 0px 5px 0px #363636;
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .generate-certifications-section .crud-delete-option p, .generate-certifications-section .crud-edit-option p {
+    color: #39496a;
+    margin-bottom: 2rem;
+  }
+  .generate-certifications-section .crud-delete-option input[type=text], .generate-certifications-section .crud-edit-option input[type=text] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: #39496a 1px solid;
+    width: 50%;
+    padding: 10px 0;
+    color: #485761;
+    margin: 1rem 0;
+    color: #39496a;
+  }
+  .generate-certifications-section .crud-delete-option .crud-select-btn, .generate-certifications-section .crud-delete-option .crud-edit-select-btn, .generate-certifications-section .crud-edit-option .crud-select-btn, .generate-certifications-section .crud-edit-option .crud-edit-select-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  .generate-certifications-section .crud-delete-option .crud-select-btn input[type=button], .generate-certifications-section .crud-delete-option .crud-edit-select-btn input[type=button], .generate-certifications-section .crud-edit-option .crud-select-btn input[type=button], .generate-certifications-section .crud-edit-option .crud-edit-select-btn input[type=button] {
+    width: auto;
+    margin: 0 10px;
+    padding: 10px 30px;
+    border: 1px solid #39496a;
+    background-color: #39496a;
+    border-radius: 30px;
+    color: #fff;
+    transition: 1s;
+    cursor: pointer;
+  }
+  .generate-certifications-section .crud-delete-option .crud-select-btn input[type=button]:hover, .generate-certifications-section .crud-delete-option .crud-edit-select-btn input[type=button]:hover, .generate-certifications-section .crud-edit-option .crud-select-btn input[type=button]:hover, .generate-certifications-section .crud-edit-option .crud-edit-select-btn input[type=button]:hover {
+    width: auto;
+    margin: 0 10px;
+    padding: 10px 30px;
+    border: 1px solid #39496a;
+    background-color: #fff;
+    border-radius: 30px;
+    color: #39496a;
+  }
+  .generate-certifications-section .certificate-message {
+    position: absolute;
+    top: 30vh;
+    left: 20%;
+    width: 60%;
+    padding: 20px 0;
+    border: 2px solid #39496a;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 0px 5px 0px #363636;
+    -moz-box-shadow: 0px 0px 5px 0px #363636;
+    box-shadow: 0px 0px 5px 0px #363636;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .generate-certifications-section .certificate-message p {
+    color: #39496a;
+    font-family: "Open Sans Condensed", sans-serif;
+    letter-spacing: 1px;
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+  .generate-certifications-section .certificate-message input[type=button] {
+    padding: 10px 30px;
+    border-radius: 50px;
+    background-color: #39496a;
+    border: 1px solid #39496a;
+    color: #fff;
+    transition: 1s;
+    margin: 0 20px;
+    cursor: pointer;
+  }
+  .generate-certifications-section .certificate-message input[type=button]:hover {
+    padding: 10px 30px;
+    border-radius: 50px;
+    background-color: #fff;
+    border: 1px solid #39496a;
+    color: #39496a;
+    cursor: pointer;
+  }
+  .generate-certifications-section .success-assign-cert-message, .generate-certifications-section .success-charge-document, .generate-certifications-section .success-select-document, .generate-certifications-section .success-delete-cert, .generate-certifications-section .success-edit-cert {
+    width: 40%;
+    height: 80px;
+    position: absolute;
+    top: 1vh;
+    right: 2%;
+    text-align: center;
+    -webkit-box-shadow: 0px 0px 10px 0px #e3e3e3;
+    -moz-box-shadow: 0px 0px 10px 0px #e3e3e3;
+    box-shadow: 0px 0px 10px 0px #e3e3e3;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: rgba(35, 203, 167, 0.8);
+    color: #fff;
+    font-size: 12px;
+    display: none;
+  }
+  .generate-certifications-section .error-update-document {
+    width: 40%;
+    height: 80px;
+    position: absolute;
+    top: 1vh;
+    right: 2%;
+    text-align: center;
+    -webkit-box-shadow: 0px 0px 10px 0px #e3e3e3;
+    -moz-box-shadow: 0px 0px 10px 0px #e3e3e3;
+    box-shadow: 0px 0px 10px 0px #e3e3e3;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: rgba(255, 99, 71, 0.8);
+    color: #fff;
+    font-size: 12px;
+    display: none;
+  }
+}
 .user-certification {
   display: flex;
   justify-content: flex-start;

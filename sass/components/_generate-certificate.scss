@@ -331,3 +331,494 @@
     display: none;
   }
 }
+
+@media screen and (max-width: 600px){
+  .generate-certifications-section{
+    width: 100%;
+    height: 70vh;
+    padding-top: 10vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .upload-certifications-slider , .assign-certificate-slider , .certificates-crud-slider{
+      width: 90%;
+      border-radius: 5px;
+      background-color: $dark-blue;
+      margin: 1rem 0;
+      padding: 1rem 0;
+      cursor: pointer;
+      @include flex-row;
+
+      h2{
+        font-size: 11px;
+        letter-spacing: 5px;
+        color: #fff;
+        text-shadow: 0px 0px 5px rgba(150, 150, 150, 1);
+      }
+
+      i{
+        margin: 0 .5rem;
+        font-size: 1rem;
+        color: #fff;
+      }
+
+      .upload-certifiction{
+        @include flex-column;
+        display: none;
+        width: 60%;
+        margin: 2rem 0;
+
+        .upload-certification-content{
+          margin: 20px 0;
+          padding: 10px 0;
+          width: 90%;
+          border-bottom: $dark-blue 1px solid;
+          height: 30px;
+          text-align: center;
+          transition: 2s;
+          @include flex-row;
+          cursor: pointer;
+
+          i{
+            color: green;
+            margin-right: 5px;
+          }
+
+          p{
+            color: $dark-blue;
+          }
+        }
+
+        .select-certificate-to-upload{
+          display: none;
+        }
+
+        input[type = 'text']{
+          @include flex-column;
+          border-bottom: $dark-blue 1px solid;
+          width: 90%;
+          padding: 10px 0;
+          color: #485761;
+          margin: 1rem 0;
+          color: $dark-blue;
+        }
+
+        input[type = 'button']{
+          width: auto;
+          margin: 10px 0;
+          padding: 10px 30px;
+          border: 1px solid $dark-blue;
+          background-color: $dark-blue;
+          border-radius: 30px;
+          color: #fff;
+          transition: 1s;
+          cursor: pointer;
+        }
+
+        input[type = 'button']:hover{
+          width: auto;
+          margin: 10px 0;
+          padding: 10px 30px;
+          border: 1px solid $dark-blue;
+          background-color: #fff;
+          border-radius: 30px;
+          color: $dark-blue;
+        }
+      }
+    }
+
+    .certificates-crud{
+      @include flex-column;
+      display: none;
+      width: 90%;
+      margin: 2rem 0;
+
+      table{
+        width: 100%;
+        border: 1px solid #e3e3e3;
+        border-radius: 5px;
+
+        thead ,tbody{
+          width: 100%;
+        }
+
+        tr{
+          width: 100%;
+
+          th{
+            color: #fff;
+            font-weight: bold;
+            background-color: $dark-blue;
+          }
+
+          td{
+            color: #444;
+
+            .fa-edit{
+              color: #8FE255;
+              cursor: pointer;
+            }
+
+            .fa-edit:hover{
+              color: green;
+            }
+
+            .fa-trash-alt{
+              color: tomato;
+              cursor: pointer;
+            }
+
+            .fa-trash-alt:hover{
+              color: red;
+            }
+          }
+
+          th , td{
+            width: 33.3%;
+            font-size: 10px;
+            text-align: center;
+            padding: 1rem 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 992px){
+  .generate-certifications-section{
+    width: 100%;
+    height: 70vh;
+    padding-top: 10vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .upload-certifications-slider , .assign-certificate-slider , .certificates-crud-slider{
+      width: 70%;
+      border-radius: 5px;
+      background-color: $dark-blue;
+      margin: 1rem 0;
+      padding: 1rem 0;
+      cursor: pointer;
+      @include flex-row;
+
+      h2{
+        font-size: 15px;
+        letter-spacing: 5px;
+        color: #fff;
+        text-shadow: 0px 0px 5px rgba(150, 150, 150, 1);
+      }
+
+      i{
+        margin: 0 1rem;
+        font-size: 2.5rem;
+        color: #fff;
+      }
+    }
+
+    .upload-certifiction{
+      @include flex-column;
+      display: none;
+      width: 60%;
+      margin: 2rem 0;
+
+      .upload-certification-content{
+        margin: 20px 0;
+        padding: 10px 0;
+        width: 50%;
+        border-bottom: $dark-blue 1px solid;
+        height: 30px;
+        text-align: center;
+        transition: 2s;
+        @include flex-row;
+        cursor: pointer;
+
+        i{
+          color: green;
+          margin-right: 5px;
+        }
+
+        p{
+          color: $dark-blue;
+        }
+      }
+
+      .select-certificate-to-upload{
+        display: none;
+      }
+
+      input[type = 'text']{
+        @include flex-column;
+        border-bottom: $dark-blue 1px solid;
+        width: 50%;
+        padding: 10px 0;
+        color: #485761;
+        margin: 1rem 0;
+        color: $dark-blue;
+      }
+
+      input[type = 'button']{
+        width: auto;
+        margin: 10px 0;
+        padding: 10px 30px;
+        border: 1px solid $dark-blue;
+        background-color: $dark-blue;
+        border-radius: 30px;
+        color: #fff;
+        transition: 1s;
+        cursor: pointer;
+      }
+
+      input[type = 'button']:hover{
+        width: auto;
+        margin: 10px 0;
+        padding: 10px 30px;
+        border: 1px solid $dark-blue;
+        background-color: #fff;
+        border-radius: 30px;
+        color: $dark-blue;
+      }
+    }
+
+    .assign-certifiction-to-user{
+      @include flex-column;
+      display: none;
+      width: 60%;
+      margin: 2rem 0;
+
+      h2{
+        font-size: 30px;
+        letter-spacing: 5px;
+        color: $dark-blue;
+        margin-bottom: 5%;
+        text-shadow: 0px 0px 5px rgba(150, 150, 150, 1);
+      }
+
+      select{
+        @include flex-column;
+        border-bottom: $dark-blue 1px solid;
+        width: 50%;
+        padding: 10px 0;
+        color: #485761;
+        margin: 1rem 0;
+      }
+
+      input[type = 'button']{
+        width: auto;
+        margin: 10px 0;
+        padding: 10px 30px;
+        border: 1px solid $dark-blue;
+        background-color: $dark-blue;
+        border-radius: 30px;
+        color: #fff;
+        transition: 1s;
+        cursor: pointer;
+      }
+
+      input[type = 'button']:hover{
+        width: auto;
+        margin: 10px 0;
+        padding: 10px 30px;
+        border: 1px solid $dark-blue;
+        background-color: #fff;
+        border-radius: 30px;
+        color: $dark-blue;
+      }
+    }
+
+    .certificates-crud{
+      @include flex-column;
+      display: none;
+      width: 60%;
+      margin: 2rem 0;
+
+      table{
+        width: 100%;
+        border: 1px solid #e3e3e3;
+        border-radius: 5px;
+
+        thead ,tbody{
+          width: 100%;
+        }
+
+        tr{
+          width: 100%;
+
+          th{
+            color: #fff;
+            font-weight: bold;
+            background-color: $dark-blue;
+          }
+
+          td{
+            color: #444;
+
+            .fa-edit{
+              color: #8FE255;
+              cursor: pointer;
+            }
+
+            .fa-edit:hover{
+              color: green;
+            }
+
+            .fa-trash-alt{
+              color: tomato;
+              cursor: pointer;
+            }
+
+            .fa-trash-alt:hover{
+              color: red;
+            }
+          }
+
+          th , td{
+            width: 33.3%;
+            text-align: center;
+            padding: 1rem 0;
+          }
+        }
+      }
+    }
+
+    .crud-delete-option , .crud-edit-option{
+      position: fixed;
+      top: 30vh;
+      left: 20%;
+      width: 60%;
+      padding: 2rem 0;
+      border: 2px solid $dark-blue;
+      background-color: #fff;
+      -webkit-box-shadow: 0px 0px 5px 0px rgba(54,54,54,1);
+      -moz-box-shadow: 0px 0px 5px 0px rgba(54,54,54,1);
+      box-shadow: 0px 0px 5px 0px rgba(54,54,54,1);
+      text-align: center;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      p{
+        color: $dark-blue;
+        margin-bottom: 2rem;
+      }
+
+      input[type = 'text']{
+        @include flex-column;
+        border-bottom: $dark-blue 1px solid;
+        width: 50%;
+        padding: 10px 0;
+        color: #485761;
+        margin: 1rem 0;
+        color: $dark-blue;
+      }
+
+      .crud-select-btn , .crud-edit-select-btn{
+        @include flex-row;
+
+        input[type = 'button']{
+          width: auto;
+          margin: 0 10px;
+          padding: 10px 30px;
+          border: 1px solid $dark-blue;
+          background-color: $dark-blue;
+          border-radius: 30px;
+          color: #fff;
+          transition: 1s;
+          cursor: pointer;
+        }
+
+        input[type = 'button']:hover{
+          width: auto;
+          margin: 0 10px;
+          padding: 10px 30px;
+          border: 1px solid $dark-blue;
+          background-color: #fff;
+          border-radius: 30px;
+          color: $dark-blue;
+        }
+      }
+    }
+
+    .certificate-message{
+      position: absolute;
+      top: 30vh;
+      left: 20%;
+      width: 60%;
+      padding: 20px 0;
+      border: 2px solid $dark-blue;
+      background-color: #fff;
+      -webkit-box-shadow: 0px 0px 5px 0px rgba(54,54,54,1);
+      -moz-box-shadow: 0px 0px 5px 0px rgba(54,54,54,1);
+      box-shadow: 0px 0px 5px 0px rgba(54,54,54,1);
+      text-align: center;
+      @include flex-column;
+
+      p{
+        color: $dark-blue;
+        font-family: 'Open Sans Condensed', sans-serif;
+        letter-spacing: 1px;
+        font-size: 17px;
+        margin-bottom: 10px;
+      }
+
+      input[type = 'button']{
+        padding: 10px 30px;
+        border-radius: 50px;
+        background-color: $dark-blue;
+        border: 1px solid $dark-blue;
+        color: #fff;
+        transition: 1s;
+        margin: 0 20px;
+        cursor: pointer;
+      }
+
+      input[type = 'button']:hover{
+        padding: 10px 30px;
+        border-radius: 50px;
+        background-color: #fff;
+        border: 1px solid $dark-blue;
+        color: $dark-blue;
+        cursor: pointer;
+      }
+    }
+
+    .success-assign-cert-message , .success-charge-document , .success-select-document , .success-delete-cert , .success-edit-cert{
+      width: 40%;
+      height: 80px;
+      position: absolute;
+      top: 1vh;
+      right: 2%;
+      text-align: center;
+      -webkit-box-shadow: 0px 0px 10px 0px rgba(227,227,227,1);
+      -moz-box-shadow: 0px 0px 10px 0px rgba(227,227,227,1);
+      box-shadow: 0px 0px 10px 0px rgba(227,227,227,1);
+      border-radius: 100px;
+      @include flex-row;
+      background-color: rgba(35, 203, 167, 0.8);
+      color: #fff;
+      font-size: 12px;
+      display: none;
+    }
+
+    .error-update-document{
+      width: 40%;
+      height: 80px;
+      position: absolute;
+      top: 1vh;
+      right: 2%;
+      text-align: center;
+      -webkit-box-shadow: 0px 0px 10px 0px rgba(227,227,227,1);
+      -moz-box-shadow: 0px 0px 10px 0px rgba(227,227,227,1);
+      box-shadow: 0px 0px 10px 0px rgba(227,227,227,1);
+      border-radius: 100px;
+      @include flex-row;
+      background-color: rgba(255,99,71, 0.8);
+      color: #fff;
+      font-size: 12px;
+      display: none;
+    }
+  }
+}
