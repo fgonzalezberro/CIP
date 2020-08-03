@@ -30,7 +30,7 @@ const chargeSelectUsers = () =>{
                                 `;
     }
 
-    // Display the Database info in 'Usr Select'
+    // Display the Database info in 'User Select'
     $(selectUser).append(usersToParseIntoOption);
   });
 }
