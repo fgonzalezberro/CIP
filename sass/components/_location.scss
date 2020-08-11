@@ -1,7 +1,7 @@
 // Location Section Open
 .location{
   width: 100%;
-  padding: 10% 0 10% 0;
+  padding: 10% 0;
   text-align: center;
   @include flex-column;
 
@@ -10,17 +10,21 @@
     font-size: 30px;
   }
 
-  p{
-    text-align: center;
-    color: #4d4d4d;
-    font-weight: 400;
-    font-family: 'Montserrat', sans-serif;
-    margin-bottom: 2%;
-    font-size: 19px;
+  .location-sub-title{
+    width: 45%;
+
+    p{
+      text-align: center;
+      color: #4d4d4d;
+      font-weight: 400;
+      font-family: 'Montserrat', sans-serif;
+      margin-bottom: 2%;
+      font-size: 19px;
+    }
   }
 
   img{
-    width: 30%;
+    width: 35%;
     height: auto;
   }
 }

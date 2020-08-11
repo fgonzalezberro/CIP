@@ -15,14 +15,17 @@
     font-weight: 400;
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 2%;
-    font-size: 17px;
+    font-size: 22px;
   }
 
   .company-info{
     padding: 3% 20%;
     text-align: center;
-    color: grey;
-    font-family: 'Montserrat', sans-serif;
+
+    p{
+      font-family: 'Montserrat', sans-serif;
+      font-size: 17px;
+    }
   }
 
   .company-features{
@@ -41,6 +44,7 @@
       }
 
       p{
+        font-size: 17px;
         padding: 3% 20%;
         text-align: center;
       }
@@ -57,7 +61,7 @@
     }
 
     p{
-      font-size: 13px;
+      font-size: 15px;
       margin-bottom: 3%;
     }
 

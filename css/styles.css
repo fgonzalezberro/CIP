@@ -260,13 +260,15 @@ header nav .current-user-image img {
   font-weight: 400;
   font-family: "Montserrat", sans-serif;
   margin-bottom: 2%;
-  font-size: 17px;
+  font-size: 22px;
 }
 .company .company-info {
   padding: 3% 20%;
   text-align: center;
-  color: grey;
+}
+.company .company-info p {
   font-family: "Montserrat", sans-serif;
+  font-size: 17px;
 }
 .company .company-features {
   padding: 3% 10%;
@@ -289,6 +291,7 @@ header nav .current-user-image img {
   font-size: 3rem;
 }
 .company .company-features div p {
+  font-size: 17px;
   padding: 3% 20%;
   text-align: center;
 }
@@ -298,7 +301,7 @@ header nav .current-user-image img {
     font-size: 22px;
   }
   .company p {
-    font-size: 13px;
+    font-size: 15px;
     margin-bottom: 3%;
   }
   .company .company-features {
@@ -399,7 +402,7 @@ header nav .current-user-image img {
     font-size: 22px;
   }
   .our-services p {
-    font-size: 14px;
+    font-size: 15px;
   }
   .our-services .services {
     display: flex;
@@ -524,7 +527,7 @@ header nav .current-user-image img {
 }
 .location {
   width: 100%;
-  padding: 10% 0 10% 0;
+  padding: 10% 0;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -535,7 +538,10 @@ header nav .current-user-image img {
   color: #39496a;
   font-size: 30px;
 }
-.location p {
+.location .location-sub-title {
+  width: 45%;
+}
+.location .location-sub-title p {
   text-align: center;
   color: #4d4d4d;
   font-weight: 400;
@@ -544,7 +550,7 @@ header nav .current-user-image img {
   font-size: 19px;
 }
 .location img {
-  width: 30%;
+  width: 35%;
   height: auto;
 }
 
@@ -768,7 +774,7 @@ footer .social-networks i:hover {
     font-size: 22px;
   }
   .our-clients p {
-    font-size: 14px;
+    font-size: 15px;
   }
   .our-clients .carousel-content {
     width: 100%;
@@ -855,6 +861,9 @@ footer .social-networks i:hover {
   background: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url("../img/contact-form-image.jpeg");
   background-repeat: no-repeat;
   -webkit-background-size: cover;
+  -webkit-box-shadow: 0px -4px 6px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px -4px 6px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px -4px 6px 0px rgba(0, 0, 0, 0.75);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -970,7 +979,7 @@ footer .social-networks i:hover {
     width: 100%;
     background: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), black), url("../img/contact-form-image.jpeg");
     background-repeat: no-repeat;
-    -webkit-background-size: cover;
+    -webkit-background-size: 100% 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -978,14 +987,14 @@ footer .social-networks i:hover {
   }
   .form-contact h2 {
     color: #39496a;
-    font-size: 30px;
+    font-size: 22px;
   }
   .form-contact p {
     text-align: center;
     color: grey;
     font-family: "Montserrat", sans-serif;
     margin-bottom: 3%;
-    font-size: 22px;
+    font-size: 15px;
   }
   .form-contact form {
     display: flex;

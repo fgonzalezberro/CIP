@@ -5,6 +5,9 @@
   background: -webkit-linear-gradient(rgba(0,0,0, .7),rgba(0,0,0,.9)), url("../img/contact-form-image.jpeg");
   background-repeat: no-repeat;
   -webkit-background-size: cover;
+  -webkit-box-shadow: 0px -4px 6px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px -4px 6px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px -4px 6px 0px rgba(0,0,0,0.75);
   @include flex-column;
 
   h2{
@@ -117,12 +120,12 @@
     width: 100%;
     background: -webkit-linear-gradient(rgba(0,0,0,.7),rgba(0,0,0, 1)), url("../img/contact-form-image.jpeg");
     background-repeat: no-repeat;
-    -webkit-background-size: cover;
+    -webkit-background-size: 100% 100%;
     @include flex-column;
 
     h2{
       color: $dark-blue;
-      font-size: 30px;
+      font-size: 22px;
     }
 
     p{
@@ -130,7 +133,7 @@
       color: grey;
       font-family: 'Montserrat', sans-serif;
       margin-bottom: 3%;
-      font-size: 22px;
+      font-size: 15px;
     }
 
     form{
