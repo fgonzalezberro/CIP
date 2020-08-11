@@ -2,7 +2,7 @@
 .form-contact{
   padding: 10% 0;
   width: 100%;
-  background: -webkit-linear-gradient(rgba(0,0,0,.7),rgba(0,0,0, 1)), url("../img/contact-form-image.jpeg");
+  background: -webkit-linear-gradient(rgba(0,0,0, .7),rgba(0,0,0,.9)), url("../img/contact-form-image.jpeg");
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   @include flex-column;
@@ -14,13 +14,17 @@
 
   p{
     text-align: center;
-    color: grey;
+    color: #e3e3e3;
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 3%;
     font-size: 22px;
   }
 
   form{
+    ::placeholder{
+      color: #e3e3e3;
+    }
+
     @include flex-column;
     width: 100%;
 
