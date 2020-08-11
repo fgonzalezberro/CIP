@@ -222,14 +222,14 @@ header nav .current-user-image img {
   }
   .cover h1 {
     color: #fff;
-    letter-spacing: 10px;
-    font-size: 30px;
+    letter-spacing: 2px;
+    font-size: 21px;
     text-align: center;
   }
   .cover h2 {
     color: #fff;
     letter-spacing: 5px;
-    font-size: 19px;
+    font-size: 16px;
     font-family: "Open Sans Condensed", sans-serif;
     text-align: center;
   }
