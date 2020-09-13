@@ -24,6 +24,7 @@ import { mobileNavToggle , hideAdminDashNavMobile } from './admin-dashboard-mobi
 import { normalUserLogOut } from './normal-user-log-out.js';
 import { requestUserDashboard } from './request-user-dashboard-components.js';
 import { chargeCertificationsTable , setUserStyles } from './charge-certifications-table.js';
+import { datePicker } from './generate-report.js';
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
@@ -228,4 +229,13 @@ window.addEventListener('load', ()=>{
 
   // Certification CRUD functionalities
   certificatesCrud();
+
+  // Call 'Charge report' component
+  $(document).on('click' , '.nav-generate-report' , function(){
+    requestAdminDashboardComponents('../components/generate-report.html');
+  });
+
+  $(document).on('mouseover ' , '#report-date' , function(){
+    $('#report-date').datepicker();
+  });
 });
