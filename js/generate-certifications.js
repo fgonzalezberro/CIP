@@ -348,9 +348,13 @@ const certificatesCrud = () =>{
     const dataBaseCertRef = firebase.database().ref('/certifications/'+certificateToEdit);
     let newCertName = document.querySelector('.new-certification-name');
 
-    dataBaseCertRef.update({
-      name: newCertName.value
-    });
+    if(newCertName.value !== ''){
+      dataBaseCertRef.update({
+        name: newCertName.value
+      });
+    }else{
+      alert('Por favor, no deje vacio el nombre del certificado');
+    }
 
     const succesEditMessage = document.querySelector('.success-edit-cert');
 
