@@ -17,6 +17,7 @@ const removeGenerateCertificationsAnimation = () =>{
 // Charge all users in dropbox
 const chargeSelectUsers = () =>{
   const selectUser = document.querySelector('.select-user');
+  const selectUserToDelete = document.querySelector('.select-user-to-delete');
   const dataBaseUsersRef = firebase.database().ref('/users');
 
   dataBaseUsersRef.once("value", function(snapshot){
@@ -32,24 +33,26 @@ const chargeSelectUsers = () =>{
 
     // Display the Database info in 'User Select'
     $(selectUser).append(usersToParseIntoOption);
+    $(selectUserToDelete).append(usersToParseIntoOption);
   });
 }
 
 // Charge all certificates in dropbox
 const chargeSelectCertificates = () =>{
   const selectCertificate = document.querySelector('.select-certificate');
+  const selectCertificateToDelete = document.querySelector('.select-certificate-to-delete');
   const certificateCrudTable = document.querySelector('.certificates-crud-table');
   const dataBaseUsersRef = firebase.database().ref('/certifications');
 
   dataBaseUsersRef.on("value", function(snapshot){
     let showData = snapshot.val();
     let certToParseIntoOption = '';
-    let certToParseIntoCrudTable = ''
+    let certToParseIntoCrudTable = '';
 
     // Iterate Database and select info to display in courses Content
     for(var key in showData){
       certToParseIntoOption += `
-                                  <option value="${key}">${showData[key].name}</option>
+                                  <option value="${showData[key].name}" >${showData[key].name}</option>
                                 `;
 
       certToParseIntoCrudTable += `
@@ -63,6 +66,7 @@ const chargeSelectCertificates = () =>{
 
     // Display the Database info in 'Usr Select'
     $(selectCertificate).html(certToParseIntoOption);
+    $(selectCertificateToDelete).html(certToParseIntoOption);
     $(certificateCrudTable).html(certToParseIntoCrudTable);
   });
 }
@@ -132,7 +136,7 @@ const uploadCertificatesOnDB = () =>{
         $("#progress-bar").hide();
 
         // Call create node in data base function
-        createNodeInDataBase(fileToUpload.name , nameFile.value , downloadURL);
+        createNodeInDataBase(fileToUpload.name , nameFile.value , nameFile.title , downloadURL);
       });
     });
   }else{
@@ -246,10 +250,50 @@ const assignCertificate = () =>{
   });
 }
 
+// Delete certificate to a user
+const deleteCertificate = () =>{
+  const storageRef = firebase.database().ref();
+  const userSelect = document.querySelector('.select-user-to-delete');
+  const certificateSelect = document.querySelector('.select-certificate-to-delete');
+  const dataBaseUsersRef = firebase.database().ref(`/users/${userSelect.value}/certifications`);
+
+  dataBaseUsersRef.once("value", function(snapshot){
+    let showData = snapshot.val();
+
+    for(var key in showData){
+      console.log(showData[key].certName);
+      console.log(certificateSelect.value);
+
+      if(showData[key].certName === certificateSelect.value){
+        firebase.database().ref(`/users/${userSelect.value}/certifications/${key}`).remove();
+
+        const successMessage = document.querySelector('.success-delete-cert-message');
+
+        // Show Success Message
+        successMessage.classList.remove('fadeOutLeft');
+        successMessage.classList.add('wow' , 'animated' , 'fadeInLeft' , 'slow');
+        successMessage.style.display = 'flex';
+
+        // Hide Success Message
+        setTimeout(() =>{
+          successMessage.classList.add('fadeOutLeft');
+
+          setTimeout(() =>{
+            successMessage.style.display = 'none';
+          }, 1000);
+        }, 3000);
+      }else{
+        alert('¡ Error, asegurese de que el certificado este vinculado con el usuario asignado !');
+      }
+    }
+  });
+}
+
 // Slide Certification options
 const displayCertificationsOptions = () =>{
   let uploadFlagState = false;
   let assingFlagState = false;
+  let deleteFlagState = false;
   let crudFlagState = false;
 
   $(document).on('click' , '.upload-certifications-slider' , function(){
@@ -279,6 +323,21 @@ const displayCertificationsOptions = () =>{
       $(this).children('i').addClass('fa-caret-down');
       $(this).children('i').removeClass('fa-caret-up');
       assingFlagState  = false;
+    }
+  });
+
+  $(document).on('click' , '.delete-certificate-slider' , function(){
+    $('.delete-certifiction-to-user').slideToggle();
+    $('.delete-certifiction-to-user').css('display' , 'flex');
+
+    if(!deleteFlagState ){
+      $(this).children('i').addClass('fa-caret-up');
+      $(this).children('i').removeClass('fa-caret-down');
+      deleteFlagState  = true;
+    }else{
+      $(this).children('i').addClass('fa-caret-down');
+      $(this).children('i').removeClass('fa-caret-up');
+      deleteFlagState  = false;
     }
   });
 
@@ -390,6 +449,7 @@ export{
         inputFileChange,
         chargeSelectCertificates,
         assignCertificate,
+        deleteCertificate,
         displayCertificationsOptions,
         certificatesCrud
       };

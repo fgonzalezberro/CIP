@@ -1634,7 +1634,7 @@ footer .social-networks i:hover {
   align-items: center;
   flex-direction: column;
 }
-.generate-certifications-section .upload-certifications-slider, .generate-certifications-section .assign-certificate-slider, .generate-certifications-section .certificates-crud-slider {
+.generate-certifications-section .upload-certifications-slider, .generate-certifications-section .assign-certificate-slider, .generate-certifications-section .certificates-crud-slider, .generate-certifications-section .delete-certificate-slider {
   width: 70%;
   border-radius: 5px;
   background-color: #39496a;
@@ -1646,13 +1646,13 @@ footer .social-networks i:hover {
   align-items: center;
   flex-direction: row;
 }
-.generate-certifications-section .upload-certifications-slider h2, .generate-certifications-section .assign-certificate-slider h2, .generate-certifications-section .certificates-crud-slider h2 {
+.generate-certifications-section .upload-certifications-slider h2, .generate-certifications-section .assign-certificate-slider h2, .generate-certifications-section .certificates-crud-slider h2, .generate-certifications-section .delete-certificate-slider h2 {
   font-size: 30px;
   letter-spacing: 5px;
   color: #fff;
   text-shadow: 0px 0px 5px #969696;
 }
-.generate-certifications-section .upload-certifications-slider i, .generate-certifications-section .assign-certificate-slider i, .generate-certifications-section .certificates-crud-slider i {
+.generate-certifications-section .upload-certifications-slider i, .generate-certifications-section .assign-certificate-slider i, .generate-certifications-section .certificates-crud-slider i, .generate-certifications-section .delete-certificate-slider i {
   margin: 0 1rem;
   font-size: 2.5rem;
   color: #fff;
@@ -1722,7 +1722,7 @@ footer .social-networks i:hover {
   border-radius: 30px;
   color: #39496a;
 }
-.generate-certifications-section .assign-certifiction-to-user {
+.generate-certifications-section .assign-certifiction-to-user, .generate-certifications-section .delete-certifiction-to-user {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1731,14 +1731,14 @@ footer .social-networks i:hover {
   width: 60%;
   margin: 2rem 0;
 }
-.generate-certifications-section .assign-certifiction-to-user h2 {
+.generate-certifications-section .assign-certifiction-to-user h2, .generate-certifications-section .delete-certifiction-to-user h2 {
   font-size: 30px;
   letter-spacing: 5px;
   color: #39496a;
   margin-bottom: 5%;
   text-shadow: 0px 0px 5px #969696;
 }
-.generate-certifications-section .assign-certifiction-to-user select {
+.generate-certifications-section .assign-certifiction-to-user select, .generate-certifications-section .delete-certifiction-to-user select {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1749,7 +1749,7 @@ footer .social-networks i:hover {
   color: #485761;
   margin: 1rem 0;
 }
-.generate-certifications-section .assign-certifiction-to-user input[type=button] {
+.generate-certifications-section .assign-certifiction-to-user input[type=button], .generate-certifications-section .delete-certifiction-to-user input[type=button] {
   width: auto;
   margin: 10px 0;
   padding: 10px 30px;
@@ -1760,7 +1760,7 @@ footer .social-networks i:hover {
   transition: 1s;
   cursor: pointer;
 }
-.generate-certifications-section .assign-certifiction-to-user input[type=button]:hover {
+.generate-certifications-section .assign-certifiction-to-user input[type=button]:hover, .generate-certifications-section .delete-certifiction-to-user input[type=button]:hover {
   width: auto;
   margin: 10px 0;
   padding: 10px 30px;
@@ -1917,7 +1917,7 @@ footer .social-networks i:hover {
   color: #39496a;
   cursor: pointer;
 }
-.generate-certifications-section .success-assign-cert-message, .generate-certifications-section .success-charge-document, .generate-certifications-section .success-select-document, .generate-certifications-section .success-delete-cert, .generate-certifications-section .success-edit-cert {
+.generate-certifications-section .success-assign-cert-message, .generate-certifications-section .success-assign-cert-message, .generate-certifications-section .success-charge-document, .generate-certifications-section .success-select-document, .generate-certifications-section .success-delete-cert, .generate-certifications-section .success-edit-cert, .generate-certifications-section .success-delete-cert-message {
   width: 40%;
   height: 80px;
   position: fixed;
@@ -1939,8 +1939,8 @@ footer .social-networks i:hover {
 .generate-certifications-section .error-update-document {
   width: 40%;
   height: 80px;
-  position: absolute;
-  top: 1vh;
+  position: fixed;
+  top: 150px;
   right: 2%;
   text-align: center;
   -webkit-box-shadow: 0px 0px 10px 0px #e3e3e3;
@@ -1965,7 +1965,7 @@ footer .social-networks i:hover {
     align-items: center;
     flex-direction: column;
   }
-  .generate-certifications-section .upload-certifications-slider, .generate-certifications-section .assign-certificate-slider, .generate-certifications-section .certificates-crud-slider {
+  .generate-certifications-section .upload-certifications-slider, .generate-certifications-section .assign-certificate-slider, .generate-certifications-section .certificates-crud-slider, .generate-certifications-section .delete-certificate-slider {
     width: 90%;
     border-radius: 5px;
     background-color: #39496a;
@@ -1977,18 +1977,18 @@ footer .social-networks i:hover {
     align-items: center;
     flex-direction: row;
   }
-  .generate-certifications-section .upload-certifications-slider h2, .generate-certifications-section .assign-certificate-slider h2, .generate-certifications-section .certificates-crud-slider h2 {
+  .generate-certifications-section .upload-certifications-slider h2, .generate-certifications-section .assign-certificate-slider h2, .generate-certifications-section .certificates-crud-slider h2, .generate-certifications-section .delete-certificate-slider h2 {
     font-size: 11px;
     letter-spacing: 5px;
     color: #fff;
     text-shadow: 0px 0px 5px #969696;
   }
-  .generate-certifications-section .upload-certifications-slider i, .generate-certifications-section .assign-certificate-slider i, .generate-certifications-section .certificates-crud-slider i {
+  .generate-certifications-section .upload-certifications-slider i, .generate-certifications-section .assign-certificate-slider i, .generate-certifications-section .certificates-crud-slider i, .generate-certifications-section .delete-certificate-slider i {
     margin: 0 0.5rem;
     font-size: 1rem;
     color: #fff;
   }
-  .generate-certifications-section .upload-certifications-slider .upload-certifiction, .generate-certifications-section .assign-certificate-slider .upload-certifiction, .generate-certifications-section .certificates-crud-slider .upload-certifiction {
+  .generate-certifications-section .upload-certifications-slider .upload-certifiction, .generate-certifications-section .assign-certificate-slider .upload-certifiction, .generate-certifications-section .certificates-crud-slider .upload-certifiction, .generate-certifications-section .delete-certificate-slider .upload-certifiction {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1997,7 +1997,7 @@ footer .social-networks i:hover {
     width: 60%;
     margin: 2rem 0;
   }
-  .generate-certifications-section .upload-certifications-slider .upload-certifiction .upload-certification-content, .generate-certifications-section .assign-certificate-slider .upload-certifiction .upload-certification-content, .generate-certifications-section .certificates-crud-slider .upload-certifiction .upload-certification-content {
+  .generate-certifications-section .upload-certifications-slider .upload-certifiction .upload-certification-content, .generate-certifications-section .assign-certificate-slider .upload-certifiction .upload-certification-content, .generate-certifications-section .certificates-crud-slider .upload-certifiction .upload-certification-content, .generate-certifications-section .delete-certificate-slider .upload-certifiction .upload-certification-content {
     margin: 20px 0;
     padding: 10px 0;
     width: 90%;
@@ -2011,17 +2011,17 @@ footer .social-networks i:hover {
     flex-direction: row;
     cursor: pointer;
   }
-  .generate-certifications-section .upload-certifications-slider .upload-certifiction .upload-certification-content i, .generate-certifications-section .assign-certificate-slider .upload-certifiction .upload-certification-content i, .generate-certifications-section .certificates-crud-slider .upload-certifiction .upload-certification-content i {
+  .generate-certifications-section .upload-certifications-slider .upload-certifiction .upload-certification-content i, .generate-certifications-section .assign-certificate-slider .upload-certifiction .upload-certification-content i, .generate-certifications-section .certificates-crud-slider .upload-certifiction .upload-certification-content i, .generate-certifications-section .delete-certificate-slider .upload-certifiction .upload-certification-content i {
     color: green;
     margin-right: 5px;
   }
-  .generate-certifications-section .upload-certifications-slider .upload-certifiction .upload-certification-content p, .generate-certifications-section .assign-certificate-slider .upload-certifiction .upload-certification-content p, .generate-certifications-section .certificates-crud-slider .upload-certifiction .upload-certification-content p {
+  .generate-certifications-section .upload-certifications-slider .upload-certifiction .upload-certification-content p, .generate-certifications-section .assign-certificate-slider .upload-certifiction .upload-certification-content p, .generate-certifications-section .certificates-crud-slider .upload-certifiction .upload-certification-content p, .generate-certifications-section .delete-certificate-slider .upload-certifiction .upload-certification-content p {
     color: #39496a;
   }
-  .generate-certifications-section .upload-certifications-slider .upload-certifiction .select-certificate-to-upload, .generate-certifications-section .assign-certificate-slider .upload-certifiction .select-certificate-to-upload, .generate-certifications-section .certificates-crud-slider .upload-certifiction .select-certificate-to-upload {
+  .generate-certifications-section .upload-certifications-slider .upload-certifiction .select-certificate-to-upload, .generate-certifications-section .assign-certificate-slider .upload-certifiction .select-certificate-to-upload, .generate-certifications-section .certificates-crud-slider .upload-certifiction .select-certificate-to-upload, .generate-certifications-section .delete-certificate-slider .upload-certifiction .select-certificate-to-upload {
     display: none;
   }
-  .generate-certifications-section .upload-certifications-slider .upload-certifiction input[type=text], .generate-certifications-section .assign-certificate-slider .upload-certifiction input[type=text], .generate-certifications-section .certificates-crud-slider .upload-certifiction input[type=text] {
+  .generate-certifications-section .upload-certifications-slider .upload-certifiction input[type=text], .generate-certifications-section .assign-certificate-slider .upload-certifiction input[type=text], .generate-certifications-section .certificates-crud-slider .upload-certifiction input[type=text], .generate-certifications-section .delete-certificate-slider .upload-certifiction input[type=text] {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2033,7 +2033,7 @@ footer .social-networks i:hover {
     margin: 1rem 0;
     color: #39496a;
   }
-  .generate-certifications-section .upload-certifications-slider .upload-certifiction input[type=button], .generate-certifications-section .assign-certificate-slider .upload-certifiction input[type=button], .generate-certifications-section .certificates-crud-slider .upload-certifiction input[type=button] {
+  .generate-certifications-section .upload-certifications-slider .upload-certifiction input[type=button], .generate-certifications-section .assign-certificate-slider .upload-certifiction input[type=button], .generate-certifications-section .certificates-crud-slider .upload-certifiction input[type=button], .generate-certifications-section .delete-certificate-slider .upload-certifiction input[type=button] {
     width: auto;
     margin: 10px 0;
     padding: 10px 30px;
@@ -2044,7 +2044,7 @@ footer .social-networks i:hover {
     transition: 1s;
     cursor: pointer;
   }
-  .generate-certifications-section .upload-certifications-slider .upload-certifiction input[type=button]:hover, .generate-certifications-section .assign-certificate-slider .upload-certifiction input[type=button]:hover, .generate-certifications-section .certificates-crud-slider .upload-certifiction input[type=button]:hover {
+  .generate-certifications-section .upload-certifications-slider .upload-certifiction input[type=button]:hover, .generate-certifications-section .assign-certificate-slider .upload-certifiction input[type=button]:hover, .generate-certifications-section .certificates-crud-slider .upload-certifiction input[type=button]:hover, .generate-certifications-section .delete-certificate-slider .upload-certifiction input[type=button]:hover {
     width: auto;
     margin: 10px 0;
     padding: 10px 30px;
@@ -2111,7 +2111,7 @@ footer .social-networks i:hover {
     align-items: center;
     flex-direction: column;
   }
-  .generate-certifications-section .upload-certifications-slider, .generate-certifications-section .assign-certificate-slider, .generate-certifications-section .certificates-crud-slider {
+  .generate-certifications-section .upload-certifications-slider, .generate-certifications-section .assign-certificate-slider, .generate-certifications-section .certificates-crud-slider, .generate-certifications-section .delete-certificate-slider {
     width: 70%;
     border-radius: 5px;
     background-color: #39496a;
@@ -2123,13 +2123,13 @@ footer .social-networks i:hover {
     align-items: center;
     flex-direction: row;
   }
-  .generate-certifications-section .upload-certifications-slider h2, .generate-certifications-section .assign-certificate-slider h2, .generate-certifications-section .certificates-crud-slider h2 {
+  .generate-certifications-section .upload-certifications-slider h2, .generate-certifications-section .assign-certificate-slider h2, .generate-certifications-section .certificates-crud-slider h2, .generate-certifications-section .delete-certificate-slider h2 {
     font-size: 15px;
     letter-spacing: 5px;
     color: #fff;
     text-shadow: 0px 0px 5px #969696;
   }
-  .generate-certifications-section .upload-certifications-slider i, .generate-certifications-section .assign-certificate-slider i, .generate-certifications-section .certificates-crud-slider i {
+  .generate-certifications-section .upload-certifications-slider i, .generate-certifications-section .assign-certificate-slider i, .generate-certifications-section .certificates-crud-slider i, .generate-certifications-section .delete-certificate-slider i {
     margin: 0 1rem;
     font-size: 2.5rem;
     color: #fff;
@@ -2394,11 +2394,11 @@ footer .social-networks i:hover {
     color: #39496a;
     cursor: pointer;
   }
-  .generate-certifications-section .success-assign-cert-message, .generate-certifications-section .success-charge-document, .generate-certifications-section .success-select-document, .generate-certifications-section .success-delete-cert, .generate-certifications-section .success-edit-cert {
+  .generate-certifications-section .success-assign-cert-message, .generate-certifications-section .success-charge-document, .generate-certifications-section .success-select-document, .generate-certifications-section .success-delete-cert, .generate-certifications-section .success-edit-cert, .generate-certifications-section .success-delete-cert-message {
     width: 40%;
     height: 80px;
-    position: absolute;
-    top: 1vh;
+    position: fixed;
+    top: 150px;
     right: 2%;
     text-align: center;
     -webkit-box-shadow: 0px 0px 10px 0px #e3e3e3;
@@ -2417,8 +2417,8 @@ footer .social-networks i:hover {
   .generate-certifications-section .error-update-document {
     width: 40%;
     height: 80px;
-    position: absolute;
-    top: 1vh;
+    position: fixed;
+    top: 150px;
     right: 2%;
     text-align: center;
     -webkit-box-shadow: 0px 0px 10px 0px #e3e3e3;

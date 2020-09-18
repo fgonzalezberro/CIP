@@ -7,7 +7,7 @@
   align-items: center;
   flex-direction: column;
 
-  .upload-certifications-slider , .assign-certificate-slider , .certificates-crud-slider{
+  .upload-certifications-slider , .assign-certificate-slider , .certificates-crud-slider , .delete-certificate-slider{
     width: 70%;
     border-radius: 5px;
     background-color: $dark-blue;
@@ -94,7 +94,7 @@
     }
   }
 
-  .assign-certifiction-to-user{
+  .assign-certifiction-to-user , .delete-certifiction-to-user{
     @include flex-column;
     display: none;
     width: 60%;
@@ -297,7 +297,7 @@
     }
   }
 
-  .success-assign-cert-message , .success-charge-document , .success-select-document , .success-delete-cert , .success-edit-cert{
+  .success-assign-cert-message, .success-assign-cert-message , .success-charge-document , .success-select-document , .success-delete-cert , .success-edit-cert , .success-delete-cert-message{
     width: 40%;
     height: 80px;
     position: fixed;
@@ -317,8 +317,8 @@
   .error-update-document{
     width: 40%;
     height: 80px;
-    position: absolute;
-    top: 1vh;
+    position: fixed;
+    top: 150px;
     right: 2%;
     text-align: center;
     -webkit-box-shadow: 0px 0px 10px 0px rgba(227,227,227,1);
@@ -341,7 +341,7 @@
     align-items: center;
     flex-direction: column;
 
-    .upload-certifications-slider , .assign-certificate-slider , .certificates-crud-slider{
+    .upload-certifications-slider , .assign-certificate-slider , .certificates-crud-slider, .delete-certificate-slider{
       width: 90%;
       border-radius: 5px;
       background-color: $dark-blue;
@@ -495,7 +495,7 @@
     align-items: center;
     flex-direction: column;
 
-    .upload-certifications-slider , .assign-certificate-slider , .certificates-crud-slider{
+    .upload-certifications-slider , .assign-certificate-slider , .certificates-crud-slider , .delete-certificate-slider{
       width: 70%;
       border-radius: 5px;
       background-color: $dark-blue;
@@ -785,11 +785,11 @@
       }
     }
 
-    .success-assign-cert-message , .success-charge-document , .success-select-document , .success-delete-cert , .success-edit-cert{
+    .success-assign-cert-message , .success-charge-document , .success-select-document , .success-delete-cert , .success-edit-cert , .success-delete-cert-message{
       width: 40%;
       height: 80px;
-      position: absolute;
-      top: 1vh;
+      position: fixed;
+      top: 150px;
       right: 2%;
       text-align: center;
       -webkit-box-shadow: 0px 0px 10px 0px rgba(227,227,227,1);
@@ -806,8 +806,8 @@
     .error-update-document{
       width: 40%;
       height: 80px;
-      position: absolute;
-      top: 1vh;
+      position: fixed;
+      top: 150px;
       right: 2%;
       text-align: center;
       -webkit-box-shadow: 0px 0px 10px 0px rgba(227,227,227,1);

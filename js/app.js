@@ -17,6 +17,7 @@ import {
   inputFileChange,
   chargeSelectCertificates,
   assignCertificate,
+  deleteCertificate,
   displayCertificationsOptions,
   certificatesCrud
  } from './generate-certifications.js';
@@ -209,6 +210,11 @@ window.addEventListener('load', ()=>{
   // Assign ceritifacte to user
   $(document).on('click' , '.assign-cert-btn', function(){
     assignCertificate();
+  });
+
+  // Delete ceritifacte to user
+  $(document).on('click' , '.delete-cert-btn', function(){
+    deleteCertificate();
   });
 
   // Charge certification table
